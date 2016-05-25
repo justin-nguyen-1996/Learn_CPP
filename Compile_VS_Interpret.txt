@@ -12,3 +12,10 @@
 3. Using an interpreter
         high level (.py) --> interpreter
         interpreter --> executable (.exe)
+4. Differences
+        Interpreters
+          --> execute the code w/o compiling into machine code
+          --> more flexible, but less efficient when running programs
+          --> needed every time you run a program, even if no changes
+        Compilers
+          --> just use the same .exe if no changes
