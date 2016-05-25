@@ -1,0 +1,14 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/24/2016
+*/
+
+1. Making the computer understand our programs
+        assembly --> assembler --> machine code
+        high level language --> compiler/interpreter
+2. Using a compiler
+        high level (.c/.cpp) --> compiler
+        compiler (.o) --> linker --> executable (.exe)
+3. Using an interpreter
+        high level (.py) --> interpreter
+        interpreter --> executable (.exe)
