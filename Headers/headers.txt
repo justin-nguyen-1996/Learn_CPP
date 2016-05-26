@@ -1,0 +1,8 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/25/2016
+*/
+
+1. Header Guards
+	--> prevent header files from being included
+	    more than once in the same file
