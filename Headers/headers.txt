@@ -6,3 +6,7 @@
 1. Header Guards
 	--> prevent header files from being included
 	    more than once in the same file
+
+2. Angles vs. Quotes
+	--> angle brackets for system includes
+	--> quotes for current dir includes
