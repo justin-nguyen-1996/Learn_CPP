@@ -7,5 +7,5 @@ int main() {
 	std::cout << "Enter two numbers: ";
 	std::cin  >> a;
 	std::cin  >> b;
-	std::cout << "Sum: " << add(a,b) << endl;
+	std::cout << "Sum: " << add(a,b) << std::endl;
 }
