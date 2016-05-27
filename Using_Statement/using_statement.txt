@@ -1,0 +1,17 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/25/2016
+*/
+
+1. Using Statement Declaration
+        --> e.g. using std::cout;
+                 cout << "Hello"
+        --> tells the compiler to resolve "cout"
+            by using std::cout
+
+2. Using Statement Directive
+        --> e.g. using namespace std;
+                 cout << "Hello"
+        --> tells the compiler that we're using
+            everything in the std namespace
+
