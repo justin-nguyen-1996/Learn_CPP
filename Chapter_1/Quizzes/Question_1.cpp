@@ -20,14 +20,19 @@ public int main() {
     int a = readNumber();
     int b = readNumber();
     
-    writeAnswer();
+    int sum = a + b;
+    writeAnswer(sum);
+    
     return 0;
 }
 
 int readNumber() {
-    
+    int x;
+    std::cout << "Enter a number: ";
+    std::cin  >> x;
+    return x;
 }
 
-void writeAnswer() {
-    
+void writeAnswer(int ans) {
+    std::cout << "Sum: " << ans << endl;
 }
