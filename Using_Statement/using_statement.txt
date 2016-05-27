@@ -15,3 +15,6 @@
         --> tells the compiler that we're using
             everything in the std namespace
 
+3. Using Statement benefits and dangers
+        --> easier to read
+        --> but can now have naming collisions
