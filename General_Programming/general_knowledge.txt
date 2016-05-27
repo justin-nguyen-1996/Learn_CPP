@@ -24,20 +24,4 @@
 5. Status Codes
         --> e.g. main returns 0 back to the Operating System
                  positive return values indicate failure
-6. Making the computer understand our programs
-        assembly --> assembler --> machine code
-        high level language --> compiler/interpreter
-7. Using a compiler
-        high level (.c/.cpp) --> compiler
-        compiler (.o) --> linker --> executable (.exe)
-8. Using an interpreter
-        high level (.py) --> interpreter
-        interpreter --> executable (.exe)
-9. Differences
-        Interpreters
-          --> execute the code w/o compiling into machine code
-          --> more flexible, but less efficient when running programs
-          --> needed every time you run a program, even if no changes
-        Compilers
-          --> just use the same .exe if no changes
 
