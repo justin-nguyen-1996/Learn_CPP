@@ -13,3 +13,21 @@
     3. A main() function should be used to glue the above functions together. 
 */
 
+int readNumber();
+void writeAnswer();
+
+public int main() {
+    int a = readNumber();
+    int b = readNumber();
+    
+    writeAnswer();
+    return 0;
+}
+
+int readNumber() {
+    
+}
+
+void writeAnswer() {
+    
+}
