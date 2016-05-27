@@ -13,16 +13,18 @@
     3. A main() function should be used to glue the above functions together. 
 */
 
-int readNumber();
-void writeAnswer();
+#include <iostream>
 
-public int main() {
+int readNumber();
+void writeAnswer(int x);
+
+int main() {
     int a = readNumber();
     int b = readNumber();
-    
+
     int sum = a + b;
     writeAnswer(sum);
-    
+
     return 0;
 }
 
@@ -34,5 +36,5 @@ int readNumber() {
 }
 
 void writeAnswer(int ans) {
-    std::cout << "Sum: " << ans << endl;
+    std::cout << "Sum: " << ans << std::endl;
 }
