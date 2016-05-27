@@ -1,11 +1,11 @@
 objs = question_1.o
 CFLAGS = -Wall -g
-CPPFlags = -g
+CPPFLAGS = -Wall -g
 exe = question_1
 
 all: $(objs)
-    g++ $(CFLAGS) $(CPPFLAGS) -o $(exe) $(objs)
-    
+        g++ $(CFLAGS) -o $(exe) $(objs)
+
 .PHONY: clean
 clean:
-    rm $(objs) $(exe)
+        rm $(objs) $(exe)
