@@ -10,3 +10,8 @@
 2. Angles vs. Quotes
 	--> angle brackets for system includes
 	--> quotes for current dir includes
+
+3. Good Practices
+	--> always use header guards
+	--> only use constant variables in .h files
+	--> make each .h file as independent as possible
