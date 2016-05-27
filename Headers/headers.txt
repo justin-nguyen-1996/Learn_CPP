@@ -15,3 +15,8 @@
 	--> always use header guards
 	--> only use constant variables in .h files
 	--> make each .h file as independent as possible
+
+4. #pragma once
+	--> can use this in place of header guards
+	--> not supported by C++ language
+	--> but most compilers support it
