@@ -12,7 +12,6 @@
         --> Object-like Macros
                 --> uses subsitution text (e.g. #define num 100)
                 --> dangerous and not used much
-        -->
 2. Output Operator (<<)
 3. L-values vs. R-values
         --> values on left/right side of equals sign
