@@ -1,0 +1,10 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/27/2016
+*/
+
+1. Copy Initialization
+	--> int var = 5;
+2. Direct Initialization
+	--> int var(5);
+
