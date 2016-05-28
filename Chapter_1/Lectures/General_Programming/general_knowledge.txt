@@ -12,9 +12,12 @@
         --> Object-like Macros
                 --> uses subsitution text (e.g. #define num 100)
                 --> dangerous and not used much
+
 2. Output Operator (<<)
+
 3. L-values vs. R-values
         --> values on left/right side of equals sign
+
 4. Assignment vs. Initialization
         --> assignment
                 --> declaration: int x;
@@ -24,4 +27,8 @@
 5. Status Codes
         --> e.g. main returns 0 back to the Operating System
                  positive return values indicate failure
+
+6. Variable Definition Guideline
+	--> define variables as close to 
+	    their first use as possible
 
