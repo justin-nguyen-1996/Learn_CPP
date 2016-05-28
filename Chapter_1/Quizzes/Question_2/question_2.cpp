@@ -11,7 +11,7 @@
 */
 
 #include <iostream>
-#include "Question_2.h"
+#include "question_2.h"
 
 int main() {
     int a = readNumber();
