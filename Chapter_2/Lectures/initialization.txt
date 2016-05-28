@@ -7,4 +7,9 @@
 	--> int var = 5;
 2. Direct Initialization
 	--> int var(5);
+3. Uniform Initialization
+	--> int var{5};
+	--> optimization benefits
+	--> better for objects
+	--> works with non-explicit copy constructors
 
