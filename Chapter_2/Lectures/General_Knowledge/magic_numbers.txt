@@ -1,0 +1,12 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/29/2016
+*/
+
+1. Magic Numbers Meaning
+	--> "hard coded literals"
+	--> numbers in the middle of your code that don't have any context
+	--> bad practive if the code needs to change a little
+	    (have to replace every instance of the number)
+	    (time consuming and error prone)
+
