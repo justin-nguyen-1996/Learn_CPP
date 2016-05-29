@@ -5,8 +5,10 @@
 
 1. Copy Initialization
 	--> int var = 5;
+
 2. Direct Initialization
 	--> int var(5);
+
 3. Uniform Initialization
 	--> int var{5};
 	--> optimization benefits
