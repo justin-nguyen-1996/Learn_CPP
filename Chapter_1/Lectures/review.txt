@@ -1,0 +1,13 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/29/2016
+*/
+
+1. using std::cout or using namespace std
+2. header guards (#ifndef, #define, #endif)
+3. #pragma once
+4. compilers vs. interpreters
+5. assignment (declaration, assignment) vs. initialization
+6. status codes
+7. variable definition guideline (as close to use as possible)
+
