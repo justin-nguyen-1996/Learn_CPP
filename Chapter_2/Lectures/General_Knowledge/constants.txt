@@ -1,0 +1,37 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/29/2016
+*/
+
+1. Constant Parameters
+	--> ensures that the function will not alter
+	    the value of the parameter
+
+2. Constant Expressions
+	--> constexpr
+	--> ensures that the constant must be compile-time constant
+	--> as opposed to run-time constant
+
+3. Bad Symbolic Constants
+	--> #define
+		--> these values do not show up in the debugger
+		    have to go back to the def. to find the value
+		--> these have global scope (leads to naming conflicts)
+
+4. Good Symbolic Constants
+	--> use const variables
+	--> 1. make a header file to hold the constants
+	--> 2. declare a namespace
+	--> 3. add the constants
+	--> 4. #include the header file
+
+	#ifndef CONSTANTS
+	#define CONSTANTS
+
+	namespace constants {
+		const double PI {3.1415926535};
+		const double GRAVITY {9.8};
+	}
+
+	#endif
+
