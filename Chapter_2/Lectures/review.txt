@@ -10,4 +10,5 @@
 5. digit separating (2'098'274)
 6. 0b1010, 0x1010
 7. magic numbers
-8. 
+8. const, constexpr
+
