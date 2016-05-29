@@ -1,0 +1,10 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/29/2016
+*/
+
+1. Printing Boolean Values
+	--> bool x = true;
+	--> std::cout << x << std::endl; // prints: 1
+	--> std::cout << std::boolalpha;
+	--> std::cout << x << std::endl; // prints: true
