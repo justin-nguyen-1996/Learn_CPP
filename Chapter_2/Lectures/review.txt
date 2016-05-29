@@ -1,0 +1,11 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/29/2016
+*/
+
+1. std::boolalpha
+2. \n (instead of) std::endl
+3. int a {5} (instead of) int a = 5
+4. static_cast<type> (expression)
+5. digit separating (2'098'274)
+6. 0b1010, 0x1010
