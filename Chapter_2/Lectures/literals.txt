@@ -1,0 +1,11 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/29/2016
+*/
+
+1. Hexadecimal
+	--> int hex {0x01};
+
+2. Binary
+	--> int bin {0b0110};
+

@@ -9,4 +9,11 @@
 
 	--> UNIX uses \n
 
+2. std::endl vs. \n
+	--> std::endl 
+		--> flushes the output buffer
+		--> immediate and forced output to the screen
+	--> \n
+		--> queues up output and outputs when ready
+		--> better for performance
 
