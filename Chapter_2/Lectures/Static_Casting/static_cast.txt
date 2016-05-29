@@ -1,0 +1,11 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/29/2016
+*/
+
+1. Static Casting
+	static_cast<new_type>(expression)
+	
+	example:
+		char letter;
+		static_cast<int> (letter);
