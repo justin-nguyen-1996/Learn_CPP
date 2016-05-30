@@ -1,6 +1,14 @@
 /*
     Author:  Justin Nguyen
     Created: 5/29/2016
+
+    Write the following program: The user is asked to 
+    enter 2 floating point numbers (use doubles). 
+
+    The user is then asked to enter one of the following 
+    mathematical symbols: +, -, *, or /. 
+
+    If the user enters an invalid symbol, the program prints nothing.
 */
 
 #include <iostream>
