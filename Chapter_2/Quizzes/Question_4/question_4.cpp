@@ -37,9 +37,10 @@ void printResult(double new_height) {
 
 int main() {
 	getTowerHeight();
-	double current_height {0};
+	double current_height {getTowerHeight()};
 	while (current_height > 0) {
-		printResult(current_height - distFallen());
+		current_height -= distFallen();
+		printResult(current_height); 
 	}
 
 	return 0;
