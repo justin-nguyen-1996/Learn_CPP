@@ -15,7 +15,7 @@
 #include <iostream>
 #include "constants.h"
 
-int getTowerHeight() {
+double getTowerHeight() {
 	std::cout << "Enter the initial height of the tower in meters: ";
 	int height;
 	std::cin  >> height;
@@ -36,7 +36,6 @@ void printResult(double new_height) {
 }
 
 int main() {
-	getTowerHeight();
 	double current_height {getTowerHeight()};
 	while (current_height > 0) {
 		current_height -= distFallen();
