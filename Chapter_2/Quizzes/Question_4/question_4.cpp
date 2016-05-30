@@ -31,8 +31,15 @@ double distFallen() {
 
 void printResult(double new_height) {
 	static int sec_passed {0};
-	std::cout << "At " << sec_passed << " seconds, the ball " <<
-		"is at height: " << new_height << " meters.\n";
+
+	if (new_height > 0) {
+		std::cout << "At " << sec_passed << " seconds, the ball " <<
+			"is at height: " << new_height << " meters.\n";
+	} else {
+		std::cout << "At " << sec_passed << " seconds, the ball " <<
+			"is on the ground.\n";
+	}
+
 	sec_passed += 1;
 }
 
