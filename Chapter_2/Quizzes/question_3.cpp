@@ -5,23 +5,24 @@
 
 #include <iostream>
 
-double calcOP(const double a, const double b, const char op) {
+double calcOp(const double a, const double b, const char op) {
 	if (op == '+') { return a + b; }
-	else if (op == "-") { return a - b; }
-	else if (op == "*") { return a * b; }
-	else if (op == "/") { return a / b; }
+	else if (op == '-') { return a - b; }
+	else if (op == '*') { return a * b; }
+	else if (op == '/') { return a / b; }
+	else { return 0.0; }
 }
 
-int void main() {
+int main() {
 	std::cout <<  "Enter a double value: ";
 	double a;
 	std::cin  >> a;
 
-	std::cout << "\nEnter a second double value: ";
+	std::cout << "Enter a second double value: ";
 	double b;
 	std::cin  >> b;
 
-	std::cout << "\nEnter one of the following: +, -, *, or/: ";
+	std::cout << "Enter one of the following: +, -, *, or/: ";
 	char op;
 	std::cin  >> op;
 	
@@ -29,6 +30,7 @@ int void main() {
 		return 1;
 	}
 
-	std::cout << a << " " << op << " " << "is " << calcOp(a,b,op) << "\n";
+	std::cout << a << " " << op << " " << b << " " << 
+		"is " << calcOp(a,b,op) << "\n";
 	return 0;
 }
