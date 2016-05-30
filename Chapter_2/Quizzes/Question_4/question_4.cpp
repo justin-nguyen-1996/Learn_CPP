@@ -13,6 +13,7 @@
 */
 
 #include <iostream>
+#include "constants.h"
 
 int getTowerHeight() {
 	std::cout << "Enter the initial height of the tower in meters: ";
@@ -23,7 +24,7 @@ int getTowerHeight() {
 
 double distFallen() {
 	static int sec_passed {0};
-	double dist_fallen = GRAVITY * sec_passed * sec_passed / 2;
+	double dist_fallen = constants::GRAVITY * sec_passed * sec_passed / 2;
 	sec_passed += 1;
 	return dist_fallen;
 }
