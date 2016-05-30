@@ -28,6 +28,12 @@ double distFallen() {
 	return dist_fallen;
 }
 
+void printResult(double new_height) {
+	static int sec_passed {0};
+	std::cout << "At" << sec_passed << "seconds, the ball " <<
+		"is at height: " << new_height << "meters.\n";
+}
+
 int main() {
 	getTowerHeight();
 	double current_height {0};
