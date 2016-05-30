@@ -33,12 +33,14 @@ void printResult(double new_height) {
 	static int sec_passed {0};
 	std::cout << "At " << sec_passed << " seconds, the ball " <<
 		"is at height: " << new_height << " meters.\n";
+	sec_passed += 1;
 }
 
 int main() {
-	double current_height {getTowerHeight()};
+	double init_height {getTowerHeight()};
+	double current_height {init_height};
 	while (current_height > 0) {
-		current_height -= distFallen();
+		current_height = init_height - distFallen();
 		printResult(current_height); 
 	}
 
