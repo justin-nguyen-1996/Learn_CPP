@@ -2,3 +2,22 @@
     Author:  Justin Nguyen
     Created: 5/31/2016
 */
+
+1. Extern Example
+    --> global.cpp: 
+            int y {2};
+        main.cpp:
+            extern y; // (forward declaration) (tells linker this is defined elsewhere)
+            std::cout << y << "\n"; // prints 2, compiles
+            
+2. Including Constants the Right Way
+    --> don't do this:
+        constants.h:
+            const double pi = 3.14159;
+            const double gravity = 9.8;
+    --> if constants.h is included multiple times,
+        these variables will be defined multiple times
+    --> this is a huge memory waste if many variables in constants.h
+    
+    --> do this:
+        
