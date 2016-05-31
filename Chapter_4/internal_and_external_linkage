@@ -1,0 +1,21 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/31/2016
+*/
+
+1. Internal Linkage
+    --> can be referenced anywhere in the file, but not outside the file
+    --> static globals, static locals
+
+2. External Linkage
+    --> can be referenced anywhere in the file and outside the file
+    --> extern needed (acts as a forward declaration)
+    --> extern only declares the variable is located somewhere else
+        (does not actually allocate memory space for it yet)
+
+3. Extern Example
+    --> global.cpp: 
+            int y {2};
+        main.cpp:
+            extern y; // (forward declaration) (tells linker this is defined elsewhere)
+            std::cout << y << "\n"; // prints 2, compiles
