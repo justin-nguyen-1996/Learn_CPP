@@ -1,0 +1,8 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/30/2016
+*/
+
+1. Conditional Operator (Ternary Operator)
+2. Floating Point Rounding Errors
+3. 
