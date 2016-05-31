@@ -15,4 +15,7 @@
     --> global scope (visible until the end of the file)
     --> static duration (created when the program starts, destroyed when it ends)
 
-4. 
+4. Global Scope Operator
+    --> "::"
+    --> use this to explicitly tell the compiler to use the global variable
+    --> std::cout << value,    std::cout << ::value
