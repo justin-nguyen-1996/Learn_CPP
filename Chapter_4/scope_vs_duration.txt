@@ -2,3 +2,13 @@
     Author:  Justin Nguyen
     Created: 5/31/2016
 */
+
+1. Scope vs. Duration
+    --> scope refers to where the variable is accessible
+    --> duration refers to when the variable is created/destroyed
+
+2. Local Variables
+    --> block scope (only visible within the block they are declared)
+    --> automatic duration (created when entering the block and destroyed when exiting)
+    
+3. Global
