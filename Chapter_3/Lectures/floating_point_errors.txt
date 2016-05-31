@@ -1,0 +1,10 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/30/2016
+*/
+
+1. Small/Unexpected Rounding Errors
+
+2. Don't use == or != with floating point numbers
+
+3. 
