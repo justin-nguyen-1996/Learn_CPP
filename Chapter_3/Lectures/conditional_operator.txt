@@ -1,0 +1,16 @@
+/*
+    Author:  Justin Nguyen
+    Created: 5/30/2016
+*/
+
+1. Conditional Operator
+	--> also called the "ternary operator"
+	--> short version of specific if-statement
+
+	if (condition) {
+		statement_true;
+	} else {
+		statement_false;
+	}
+
+	(condition) ? statement_true : statement_false;
