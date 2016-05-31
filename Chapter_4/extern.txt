@@ -20,4 +20,23 @@
     --> this is a huge memory waste if many variables in constants.h
     
     --> do this:
+        constants.h:
+            extern const double pi;
+            extern const double gravity;
+        constants.cpp:
+            extern const double pi {3.14159};
+            extern const double gravity {9.8};
+        main.cpp:
+            #include "constants.h"
+    --> extern only declares the variables, not defines them
+        (it doesn't allocate memory for the variables, so no waste)
+    --> can add optional namespace too
+        constants.h:
+            namespace Constants {
+                extern const double pi;
+            }
+        constants.cpp:
+            namespace Constants {
+                extern const double pi {3.14159};
+            }
         
