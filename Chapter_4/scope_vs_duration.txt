@@ -11,4 +11,8 @@
     --> block scope (only visible within the block they are declared)
     --> automatic duration (created when entering the block and destroyed when exiting)
     
-3. Global
+3. Global Variables
+    --> global scope (visible until the end of the file)
+    --> static duration (created when the program starts, destroyed when it ends)
+
+4. 
