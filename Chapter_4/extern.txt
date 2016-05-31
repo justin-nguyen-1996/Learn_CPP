@@ -28,6 +28,7 @@
             extern const double gravity {9.8};
         main.cpp:
             #include "constants.h"
+    
     --> extern only declares the variables, not defines them
         (it doesn't allocate memory for the variables, so no waste)
     --> can add optional namespace too
