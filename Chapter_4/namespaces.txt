@@ -7,3 +7,10 @@
     --> an area of code where all identifiers are guaranteed to be unique
     --> namespace Foo { _________ }
     
+2. Scope Resolution Operator
+    --> used to access and differentiate between namespaces
+    --> by default, global variables and normal functions
+        belong to the global namespace
+        --> explicitly access them using ::var_name
+        
+3. 
