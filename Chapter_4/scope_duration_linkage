@@ -16,4 +16,8 @@
 3. Linkage
     --> tells linker where to find var/fxn definitions
 
+4. Global Scope Operator
+    --> "::"
+    --> use this to explicitly tell the compiler to use the global variable
+    --> std::cout << value,    std::cout << ::value
     
