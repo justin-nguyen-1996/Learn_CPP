@@ -10,3 +10,8 @@
     --> Const Casts
     --> Reinterpret Casts
     
+2. C-Style Casts
+    --> double d = (double) a / b; // int a, b
+    --> double d = double(a) / b;
+
+3. 
