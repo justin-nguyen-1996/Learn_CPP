@@ -1,0 +1,12 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/1/2016
+*/
+
+1. Types of Casting in C++
+    --> C-Style Casts
+    --> Static Casts
+    --> Dynamic Casts
+    --> Const Casts
+    --> Reinterpret Casts
+    
