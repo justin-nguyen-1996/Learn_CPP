@@ -1,0 +1,11 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/1/2016
+*/
+
+1. Static Global Variables
+    --> internal linkage, the variable can only 
+        be accessed throughout the file
+
+
+    
