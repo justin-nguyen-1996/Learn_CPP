@@ -31,6 +31,10 @@
 6. Extern Keyword
     --> use this to access a variable with external linkage in another file
     
+7. WARNING
+    --> non-const global variables have implied external linkage
+    --> *** but const global variables have implied internal linkage ***
+    
 Example 	                                                Scope 	        Duration 	        Linkage
 Local variable                  int x;                      Block scope 	Automatic duration 	No linkage 	
 Static local variable           static int x;               Block scope 	Static duration 	No linkage 	
