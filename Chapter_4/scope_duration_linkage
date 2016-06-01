@@ -12,6 +12,7 @@
     --> when the var is created/destroyed
     --> Automatic Duration (created when entering the block and destroyed when exiting)
     --> Static Duration (created when the program starts, destroyed when it ends)
+    --> Dynamic Duration (created and destroyed upon the programmer's request)
         
 3. Linkage
     --> tells linker where to find var/fxn definitions
