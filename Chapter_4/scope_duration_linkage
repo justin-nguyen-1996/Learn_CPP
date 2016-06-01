@@ -5,10 +5,11 @@
 
 1. Scope
     --> where the var/fxn can be accessed
+        --> Block Scope (only visible within the block they are declared)
 
 2. Duration
     --> when the var is created/destroyed
     
 3. Linkage
     --> tells linker where to find var/fxn definitions
-    
+
