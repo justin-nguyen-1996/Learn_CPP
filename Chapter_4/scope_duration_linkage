@@ -9,7 +9,8 @@
 
 2. Duration
     --> when the var is created/destroyed
-    
+        --> Automatic Duration (created when entering the block and destroyed when exiting)
+        
 3. Linkage
     --> tells linker where to find var/fxn definitions
 
