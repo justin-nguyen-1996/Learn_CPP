@@ -11,3 +11,9 @@
         --> have to look through every instance of when the global was used
         --> for locals, the value can only be changed inside the function
     --> globals can reduce modularity and flexibility
+
+2. When to use non-const global variables
+    --> if the global could be needed everywhere
+    --> database, error/dump log, sound library
+    
+3. 
