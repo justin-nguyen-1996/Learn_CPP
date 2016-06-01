@@ -1,0 +1,13 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/1/2016
+*/
+
+1. (Non-Const) Global Variables are Evil
+    --> any function can change their value
+    --> every function call becomes potentially dangerous because the 
+        global's value can change without the programmer knowing
+    --> say the global's value is wrong
+        --> have to look through every instance of when the global was used
+        --> for locals, the value can only be changed inside the function
+    --> globals can reduce modularity and flexibility
