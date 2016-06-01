@@ -33,3 +33,5 @@
         --> helps maintain modularity by giving the user the option
             to pass in a different value instead of just the global
             
+4. Best Naming Prefix for Globals
+    --> "//"
