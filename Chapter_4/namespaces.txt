@@ -13,4 +13,26 @@
         belong to the global namespace
         --> explicitly access them using ::var_name
         
-3. 
+3. Using Namespaces in Blocks
+    --> {
+            using namespace a;
+            printFoo();
+        }
+        
+        {
+            using namespace b;
+            printFoo();
+        }
+
+4. Nested Namespaces
+    --> namespace Foo {
+            namespace Goo {
+                const int g_x {5};
+            }
+        }
+    --> Foo::Goo::g_x
+    
+5. Namespace Aliases
+    --> namespace Hoo = Foo::Goo;
+    --> Hoo::g_x
+            
