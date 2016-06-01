@@ -1,0 +1,14 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/1/2016
+*/
+
+1. Scope
+    --> where the var/fxn can be accessed
+
+2. Duration
+    --> when the var is created/destroyed
+    
+3. Linkage
+    --> tells linker where to find var/fxn definitions
+    
