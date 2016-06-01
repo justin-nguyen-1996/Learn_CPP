@@ -5,12 +5,13 @@
 
 1. Scope
     --> where the var/fxn can be accessed
-        --> Block Scope (only visible within the block they are declared)
-        --> global scope (visible anywhere in the file)
+    --> Block Scope (only visible within the block they are declared)
+    --> Global Scope (visible anywhere in the file)
         
 2. Duration
     --> when the var is created/destroyed
-        --> Automatic Duration (created when entering the block and destroyed when exiting)
+    --> Automatic Duration (created when entering the block and destroyed when exiting)
+    --> Static Duration (created when the program starts, destroyed when it ends)
         
 3. Linkage
     --> tells linker where to find var/fxn definitions
