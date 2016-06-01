@@ -15,10 +15,15 @@
     --> Dynamic Duration (created and destroyed upon the programmer's request)
         
 3. Linkage
-    --> tells linker where to find var/fxn definitions
+    --> whether multiple instances of an identifier refer to the same identifier or not
+    --> no linkage (identifier refers to itself)
+    --> internal linkage (identifier can be accessed anywhere in the file)
+    --> external linkage (identifier can be accessed anywhere)
 
 4. Global Scope Operator
     --> "::"
     --> use this to explicitly tell the compiler to use the global variable
     --> std::cout << value,    std::cout << ::value
+    
+
     
