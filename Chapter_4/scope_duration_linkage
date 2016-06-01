@@ -25,5 +25,7 @@
     --> use this to explicitly tell the compiler to use the global variable
     --> std::cout << value,    std::cout << ::value
     
-
+5. Forward Declarations (Function Prototypes)
+    --> use this to access a function in another file
     
+
