@@ -28,4 +28,9 @@
 5. Forward Declarations (Function Prototypes)
     --> use this to access a function in another file
     
-
+6. Extern Keyword
+    --> use this to access a variable with external linkage in another file
+    
+7. Table
+    --> 
+    
