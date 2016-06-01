@@ -16,4 +16,20 @@
     --> if the global could be needed everywhere
     --> database, error/dump log, sound library
     
-3. 
+3. If you have to use globals
+    --> prefix them with "g_" (e.g. g_gravity {9.8})
+    --> put them in a namespace
+        --> reduces the chance of naming collisions
+        --> raises awareness that the variable is a global
+    
+    --> encapsulate them
+        --> make the variable static (accessible only within the file)
+        --> use accessors and mutators (getters and setters)
+            --> input validation and range checking
+            --> only have to change accessor functions instead of
+                everywhere the global variable is used
+                
+    --> pass the global as a parameter instead of just using them
+        --> helps maintain modularity by giving the user the option
+            to pass in a different value instead of just the global
+            
