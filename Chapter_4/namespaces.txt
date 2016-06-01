@@ -1,0 +1,9 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/1/2016
+*/
+
+1. Namespaces Meaning
+    --> an area of code where all identifiers are guaranteed to be unique
+    --> namespace Foo { _________ }
+    
