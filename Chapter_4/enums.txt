@@ -30,4 +30,12 @@
 5. Can Cast an Integer to a Color (ugly though)
     --> Color color = static_cast<Color>(4);
     
+6. Enum Declarations
+    --> do not allocate memory until an enum object is created
+    --> best to put them in header files and #include them
 
+7. When to use Enums
+    --> useful for code documentation and readability purposes when 
+        you need to represent a specific, predefined set of states
+        
+8. 
