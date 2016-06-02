@@ -1,0 +1,10 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/2/2016
+*/
+
+1. String Syntax
+    --> #include <string>
+    --> std::string var_name
+    
+2. 
