@@ -14,4 +14,7 @@
     --> std::cin << var_name;
     --> std::cin.ignore(32767, "\n"); // ignore the linefeed after input
     
-3. 
+3. String Concatenation (+, += operators)
+
+4. String Length (string_name.length())
+
