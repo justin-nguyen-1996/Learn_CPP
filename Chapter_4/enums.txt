@@ -8,6 +8,20 @@
     --> last value should not have a comma
     --> end the entire enum with a comma
 
-
+2. Enum Naming Conventions
+    --> enum type names start with a capital letter
+    --> enum values are in all caps
+    --> enum values are prefixed with the enum type name
+        --> prevents naming conflicts since enum types are put into the global namespace
+        --> good for documentation
+    
+3. Enum Example
+    enum Color {
+        COLOR_RED,
+        COLOR_BLUE,
+        COLOR_GREEN
+    };
+    
+    Color paint {COLOR_RED};
     
     
