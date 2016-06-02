@@ -5,7 +5,7 @@
 
 /* 
     Ask the user to enter their full name and their age. 
-    Output how many years they’ve lived for each letter in their name.
+    Output how many (age / #_of_letters_in_their_name).
     For simplicity, count spaces as a letter.
 
     Sample output:
@@ -29,5 +29,8 @@ int main() {
     cin >> age;
     cin.ignore(32767, "\n");
     
-    cout << "You've lived " << 
+    cout << "You've lived " << age / static_cast<double>(name.length()) <<
+        "for each letter in your name."
+        
+    return 0;
 }
