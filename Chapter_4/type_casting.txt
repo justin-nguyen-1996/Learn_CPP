@@ -15,7 +15,7 @@
     --> double d = double(a) / b;
     
     --> bad because not checked by compiler at compile-time
-    --> allows for mistakes (e.g. removing const or downcasting a data type)
+    --> allows for mistakes (e.g. removing const or losing data)
 
 3. Static Casts
     --> float f = static_cast<float>(a) / b; // int a, b
