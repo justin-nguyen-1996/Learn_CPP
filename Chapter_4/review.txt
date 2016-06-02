@@ -1,0 +1,15 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/2/2016
+*/
+
+1. Scope
+2. Duration
+3. Linkage
+4. Static
+5. Extern
+6. Why Global Variables Are Bad
+7. Namespaces
+8. Type Casting
+9. Internal vs. External Linkage
+10. 
