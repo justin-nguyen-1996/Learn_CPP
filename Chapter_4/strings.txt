@@ -9,7 +9,7 @@
     
 2. String Input and Output
     --> std::cout << "Prompt: ";
-    --> std::getLine(std::cin, var_name_to_hold_input)
+    --> std::getline(std::cin, var_name_to_hold_input)
     
     --> std::cin << var_name;
     --> std::cin.ignore(32767, "\n"); // ignore the linefeed after input
