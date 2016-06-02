@@ -1,0 +1,9 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/2/2016
+*/
+
+1. #include <iostream>
+2. #include <cmath>
+3. #include <string>
+
