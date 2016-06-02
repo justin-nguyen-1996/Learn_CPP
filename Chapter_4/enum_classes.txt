@@ -1,0 +1,11 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/2/2016
+*/
+
+1. Problem with Enums
+    --> compiler evaluates enums to integers (not type safe)
+    --> this can cause poor comparisons (fruits == colors)
+    
+2. Solution: Enum Classes
+    --> 
