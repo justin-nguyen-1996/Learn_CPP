@@ -13,5 +13,6 @@
 2. C-Style Casts
     --> double d = (double) a / b; // int a, b
     --> double d = double(a) / b;
-
-3. 
+    
+    --> bad because not checked by compiler at compile-time
+    --> allows for mistakes (e.g. removing const or downcasting a data type)
