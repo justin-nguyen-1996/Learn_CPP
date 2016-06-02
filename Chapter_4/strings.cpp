@@ -18,5 +18,16 @@
 #include <string>
 
 int main() {
+    using namespace std;
     
+    cout << "Enter your full name: ";
+    string name;
+    getLine(cin, name);
+    
+    cout << "Enter your age: ";
+    int age;
+    cin >> age;
+    cin.ignore(32767, "\n");
+    
+    cout << "You've lived " << 
 }
