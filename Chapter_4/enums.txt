@@ -38,4 +38,38 @@
     --> useful for code documentation and readability purposes when 
         you need to represent a specific, predefined set of states
         
-8. 
+8. Good Enum Example
+
+    int readFileContents() {
+        if (!openFile())
+            return -1;
+        if (!readFile())
+            return -2;
+        if (!parseFile())
+            return -3;
+        return 0; // success
+    }
+    
+    /* instead do this */
+    enum ParseResult {
+        SUCCESS = 0,
+        ERROR_OPENING_FILE = -1,
+        ERROR_READING_FILE = -2,
+        ERROR_PARSING_FILE = -3
+    };
+ 
+    ParseResult readFileContents() {
+        if (!openFile())
+            return ERROR_OPENING_FILE;
+        if (!readFile())
+            return ERROR_READING_FILE;
+        if (!parsefile())
+            return ERROR_PARSING_FILE;
+        return SUCCESS;
+    }
+        
+    if (readFileContents() == SUCCESS) {
+        // do something
+    } else {
+        // print error message
+    }
