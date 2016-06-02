@@ -24,4 +24,10 @@
     
     Color paint {COLOR_RED};
     
+4. Enum Values
+    --> assigned an integer based on position (starting a 0)
     
+5. Can Cast an Integer to a Color (ugly though)
+    --> Color color = static_cast<Color>(4);
+    
+
