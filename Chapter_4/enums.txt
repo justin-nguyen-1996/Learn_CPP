@@ -1,0 +1,13 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/2/2016
+*/
+
+1. Enum Syntax
+    --> each possible value is separated by commas, not semicolons
+    --> last value should not have a comma
+    --> end the entire enum with a comma
+
+
+    
+    
