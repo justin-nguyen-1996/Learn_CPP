@@ -19,18 +19,18 @@
 
 int main() {
     using namespace std;
-    
+
     cout << "Enter your full name: ";
     string name;
-    getLine(cin, name);
-    
+    getline(cin, name);
+
     cout << "Enter your age: ";
     int age;
     cin >> age;
-    cin.ignore(32767, "\n");
-    
+    cin.ignore(32767, '\n');
+
     cout << "You've lived " << age / static_cast<double>(name.length()) <<
-        "for each letter in your name."
-        
+        " for each letter in your name." << '\n';
+
     return 0;
 }
