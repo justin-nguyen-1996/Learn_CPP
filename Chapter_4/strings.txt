@@ -12,7 +12,7 @@
     --> std::getline(std::cin, var_name_to_hold_input)
     
     --> std::cin << var_name;
-    --> std::cin.ignore(32767, "\n"); // ignore the linefeed after input
+    --> std::cin.ignore(32767, '\n'); // ignore the linefeed after input
     
 3. String Concatenation (+, += operators)
 
