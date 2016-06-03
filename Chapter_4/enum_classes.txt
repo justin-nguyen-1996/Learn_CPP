@@ -17,4 +17,6 @@
 
     enum class Color {
         RED // found in the color namespace (Color color {Color::RED})
-    };
+    }; // strongly scoped
+    
+
