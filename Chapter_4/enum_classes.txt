@@ -21,6 +21,6 @@
 
     // each enum class is a unique type (type safe)    
     Color color {Color::RED}
-    std::cout << color; // does not work
-    if (fruits == colors) // does not work
+    std::cout << color; // does not work (enum values are no longer ints)
+    if (fruits == colors) // does not work (each enum is its own type now)
 
