@@ -18,5 +18,8 @@
     enum class Color {
         RED // found in the color namespace (Color color {Color::RED})
     }; // strongly scoped
-    
 
+    // each enum class is a unique type (type safe)    
+    Color color {Color::RED}
+    std::cout << color; // does not work
+    if (fruits == colors) // does not work
