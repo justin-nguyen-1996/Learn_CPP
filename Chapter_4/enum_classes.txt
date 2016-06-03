@@ -7,5 +7,14 @@
     --> compiler evaluates enums to integers (not type safe)
     --> this can cause poor comparisons (fruits == colors)
     
+    enum Color {
+        COLOR_RED // found in the global namespace (Color color {COLOR_RED})
+    };
+    
 2. Solution: Enum Classes
-    --> 
+    --> strongly typed (type safe) and strongly scoped
+    --> no need to prefix values with the enum type anymore (redundant)
+
+    enum class Color {
+        RED // found in the color namespace (Color color {Color::RED})
+    };
