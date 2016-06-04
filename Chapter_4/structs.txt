@@ -13,4 +13,12 @@
 	--> passing structs is pass-by-value
 	--> passing struct pointers is pass-by-reference
 
-3. 
+3. Returning Structs
+	--> allows for multiple return values
+
+4. Size of Structs
+	--> occupies at least as much space as the
+	    sum of all its fields
+	--> due to "padding" (rounds 14 bytes to 16 bytes, etc.)
+
+
