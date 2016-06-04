@@ -9,4 +9,8 @@
 		double width = 1.0;
 	    };
 
+2. Passing Structs
+	--> passing structs is pass-by-value
+	--> passing struct pointers is pass-by-reference
 
+3. 
