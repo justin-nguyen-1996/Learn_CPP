@@ -4,7 +4,8 @@
 */
 
 #include <iostream>
+#include "constants.h"
 
 int main() {
-	std::cout << "gravity on Earth is " << g_gravity << "\n";
+	std::cout << "gravity on Earth is " << GRAVITY << "\n";
 }
