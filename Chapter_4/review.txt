@@ -16,4 +16,5 @@
 11. Strings
 12. Typedefs vs. Using
 13. Structs
- 
+14. Put global constants, enums, structs in a .h file 
+
