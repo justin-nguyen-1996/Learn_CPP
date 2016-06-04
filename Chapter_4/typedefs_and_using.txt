@@ -8,3 +8,8 @@
 
 2. using
 	--> using new_type = old_type
+
+3. Naming Convention for Type Aliases
+	--> variables are suffixed with _t
+	--> typedef int babies_t;
+	--> using babies_t = int;
