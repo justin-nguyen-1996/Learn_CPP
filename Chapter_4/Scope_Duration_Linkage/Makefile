@@ -1,7 +1,7 @@
-objs = linkage.o
+objs = linkage.o constants.o
 exe = linkage
-CFLAGS = -Wall -g
-CPPFLAGS = -Wall -g
+CFLAGS = -Wall -g -std=c++11
+CPPFLAGS = -Wall -g -std=c++11
 
 all: $(objs)
 	g++ $(CFLAGS) -o $(exe) $(objs)
