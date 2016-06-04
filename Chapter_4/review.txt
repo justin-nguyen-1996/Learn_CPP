@@ -10,6 +10,8 @@
 5. Extern
 6. Why Global Variables Are Bad
 7. Namespaces
-8. Type Casting
+8. Type Casting (C-Style vs. Static)
 9. Internal vs. External Linkage
-10. 
+10. Enums vs. Enum Classes
+11. Strings
+
