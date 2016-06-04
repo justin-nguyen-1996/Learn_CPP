@@ -21,4 +21,7 @@
 	    sum of all its fields
 	--> due to "padding" (rounds 14 bytes to 16 bytes, etc.)
 
+5. Accessing Structs Across Files
+	--> struct declarations do not take up any memory
+	--> put them in a .h file and #include the file
 
