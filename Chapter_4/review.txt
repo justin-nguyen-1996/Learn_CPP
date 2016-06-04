@@ -14,4 +14,6 @@
 9. Internal vs. External Linkage
 10. Enums vs. Enum Classes
 11. Strings
-
+12. Typedefs vs. Using
+13. Structs
+ 
