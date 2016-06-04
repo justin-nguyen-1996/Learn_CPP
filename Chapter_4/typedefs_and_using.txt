@@ -5,3 +5,6 @@
 
 1. typedef
 	--> typedef orig_type new_type
+
+2. using
+	--> using new_type = old_type
