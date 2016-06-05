@@ -17,7 +17,7 @@ Fraction pass_by_reference(Fraction* frac_ptr) {
 }
 
 int main() {
-	Fraction frac;
+	Fraction frac {1.2, 2.0};
 
 	pass_by_value(frac);
 	std::cout << frac.numerator << "\n";
