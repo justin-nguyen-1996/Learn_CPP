@@ -1,0 +1,17 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/5/2016
+*/
+
+1. Auto Keyword
+	--> used for "automatic type deduction"
+	--> auto d = 5.0; auto i = 1 + 2;
+
+	--> nice when types get complex and lengthy
+	--> Type1<Type2>::Type3 obj = new Type1<Type2>::Type3();
+	--> auto obj = new Type1<Type2>::Type3();
+
+	--> can help increase but also decrease readability
+	--> only use when the var type is obvious or not important
+
+2. 
