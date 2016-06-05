@@ -6,18 +6,18 @@
 #ifndef MONSTER_H
 #define MONSTER_H
 
-struct Monster {
-	Monster_t type;
-	string name;
-	int health;
-};
-
 enum class Monster_t {
 	string "ogre",
 	string "dragon",
 	string "orc",
 	string "giant_spider",
 	string "slime"
+};
+
+struct Monster {
+	Monster_t type;
+	string name;
+	int health;
 };
 
 #endif 
