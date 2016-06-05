@@ -6,6 +6,8 @@
 #ifndef MONSTER_H
 #define MONSTER_H
 
+#include <string>
+
 enum class Monster_t {
 	OGRE,
 	DRAGON,
@@ -16,7 +18,7 @@ enum class Monster_t {
 
 struct Monster {
 	Monster_t type;
-	string name;
+	std::string name;
 	int health;
 };
 
