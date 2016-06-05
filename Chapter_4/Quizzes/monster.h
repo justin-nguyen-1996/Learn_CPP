@@ -7,11 +7,11 @@
 #define MONSTER_H
 
 enum class Monster_t {
-	string "ogre",
-	string "dragon",
-	string "orc",
-	string "giant_spider",
-	string "slime"
+	OGRE,
+	DRAGON,
+	ORC,
+	GIANT_SPIDER,
+	SLIME
 };
 
 struct Monster {
