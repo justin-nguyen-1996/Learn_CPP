@@ -21,7 +21,12 @@ int main() {
 
 	pass_by_value(frac);
 	std::cout << frac.numerator << "\n";
-
+	frac = pass_by_value(frac);
+	std::cout << frac.numerator << "\n";
+	
 	pass_by_reference(&frac);
 	std::cout << frac.numerator << "\n";
+	Fraction* ptr = pass_by_reference(&frac);
+	ptr -> denominator = 16.123;
+	std::cout << frac.denominator << "\n";
 }
