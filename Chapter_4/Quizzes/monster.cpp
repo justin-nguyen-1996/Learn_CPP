@@ -23,5 +23,8 @@
 #include "monster.h"
 
 int main() {
-	
+	Monster Torg = new Monster {"Torg", 145};
+	Monster Blurp = new Monster {"Blurp", 23};
+
+	return 0;
 }
