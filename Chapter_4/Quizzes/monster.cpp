@@ -21,10 +21,11 @@
 
 #include <iostream>
 #include "monster.h"
+#include <string>
 
 int main() {
-	Monster Torg = new Monster {"Torg", 145};
-	Monster Blurp = new Monster {"Blurp", 23};
+	Monster Torg {Monster_t::OGRE, "Torg", 145};
+	Monster Blurp {Monster_t::SLIME, "Blurp", 23};
 
 	return 0;
 }
