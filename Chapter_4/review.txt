@@ -19,4 +19,5 @@
 14. Put global constants, enums, structs in a .h file 
 15. Auto keyword
 16. Trailing Return Syntax
-
+17. Nicely worded, comprehensive review
+     --> http://www.learncpp.com/cpp-tutorial/4-x-chapter-4-comprehensive-quiz/
