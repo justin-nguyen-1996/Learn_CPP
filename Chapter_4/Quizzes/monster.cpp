@@ -24,16 +24,17 @@
 #include <string>
 
 std::string getMonsterTypeString(Monster monster) {
-	if (monster.type == OGRE) { return "Ogre"; }
-	else if (monster.type == DRAGON) { return "Dragon"; }
-	else if (monster.type == ORC) { return "Orc"; }
-	else if (monster.type == GIANT_SPIDER) { return "Giant Spider"; }
-	else if (monster.type == SLIME) { return "Slime"; }
+	if (monster.type == Monster_t::OGRE) { return "Ogre"; }
+	else if (monster.type == Monster_t::DRAGON) { return "Dragon"; }
+	else if (monster.type == Monster_t::ORC) { return "Orc"; }
+	else if (monster.type == Monster_t::SLIME) { return "Slime"; }
+	else { return "Giant Spider"; }
 }
 
 void printMonster(Monster monster) {
-	std::cout << "This " << monster.type << " is named " <<
-		monster.name << " and has " << monster.health << " health\n";
+	std::cout << "This " << getMonsterTypeString(monster) << 
+		" is named " << monster.name << " and has " << 
+		monster.health << " health" << "\n";
 }
 
 int main() {
