@@ -7,16 +7,17 @@
 #define MONSTER_H
 
 struct Monster {
+	Monster_t type;
 	string name;
 	int health;
 };
 
 enum class Monster_t {
-	Monster ogre,
-	Monster dragon,
-	Monster orc,
-	Monster giant_spider,
-	Monster slime
+	string "ogre",
+	string "dragon",
+	string "orc",
+	string "giant_spider",
+	string "slime"
 };
 
 #endif 
