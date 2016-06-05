@@ -14,4 +14,7 @@
 	--> can help increase but also decrease readability
 	--> only use when the var type is obvious or not important
 
-
+2. Trailing Return Syntax
+	--> return type is specified after the function prototype
+	--> instead of  int add(int x, int y);
+	--> can do this atuo add(int x, int y) -> int;
