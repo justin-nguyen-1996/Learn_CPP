@@ -10,3 +10,5 @@ struct Fraction {
 	double numerator;
 	double denominator;
 };
+
+#endif
