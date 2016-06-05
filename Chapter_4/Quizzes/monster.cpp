@@ -23,9 +23,25 @@
 #include "monster.h"
 #include <string>
 
+std::string getMonsterTypeString(Monster monster) {
+	if (monster.type == OGRE) { return "Ogre"; }
+	else if (monster.type == DRAGON) { return "Dragon"; }
+	else if (monster.type == ORC) { return "Orc"; }
+	else if (monster.type == GIANT_SPIDER) { return "Giant Spider"; }
+	else if (monster.type == SLIME) { return "Slime"; }
+}
+
+void printMonster(Monster monster) {
+	std::cout << "This " << monster.type << " is named " <<
+		monster.name << " and has " << monster.health << " health\n";
+}
+
 int main() {
 	Monster Torg {Monster_t::OGRE, "Torg", 145};
 	Monster Blurp {Monster_t::SLIME, "Blurp", 23};
+
+	printMonster(Torg);
+	printMonster(Blurp);
 
 	return 0;
 }
