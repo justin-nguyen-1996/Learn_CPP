@@ -14,4 +14,4 @@
 	--> can help increase but also decrease readability
 	--> only use when the var type is obvious or not important
 
-2. 
+
