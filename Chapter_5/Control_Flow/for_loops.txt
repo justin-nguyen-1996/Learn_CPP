@@ -1,0 +1,17 @@
+/*
+    Author:  Justin
+    Created: 6/7/2016
+*/
+
+1. for (;;) {
+        statements;
+   }
+    
+    --> same as an infinite loop
+    --> same as while(1)
+    
+2. Mutliple Declarations
+    --> can change multiple loop variables
+    --> int iii, jjj;
+        for (iii=0, jjj=9; iii < 10; ++iii, --jjj)
+            cout << iii << " " << jjj << endl;
