@@ -19,6 +19,22 @@ std::string getAnimalName(Animal_t animal) {
         }
 }
 
+void printNumberOfLegs(Animal_t animal) {
+        int legs;
+        switch(animal) {
+                case 0: legs = 4; break;
+                case 1: legs = 2; break;
+                case 2: legs = 4; break;
+                case Animal_t::CAT: legs = 4; break;
+                case 4: legs = 4; break;
+                case 5: legs = 2; break;
+                default: legs = 0; break;
+        }
+        
+        std::cout << "A " << getAnimalName(animal) << " has " <<
+                legs << " legs.\n";
+}
+
 int main() {
         
 }
