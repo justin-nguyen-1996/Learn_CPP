@@ -17,3 +17,9 @@
 	--> if statement
 	--> switch statement
 
+4. Loops
+	--> while loops
+	--> do while loops
+	--> for loops
+
+5. Exceptions
