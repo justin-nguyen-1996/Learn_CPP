@@ -36,5 +36,8 @@ void printNumberOfLegs(Animal_t animal) {
 }
 
 int main() {
-        
+        auto cat = Animal_t::CAT;
+        printNumberOfLegs(cat);
+        printNumberOfLegs(Animal_t::CHICKEN);
 }
+
