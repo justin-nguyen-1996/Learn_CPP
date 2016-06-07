@@ -8,4 +8,11 @@
     --> must have function scope
         --> goto statement and label must be in the same function
     
-    
+    --> e.g.
+    int main() {
+        std::cout << "abc\n";
+        goto next;
+        std::cout << "this statement was skipped";
+    next:
+        std::cout << "here I am\n"; 
+    }
