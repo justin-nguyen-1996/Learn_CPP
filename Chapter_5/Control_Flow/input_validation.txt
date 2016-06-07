@@ -1,0 +1,12 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/7/2016
+*/
+
+1. Four Main Input Errors
+    --> Meaningless Input (expecting a,b,c but received d)
+        (program doesn't handle this case)
+    --> Extra Input (expecting one character, but received two chars)
+    --> Numerical Value Overflowed (gave a number too large or small)
+    --> Mismatched Data (expecting an int, but given a string)
+    
