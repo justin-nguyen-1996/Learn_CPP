@@ -1,0 +1,11 @@
+/*
+    Author:  Justin
+    Created: 6/7/2016
+*/
+
+1. for (;;)
+    statement;
+    
+    --> same as an infinite loop
+    --> same as while(1)
+    
