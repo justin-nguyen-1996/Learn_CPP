@@ -21,3 +21,13 @@
     --> time(0) --> produces the time's second hand number
     --> most people seed their PRNG with this
     
+4. Good PRNGs
+    --> need roughly uniform distribution (no bias)
+    --> next generated value should be unpredictable
+        (num += 1 is uniform but not random)
+    --> good dimensional distribution
+        (don't return all random highs or all random lows)
+        (might be uniform and unpredictable, but still biased)
+    --> long period for all generated values
+        (doesn't repeat cycle of values for a good amount of time)
+        
