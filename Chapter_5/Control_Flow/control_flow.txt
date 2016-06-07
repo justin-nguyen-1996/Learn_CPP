@@ -8,3 +8,4 @@
 	--> exit(int num)
 	--> exit(0)
 
+2. 
