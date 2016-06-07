@@ -31,3 +31,10 @@
     --> long period for all generated values
         (doesn't repeat cycle of values for a good amount of time)
         
+5. Mersenne Twister
+    --> rand() is a mediocre number generator
+    --> #include <random>
+    --> std::random_device rd; // Use a hardware entropy source if available, otherwise use PRNG
+    --> std::mt19937 mersenne(rd()); // initialize our mersenne twister with a random seed
+    --> mersenne() is much better (larger range and period)
+    
