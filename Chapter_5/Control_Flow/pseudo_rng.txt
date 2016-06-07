@@ -1,0 +1,23 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/7/2016
+*/
+
+1. Pseudo Random Number Generation (PRNG)
+    --> computers can't actually create random values/events
+        (everything is a zero or one)
+    --> use alogorithms and complex number generation to simulate "randomness"
+    --> take a seed and perform multiple mathematical operations on it
+    --> each number is generated from the previous number in a deterministic way
+        --> given any starting seed number, PRNGs will always generate the 
+            same sequence of numbers from that seed
+    
+2. srand() and rand()
+    --> #include <cstdlib>
+    --> srand(int seed); --> seeds your Pseudo RNG algorithm
+    --> rand(); --> produces a "random" number
+
+3. #include <ctime>
+    --> time(0) --> produces the time's second hand number
+    --> most people seed their PRNG with this
+    
