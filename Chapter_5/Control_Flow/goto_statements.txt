@@ -1,0 +1,11 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/7/2016
+*/
+
+1. Goto Statements
+    --> consists of goto command and a label
+    --> must have function scope
+        --> goto statement and label must be in the same function
+    
+    
