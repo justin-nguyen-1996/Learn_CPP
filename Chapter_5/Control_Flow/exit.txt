@@ -1,0 +1,10 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/6/2016
+*/
+
+1. Halt
+	--> forces the program to stop
+	--> exit(int num)
+	--> exit(0)
+
