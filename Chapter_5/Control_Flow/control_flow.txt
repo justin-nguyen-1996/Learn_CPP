@@ -8,4 +8,12 @@
 	--> exit(int num)
 	--> exit(0)
 
-2. 
+2. Jumps
+	--> goto
+	--> break
+	--> continue
+
+3. Conditional Branch
+	--> if statement
+	--> switch statement
+
