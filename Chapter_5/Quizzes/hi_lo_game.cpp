@@ -62,6 +62,7 @@ void runGame(Guess_Status* guess_status) {
     ///// temp for debugging, remove line below
     std::cout << "Real Guess: " << REAL_GUESS << "\n";
 
+    *guess_status = Guess_Status::INCORRECT;
     int guess_count = 1;
     /* game engine loop */
     while (guess_count <= MAX_GUESSES) {
@@ -98,16 +99,21 @@ int main() {
         guess_status == Guess_Status::CORRECT ? std::cout << "Correct! You win!\n" :
                                                 std::cout << "Sorry, you lose.\n";
 
-        std::cout << "Would you like to play again (y/n)? ";
-        char play_again_status;
-        std::cin >> play_again_status;
-        testBadInput();
+        while (1) {
+            std::cout << "Would you like to play again (y/n)? ";
+            char play_again_status;
+            std::cin >> play_again_status;
+            testBadInput();
 
-        if (play_again_status == 'n' || play_again_status == 'N'){
-            break;
+            if (play_again_status == 'n' || play_again_status == 'N'){
+                 exit(0);
+            } else if (play_again_status == 'y' || play_again_status == 'Y') {
+                 break;
+            }
         }
     }
 
     return 0;
 }
+
 
