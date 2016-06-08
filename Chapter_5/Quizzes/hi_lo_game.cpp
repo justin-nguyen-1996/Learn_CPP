@@ -28,27 +28,53 @@
     Sorry, you lose.  The correct number was 49.
 */
 
+/*
+ *     Author:  Justin Nguyen
+ *         Created: 6/8/2016
+ *         */
+
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 
 enum class Guess_Status {
-    LOW,
-    HIGH,
-    CORRECT
+        LOW,
+        HIGH,
+        CORRECT,
+        VALID,
+        INVALID
 };
 
-int main() {
-    std::cout << "Let's play a game. I'm thinking of a number from 1-100." <<
-        "You have 7 tries to guess what it is.\n";
+Guess_Status testBadInput() {
+        if (std::cin.fail()) {
+                std::cin.clear();
+                std::cin.ignore(32767, '\n');
+                std::cout << "Bad input. Give me a number from 1-100\n";
+                return Guess_Status::INVALID;
+        }
 
-    int guess_count = 1;
-    while (1) {
-        std::cout << "Guess #" << guess_count << ": ";
-        static int guess;
-        std::cin >> guess;
-        testBadInput();
-        testGuess(guess);
-        guess_count += 1;
-    }
+        std::cin.ignore(32767, '\n');
+        return Guess_Status::VALID;
 }
+
+int main() {
+        std::cout << "Let's play a game. I'm thinking of a number from 1-100." <<
+                "You have 7 tries to guess what it is.\n";
+
+        srand(time(0));
+        final const int REAL_GUESS = rand();
+
+        int guess_count = 1;
+        while (1) {
+                std::cout << "Guess #" << guess_count << ": ";
+                static int guess;
+                std::cin >> guess;
+
+                testBadInput();
+                testGuess(guess, REAL_GUESS);
+
+                guess_count += 1;
+        }
+}
+
 
