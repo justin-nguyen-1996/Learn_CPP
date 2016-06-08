@@ -75,14 +75,21 @@ int main() {
                 if (testBadInput() == Guess_Status::INVALID) {
                         std::cout << "Bad input. Give me a number from 1-100\n";
                         continue;
-                } else {
-
                 }
 
-                //testGuess(guess, REAL_GUESS);
+                /* test if the guess is low, high, or correct */
+                if (guess < REAL_GUESS) {
+                        std::cout << "Your guess is too low.\n";
+                } else if (guess > REAL_GUESS) {
+                        std::cout << "Your guess is too high.\n";
+                } else {
+                        break;
+                }
 
                 guess_count += 1;
         }
-}
 
+        std::cout << "Correct! You win!\n";
+        std::cout << "Would you like to play again (y/n)? ";
+}
 
