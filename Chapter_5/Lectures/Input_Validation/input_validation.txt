@@ -40,4 +40,11 @@
             the '\n' character is removed
     --> use this to ignore extra input (call after every std::cin call)
     
-3. 
+3. Getting Back to Normal std::cin Mode
+    --> once an extraction fails, std::cin goes into
+        "failure mode" and won't extract further input
+    --> so get back into normal mode:
+        if (std::cin.fail()) { // did extraction fail?
+            std::cin.clear(); // return to normal mode
+            std::cin.ignore(32767, '\n'); // clear bad input
+        }
