@@ -3,10 +3,30 @@
     Created: 6/7/2016
 */
 
+0. Extraction Operator (>>)
+    --> How extraction from input buffer works
+        (buffer holds input while input is waiting to be extracted)
+        
+    --> If there is data already in the input buffer, 
+        that data is used for extraction.
+    --> If the input buffer contains no data, the user is asked to 
+        input data for extraction (this happens most of the time)
+    --> When the user hits enter, a ‘\n’ character will be placed in the input buffer.
+    --> Extraction operator ">>" extracts as much data from the 
+        input buffer as it can into the variable (ignoring any 
+        leading whitespace characters, such as spaces, tabs, or ‘\n’).
+    --> Any data that can not be extracted is 
+        left in the input buffer for the next extraction.
+
+Extraction succeeds if at least one character can be extracted from the input buffer.
+
 1. Four Main Input Errors
     --> Meaningless Input (expecting a,b,c but received d)
         (program doesn't handle this case)
+            --> if/else statement covers this 
+                (if bad input: print error message and ask for new input)
     --> Extra Input (expecting one character, but received two chars)
+            --> std::cin.ignore(32767,'\n') covers this
     --> Numerical Value Overflowed (gave a number too large or small)
     --> Mismatched Data (expecting an int, but given a string)
     
@@ -21,3 +41,4 @@
             the '\n' character is removed
     --> use this to ignore extra input (call after every std::cin call)
     
+3. 
