@@ -27,3 +27,28 @@
     .........
     Sorry, you lose.  The correct number was 49.
 */
+
+#include <iostream>
+#include <cstdlib>
+
+enum class Guess_Status {
+    LOW,
+    HIGH,
+    CORRECT
+};
+
+int main() {
+    std::cout << "Let's play a game. I'm thinking of a number from 1-100." <<
+        "You have 7 tries to guess what it is.\n";
+
+    int guess_count = 1;
+    while (1) {
+        std::cout << "Guess #" << guess_count << ": ";
+        static int guess;
+        std::cin >> guess;
+        testBadInput();
+        testGuess(guess);
+        guess_count += 1;
+    }
+}
+
