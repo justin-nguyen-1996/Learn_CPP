@@ -1,4 +1,4 @@
-OBJS = program.o
+OBJS = hi_lo.o
 EXE = hi_lo
 CFLAGS = -Wall -g -std=c++0x
 CPPFLAGS = -Wall -g -std=c++0x
