@@ -37,8 +37,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "program_constants.h"
-#include "program_enums.h"
+#include "hi_lo_constants.h"
+#include "hi_lo_enums.h"
 
 Guess_Status testBadInput() {
     if (std::cin.fail()) {
