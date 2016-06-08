@@ -57,11 +57,13 @@ Guess_Status testBadInput() {
 }
 
 int main() {
-        std::cout << "Let's play a game. I'm thinking of a number from 1-100." <<
+        std::cout << "Let's play a game. I'm thinking of a number from 1-100.\n" <<
                 "You have 7 tries to guess what it is.\n";
 
         srand(time(0));
-        final const int REAL_GUESS = rand();
+        const int REAL_GUESS = rand();
+        ///// temp for debugging, remove line below
+        std::cout << "Real Guess: " << REAL_GUESS << "\n";
 
         int guess_count = 1;
         while (1) {
@@ -74,7 +76,7 @@ int main() {
                         std::cout << "Bad input. Give me a number from 1-100\n";
                         continue;
                 } else {
-                        std::cout << "temp message: FAIL\n";
+
                 }
 
                 //testGuess(guess, REAL_GUESS);
@@ -82,4 +84,5 @@ int main() {
                 guess_count += 1;
         }
 }
+
 
