@@ -56,16 +56,19 @@ Guess_Status testBadInput() {
         return Guess_Status::VALID;
 }
 
-int main() {
+void runGame(Guess_Status* guess_status) {
         std::cout << "Let's play a game. I'm thinking of a number from 1-100.\n" <<
                 "You have 7 tries to guess what it is.\n";
 
-        srand(time(0));
-        const int REAL_GUESS = rand();
         ///// temp for debugging, remove line below
         std::cout << "Real Guess: " << REAL_GUESS << "\n";
 
+        /* determine correct answer */
+        srand(time(0));
+        const int REAL_GUESS = rand();
+
         int guess_count = 1;
+        /* game engine loop */
         while (1) {
                 std::cout << "Guess #" << guess_count << ": ";
                 static int guess;
@@ -83,13 +86,25 @@ int main() {
                 } else if (guess > REAL_GUESS) {
                         std::cout << "Your guess is too high.\n";
                 } else {
-                        break;
+                        *guess_status {Guess_Status::CORRECT};
+                        return;
                 }
 
                 guess_count += 1;
         }
-
-        std::cout << "Correct! You win!\n";
-        std::cout << "Would you like to play again (y/n)? ";
 }
+
+int main() {
+        /* start the game */
+        Guess_Status guess_status;
+        while (1) {
+                runGame(&guess_status);
+                guess_status ? std::cout << "Correct! You win!\n" :
+                               std::cout << "Sorry, you lose.\n";
+                std::cout << "Would you like to play again (y/n)? ";
+        }
+
+        return 0;
+}
+
 
