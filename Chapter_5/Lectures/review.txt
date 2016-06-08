@@ -5,9 +5,18 @@
 
 1. Multiple For Loop Declarations
     --> for (int a = 0, b = 0; a < 10; a += 1, b *= 2) {}
-
 2. Infinite For Loops
     --> for(;;) {}
-    
 3. Goto Statements
 4. PRNG (Pseudo Random Number Generation)
+    --> rand() and srand(), #include <cstdlib>
+5. Input Validation
+    --> Meaningless Input --> else statement
+    --> Extra Input --> std::cin.ignore(32767, '\n')
+    --> Mismatched Input --> std::cin.fail(), std::cin.clear(), std::cin.ignore(32767, '\n')
+    --> Numerical Overflow --> same fix as for extra input
+    
+    --> need std::cin.ignore for every input read
+    --> need std::cin.fail(), etc. for every non-char/string input read
+    --> need else statement for every if statement
+
