@@ -49,7 +49,6 @@ Guess_Status testBadInput() {
         if (std::cin.fail()) {
                 std::cin.clear();
                 std::cin.ignore(32767, '\n');
-                std::cout << "Bad input. Give me a number from 1-100\n";
                 return Guess_Status::INVALID;
         }
 
@@ -70,11 +69,17 @@ int main() {
                 static int guess;
                 std::cin >> guess;
 
-                testBadInput();
-                testGuess(guess, REAL_GUESS);
+                /* if bad input then ask for a new one */
+                if (testBadInput() == Guess_Status::INVALID) {
+                        std::cout << "Bad input. Give me a number from 1-100\n";
+                        continue;
+                } else {
+                        std::cout << "temp message: FAIL\n";
+                }
+
+                //testGuess(guess, REAL_GUESS);
 
                 guess_count += 1;
         }
 }
-
 
