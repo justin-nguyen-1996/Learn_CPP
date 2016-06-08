@@ -56,3 +56,13 @@
 4. Numerical Overflow
     --> "failure mode", same fix
     
+5. Things to Remember
+    --> need a std::cin.ignore(32767, '\n') for every input read
+    --> need an if (std::cin.fail()) and std::cin.clear(); std::cin.ignore(32767, '\n');
+        when storing input into non-char/string variable types
+        --> chars and strings can hold any input value
+        --> numerical data types (ints, doubles, etc) cannot, obviously
+        --> else statement still needs a std::cin.ignore(32767, '\n')
+    --> need else statement for every if statement (robustness)
+    
+    
