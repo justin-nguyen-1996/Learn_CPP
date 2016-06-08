@@ -29,94 +29,85 @@
 */
 
 /*
- *     Author:  Justin Nguyen
- *         Created: 6/8/2016
- *         */
+ *    Author:  Justin Nguyen
+ *    Created: 6/8/2016
+ *    
+ */
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
-enum class Guess_Status {
-        LOW,
-        HIGH,
-        CORRECT,
-        VALID,
-        INVALID
-};
+#include "program_constants.h"
+#include "program_enums.h"
 
 Guess_Status testBadInput() {
-        if (std::cin.fail()) {
-                std::cin.clear();
-                std::cin.ignore(32767, '\n');
-                return Guess_Status::INVALID;
-        }
-
+    if (std::cin.fail()) {
+        std::cin.clear();
         std::cin.ignore(32767, '\n');
-        return Guess_Status::VALID;
+        return Guess_Status::INVALID;
+    }
+
+    std::cin.ignore(32767, '\n');
+    return Guess_Status::VALID;
 }
 
 void runGame(Guess_Status* guess_status) {
-        std::cout << "Let's play a game. I'm thinking of a number from 1-100.\n" <<
-                "You have 7 tries to guess what it is.\n";
+    std::cout << "Let's play a game. I'm thinking of a number from 1-100.\n" <<
+        "You have 7 tries to guess what it is.\n";
 
-        ///// temp for debugging, remove line below
-        std::cout << "Real Guess: " << REAL_GUESS << "\n";
+    /* determine correct answer */
+    srand(time(0));
+    const int REAL_GUESS = rand() % GUESS_RANGE + GUESS_BASE;
 
-        /* determine correct answer */
-        srand(time(0));
-        const int REAL_GUESS = rand();
+    ///// temp for debugging, remove line below
+    std::cout << "Real Guess: " << REAL_GUESS << "\n";
 
-        ///// temp for debugging, remove line below
-        std::cout << "Real Guess: " << REAL_GUESS << "\n";
+    int guess_count = 1;
+    /* game engine loop */
+    while (guess_count <= MAX_GUESSES) {
+        std::cout << "Guess #" << guess_count << ": ";
+        static int guess;
+        std::cin >> guess;
 
-        int guess_count = 1;
-        /* game engine loop */
-        while (1) {
-                std::cout << "Guess #" << guess_count << ": ";
-                static int guess;
-                std::cin >> guess;
-
-                /* if bad input then ask for a new one */
-                if (testBadInput() == Guess_Status::INVALID) {
-                        std::cout << "Bad input. Give me a number from 1-100\n";
-                        continue;
-                }
-
-                /* test if the guess is low, high, or correct */
-                if (guess < REAL_GUESS) {
-                        std::cout << "Your guess is too low.\n";
-                } else if (guess > REAL_GUESS) {
-                        std::cout << "Your guess is too high.\n";
-                } else {
-                        *guess_status = Guess_Status::CORRECT;
-                        return;
-                }
-
-                guess_count += 1;
+        /* if bad input then ask for a new one */
+        if (testBadInput() == Guess_Status::INVALID) {
+            std::cout << "Bad input. Give me a number from 1-100\n";
+            continue;
         }
+
+        /* test if the guess is low, high, or correct */
+        if (guess < REAL_GUESS) {
+            std::cout << "Your guess is too low.\n";
+        } else if (guess > REAL_GUESS) {
+            std::cout << "Your guess is too high.\n";
+        } else {
+            *guess_status = Guess_Status::CORRECT;
+            return;
+        }
+
+        guess_count += 1;
+    }
 }
 
 int main() {
-        /* start the game */
-        Guess_Status guess_status;
-        while (1) {
-                runGame(&guess_status);
+    /* start the game */
+    Guess_Status guess_status;
+    while (1) {
+        runGame(&guess_status);
 
-                guess_status == Guess_Status::CORRECT ? std::cout << "Correct! You win!\n" :
-                                                        std::cout << "Sorry, you lose.\n";
+        guess_status == Guess_Status::CORRECT ? std::cout << "Correct! You win!\n" :
+                                                std::cout << "Sorry, you lose.\n";
 
-                std::cout << "Would you like to play again (y/n)? ";
-                char play_again_status;
-                std::cin >> play_again_status;
-                testBadInput();
+        std::cout << "Would you like to play again (y/n)? ";
+        char play_again_status;
+        std::cin >> play_again_status;
+        testBadInput();
 
-                if (play_again_status == 'n' || play_again_status == 'N'){
-                        break;
-                }
+        if (play_again_status == 'n' || play_again_status == 'N'){
+            break;
         }
+    }
 
-        return 0;
+    return 0;
 }
-
 
