@@ -27,7 +27,11 @@
     --> Extra Input (expecting one character, but received two chars)
             --> std::cin.ignore(32767,'\n') covers this
     --> Numerical Value Overflowed (gave a number too large or small)
+            --> std::cin goes into failure mode, fix with solution below
     --> Mismatched Data (expecting an int, but given a string)
+        --> if (std::cin.fail()) {
+                std::cin.clear(); std::cin.ignore(32767, '\n')
+            }
     
 2. Clearing the Input Buffer
     --> std::cin
@@ -48,3 +52,7 @@
             std::cin.clear(); // return to normal mode
             std::cin.ignore(32767, '\n'); // clear bad input
         }
+        
+4. Numerical Overflow
+    --> "failure mode", same fix
+    
