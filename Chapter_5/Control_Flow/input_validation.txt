@@ -1,0 +1,23 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/7/2016
+*/
+
+1. Four Main Input Errors
+    --> Meaningless Input (expecting a,b,c but received d)
+        (program doesn't handle this case)
+    --> Extra Input (expecting one character, but received two chars)
+    --> Numerical Value Overflowed (gave a number too large or small)
+    --> Mismatched Data (expecting an int, but given a string)
+    
+2. Clearing the Input Buffer
+    --> std::cin
+    --> input is stored into a buffer and extracted with << operator
+    --> anything not extraced remains in the buffer
+        (which can cause problems)
+    --> clear the buffer using std::cin.ignore
+        std::cin.ignore(32767, '\n')
+        --> clear up to 32767 characters in the buffer until
+            the '\n' character is removed
+    --> use this to ignore extra input (call after every std::cin call)
+    

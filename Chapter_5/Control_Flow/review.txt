@@ -1,0 +1,13 @@
+/*
+    Author:  Justin
+    Created: 6/7/2016
+*/
+
+1. Multiple For Loop Declarations
+    --> for (int a = 0, b = 0; a < 10; a += 1, b *= 2) {}
+
+2. Infinite For Loops
+    --> for(;;) {}
+    
+3. Goto Statements
+4. PRNG (Pseudo Random Number Generation)
