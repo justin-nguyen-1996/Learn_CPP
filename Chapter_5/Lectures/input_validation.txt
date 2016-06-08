@@ -14,11 +14,10 @@
     --> When the user hits enter, a ‘\n’ character will be placed in the input buffer.
     --> Extraction operator ">>" extracts as much data from the 
         input buffer as it can into the variable (ignoring any 
-        leading whitespace characters, such as spaces, tabs, or ‘\n’).
+        leading whitespace characters, such as spaces, tabs, or ‘\n’)
     --> Any data that can not be extracted is 
         left in the input buffer for the next extraction.
-
-Extraction succeeds if at least one character can be extracted from the input buffer.
+    --> Extraction succeeds if at least one character can be extracted
 
 1. Four Main Input Errors
     --> Meaningless Input (expecting a,b,c but received d)
