@@ -67,6 +67,9 @@ void runGame(Guess_Status* guess_status) {
         srand(time(0));
         const int REAL_GUESS = rand();
 
+        ///// temp for debugging, remove line below
+        std::cout << "Real Guess: " << REAL_GUESS << "\n";
+
         int guess_count = 1;
         /* game engine loop */
         while (1) {
@@ -86,7 +89,7 @@ void runGame(Guess_Status* guess_status) {
                 } else if (guess > REAL_GUESS) {
                         std::cout << "Your guess is too high.\n";
                 } else {
-                        *guess_status {Guess_Status::CORRECT};
+                        *guess_status = Guess_Status::CORRECT;
                         return;
                 }
 
@@ -99,9 +102,18 @@ int main() {
         Guess_Status guess_status;
         while (1) {
                 runGame(&guess_status);
-                guess_status ? std::cout << "Correct! You win!\n" :
-                               std::cout << "Sorry, you lose.\n";
+
+                guess_status == Guess_Status::CORRECT ? std::cout << "Correct! You win!\n" :
+                                                        std::cout << "Sorry, you lose.\n";
+
                 std::cout << "Would you like to play again (y/n)? ";
+                char play_again_status;
+                std::cin >> play_again_status;
+                testBadInput();
+
+                if (play_again_status == 'n' || play_again_status == 'N'){
+                        break;
+                }
         }
 
         return 0;
