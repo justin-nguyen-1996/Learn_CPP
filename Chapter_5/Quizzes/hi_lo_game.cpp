@@ -106,10 +106,8 @@ int main() {
         testBadInput();
 
         if (play_again_status == 'n' || play_again_status == 'N'){
-             exit(0);
-        } else if (play_again_status == 'y' || play_again_status == 'Y') {
              break;
-        }
+        } else if (play_again_status == 'y' || play_again_status == 'Y') {} // keep playing
     }
 
     return 0;
