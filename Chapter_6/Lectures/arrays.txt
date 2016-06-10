@@ -12,4 +12,5 @@
     --> all elements not specified in the initializer list are set to zero
     --> int array[4] = {} // array = {0, 0, 0, 0}
     
-3. 
+3. Omitted Array Size
+    --> int array[] = {1, 2, 3, 4}; // compiler knows array size, works
