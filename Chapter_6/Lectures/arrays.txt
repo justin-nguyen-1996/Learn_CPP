@@ -1,0 +1,11 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/10/2016
+*/
+
+1. Fixed Arrays
+    --> array size must be a compile-time constant (not a run-time constant)
+    --> int array[4]; // works
+    --> int x = 4; int array[x]; // does not work
+    
+    
