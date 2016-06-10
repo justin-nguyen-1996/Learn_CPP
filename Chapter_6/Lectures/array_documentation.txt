@@ -1,0 +1,44 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/10/2016
+*/
+
+1. Array Documentation
+
+    IF USING ENUMS
+
+    enum StudentNames {
+        KENNY,
+        KYLE,
+        STAN,
+        BUTTERS,
+        CARTMAN,
+        MAX_STUDENTS // good to have, auto "resizes" the array
+    };
+ 
+    int main() {
+        int testScores[MAX_STUDENTS];
+        testScores[STAN] = 76; // better than testScores[2] = 76;
+     
+        return 0;
+    }
+    
+    IF USING ENUM CLASSES
+    
+    int main() {
+        testScores[static_cast<int> StudentNames::STAN] = 76 // really annoying
+    }
+    
+    TRY USING ENUMS INSIDE A NAMESPACE
+    
+    namespace StudentNames {
+        enum Student Names {
+            KENNY, // etc.
+        }
+    }
+    
+    int main() {
+        testScores[StudentNames::STAN] = 76;
+    }
+    
+    
