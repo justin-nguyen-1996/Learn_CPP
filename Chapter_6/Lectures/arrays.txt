@@ -53,5 +53,9 @@
         testScores[StudentNames::STAN] = 76;
     }
     
+5. Number of Array Elements Trick
+    --> int array[4];
+    --> int array_size = sizeof(array) / sizeof(array[0]);
     
-    
+6. Passing Arrays as Arguments
+    --> 
