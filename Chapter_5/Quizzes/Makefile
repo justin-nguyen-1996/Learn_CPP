@@ -1,4 +1,4 @@
-OBJS = hi_lo.o
+OBJS = hi_lo_game.o
 EXE = hi_lo
 CFLAGS = -Wall -g -std=c++0x
 CPPFLAGS = -Wall -g -std=c++0x
