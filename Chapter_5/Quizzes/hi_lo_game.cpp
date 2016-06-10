@@ -93,25 +93,25 @@ void runGame(Guess_Status* guess_status) {
 int main() {
     /* start the game */
     Guess_Status guess_status;
-
     while (1) {
         runGame(&guess_status);
 
         guess_status == Guess_Status::CORRECT ? std::cout << "Correct! You win!\n" :
-                                            std::cout << "Sorry, you lose.\n";
+                                                std::cout << "Sorry, you lose.\n";
 
-        std::cout << "Would you like to play again (y/n)? ";
-        char play_again_status;
-        std::cin >> play_again_status;
-        testBadInput();
+        while (1) {
+            std::cout << "Would you like to play again (y/n)? ";
+            char play_again_status;
+            std::cin >> play_again_status;
+            testBadInput();
 
-        if (play_again_status == 'n' || play_again_status == 'N'){
-             break;
-        } 
-        else if (play_again_status == 'y' || play_again_status == 'Y') {} // keep playing
-        else { std::cout << "Bad input. Enter 'y' or 'n'\n"; }
-        
-    }
+            if (play_again_status == 'n' || play_again_status == 'N'){
+                 exit(0);
+            } else if (play_again_status == 'y' || play_again_status == 'Y') {
+                 break;
+            }
+        }
+    } 
 
     return 0;
 }
