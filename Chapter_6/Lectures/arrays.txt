@@ -20,4 +20,9 @@
     --> int array_size = sizeof(array) / sizeof(array[0]);
     
 5. Passing Arrays as Arguments
-    --> 
+    --> parameter name can have an index number, doesn't mean anything
+        --> int param_example (int array[5])
+        --> int param_example (int array[])
+        --> int param_example (int* array)
+        --> all mean the same thing
+        
