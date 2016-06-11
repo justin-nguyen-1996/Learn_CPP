@@ -11,6 +11,7 @@ int main() {
 	int array_size = sizeof(array) / sizeof(array[0]);
 
 	for (int i = 0; i < array_size - 1; i += 1) {
+		int smallest_index = i;
 		for (int j = i + 1; j < array_size; j += 1) {
 			if (array[j] < array[smallest_index]) {
 				smallest_index = j;
