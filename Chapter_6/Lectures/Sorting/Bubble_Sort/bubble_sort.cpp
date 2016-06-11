@@ -15,7 +15,7 @@ int main() {
 			cur_i_low < array_size - 1; cur_i_low += 1) {
 			
 			int cur_i_hi = cur_i_low + 1;
-			if (cur_i_low > cur_i_hi) {
+			if (array[cur_i_low] > array[cur_i_hi]) {
 				std::swap(array[cur_i_low], array[cur_i_hi]);
 			}
 		}
@@ -27,4 +27,5 @@ int main() {
 		std::cout << el;
 		comma_space = ", ";
 	}
+	std::cout << "\n";
 }
