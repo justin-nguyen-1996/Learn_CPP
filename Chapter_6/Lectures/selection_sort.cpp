@@ -19,7 +19,7 @@ int main() {
 		}
 	}
 
-	std::comma_space = "";
+	std::string comma_space = "";
 	for (x : array) {
 		std::cout << comma_space;
 		std::cout << x;
