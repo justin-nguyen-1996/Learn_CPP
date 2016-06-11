@@ -4,10 +4,10 @@
 */
 
 #include <iostream>
-#include <utitlity>
+#include <utility>
 
 int main() {
-	int array {6, 3, 2, 9, 7, 1, 5, 4, 8};
+	int array[] = {6, 3, 2, 9, 7, 1, 5, 4, 8};
 	int array_size = sizeof(array) / sizeof(array[0]);
 
 	for (int start_i = 0; start_i < array_size - 1; start_i += 1) {
@@ -21,7 +21,7 @@ int main() {
 		}
 	}
 
-	const std::string comma_space;
+	std::string comma_space;
 	for (el : array) {
 		std::cout << comma_space;
 		std::cout << el;
