@@ -20,4 +20,11 @@ int main() {
 			}
 		}
 	}
+
+	const std::string comma_space;
+	for (el : array) {
+		std::cout << comma_space;
+		std::cout << el;
+		comma_space = ", ";
+	}
 }
