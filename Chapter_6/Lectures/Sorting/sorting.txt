@@ -1,0 +1,9 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/10/2016
+*/
+
+1. Swap Function
+    --> #include <utility>
+    --> std::swap(a, b);
+
