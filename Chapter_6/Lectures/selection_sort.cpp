@@ -12,9 +12,16 @@ int main() {
 
 	for (int i = 0; i < array_size - 1; i += 1) {
 		for (int j = i + 1; j < array_size; j += 1) {
-			if (array[i] < array[smallest_index]) {
-
+			if (array[j] < array[smallest_index]) {
+				smallest_index = j;
 			}
 		}
+	}
+
+	std::comma_space = "";
+	for (x : array) {
+		std::cout << comma_space;
+		std::cout << x;
+		comma_space = ", ";
 	}
 }
