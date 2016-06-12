@@ -8,13 +8,24 @@
 
 void bubbleSort(int array[], int array_size) {
 
+	bool is_swapped;
+
 	for (int count = 0; count < array_size - 1; count += 1) {
+		is_swapped = false;
 		for (int lo_i = 0; lo_i < array_size - count - 1; lo_i += 1) {
 
 			int hi_i = lo_i + 1;
 			if (array[lo_i] > array[hi_i]) {
 				std::swap(array[lo_i], array[hi_i]);
+				is_swapped = true;
 			}
+		}
+
+		if (! is_swapped) { 
+			// count + 1 bc indexing at zero
+			std::cout << "Early termination on iteration " << 
+				(count + 1) << "\n"; 
+			return;
 		}
 	}
 }
