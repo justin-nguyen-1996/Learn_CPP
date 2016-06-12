@@ -14,7 +14,6 @@ void bubbleSort(int array[], int array_size) {
 			int hi_i = lo_i + 1;
 			if (array[lo_i] > array[hi_i]) {
 				std::swap(array[lo_i], array[hi_i]);
-				std::cout << "d:";
 			}
 		}
 	}
@@ -39,4 +38,9 @@ int main() {
 	bubbleSort(array, array_size);
 	printArray(array, array_size);
 
+	int array2[] = {-3, 14, 3, -20, 18, 17, 5, 5};
+	array_size = sizeof(array) / sizeof(array[0]);
+
+	bubbleSort(array2, array_size);
+	printArray(array2, array_size);
 }
