@@ -1,0 +1,13 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/13/2016
+*/
+
+1. Null Pointers
+    --> null pointers evaluate to zero
+    --> int* ptr = nullptr; // use nullptr keyword
+    
+    --> std::nullptr_t
+    --> can only hold one value: nullptr
+    --> useful if trying to force a value to be a nullptr
+    
