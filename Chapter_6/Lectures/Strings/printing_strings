@@ -1,0 +1,17 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/13/2016
+*/
+
+1. Printing Strings
+    --> std::cout tries to print you var based on the var's type
+    
+    int nArray[5] = { 9, 7, 5, 3, 1 };
+    char cArray[] = "Hello!";
+    const char *name = "Alex";
+ 
+    std::cout << nArray << '\n'; // nArray will decay to type int* (003AF738)
+    std::cout << cArray << '\n'; // cArray will decay to type char* (Hello!)
+    std::cout << name << '\n'; // name is already type char* (Alex)
+    
+    
