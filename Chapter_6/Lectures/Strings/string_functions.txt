@@ -27,3 +27,9 @@
         (practice above is good, assign last index with zero after fxn call)
     --> copies in zeroes if the destination is bigger than the source
 
+3. String Length
+    --> strlen(string_var)
+    --> char name[20] = "FOUR";
+        sizeof(name) // 20
+        strlen(name) // 4
+
