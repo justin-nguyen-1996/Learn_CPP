@@ -14,4 +14,10 @@
     std::cout << cArray << '\n'; // cArray will decay to type char* (Hello!)
     std::cout << name << '\n'; // name is already type char* (Alex)
     
-    
+2. Problems with Printing Strings
+    char c = 'Q';
+    std::cout << &c;
+
+    --> type of &c is char*
+    --> std::cout tries to print a string, not an address
+    --> prints out garbage value
