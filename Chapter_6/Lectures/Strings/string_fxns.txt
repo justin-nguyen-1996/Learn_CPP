@@ -1,0 +1,14 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/12/2016
+*/
+
+1. Reading String Inputs
+    --> std::cin.getLine(var, num_chars);
+    
+    char name[255]; // declare array large enough to hold 255 characters
+    std::cout << "Enter your name: ";
+    std::cin.getLin(name, 254);
+    std::cout << "You entered: " << name << '\n';
+
+2. 
