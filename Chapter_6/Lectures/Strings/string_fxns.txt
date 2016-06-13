@@ -10,5 +10,7 @@
     std::cout << "Enter your name: ";
     std::cin.getLin(name, 254);
     std::cout << "You entered: " << name << '\n';
+    
+    --> reads (num_chars - 1) into var and appends a null zero
 
 2. 
