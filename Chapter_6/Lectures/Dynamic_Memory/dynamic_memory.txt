@@ -9,3 +9,7 @@
         --> waste memory
         --> overflow stack and buffer overflows
     
+2. New Keyword
+    --> int* ptr = new int;
+    --> new asks the operating system for an amount of memory
+        from the heap and returns the address of this allocated memory
