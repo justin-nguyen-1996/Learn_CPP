@@ -46,5 +46,11 @@
         int *ptr = new int;
     }
 
-    
+    int value = 5;
+    int *ptr = new int; // allocate memory
+    ptr = &value; // old address lost, memory leak results
+
+    int *ptr = new int;
+    ptr = new int; // old address lost, memory leak results
+
     
