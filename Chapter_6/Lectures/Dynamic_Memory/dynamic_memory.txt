@@ -33,3 +33,11 @@
 6. Deleting Null Pointer
     --> has no effect
     
+7. Memory Leaks
+    --> when you don't delete your dynamically allocated memory
+        --> (not enough "deletes" to match your "news")
+        --> non-freed memory cannot be reused or reallocated
+            (this will eventually eat up the available memory)
+    --> you run out of memory (hence your memory is "leaking")
+    
+    
