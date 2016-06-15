@@ -53,4 +53,12 @@
     int *ptr = new int;
     ptr = new int; // old address lost, memory leak results
 
+8. Scope of Dynamic Memory
+    --> dynamically allocated memory has no scope
+        --> stays allocated until it is explicitly deallocated or until the program ends
+    --> the pointers used to hold dynamically allocated memory addresses
+        follow the scoping rules of normal variables
+        --> the memory is not scoped, but the pointer variable is
+        --> if the variable goes out of scope before you deallocate the memory,
+            you will have a memory leak since there is no way to access that memory location
     
