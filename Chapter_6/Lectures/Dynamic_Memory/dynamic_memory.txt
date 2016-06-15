@@ -11,5 +11,11 @@
     
 2. New Keyword
     --> int* ptr = new int;
+    --> int* ptr = new int {6}; // initializes that memory to 6
     --> new asks the operating system for an amount of memory
         from the heap and returns the address of this allocated memory
+
+3. Delete Keyword
+    --> removes the pointer to that address (doesn't clear the memory)
+    --> using delete on non-dynamically allocated memory can cause bad things
+    
