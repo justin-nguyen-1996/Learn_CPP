@@ -30,5 +30,6 @@
     --> int* ptr = new (std::nothrow) int; // returns nullptr instead of exception
     --> best practice is to check for nullptr after every allocation
     
-
+6. Deleting Null Pointer
+    --> has no effect
     
