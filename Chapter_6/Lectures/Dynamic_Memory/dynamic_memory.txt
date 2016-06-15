@@ -3,3 +3,9 @@
     Created: 6/14/2016
 */
 
+1. Dynamic Memory Allocation
+    --> different from static and automatic memory allocation
+    --> need if don't want to:
+        --> waste memory
+        --> overflow stack and buffer overflows
+    
