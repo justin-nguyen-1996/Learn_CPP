@@ -38,6 +38,13 @@
         --> (not enough "deletes" to match your "news")
         --> non-freed memory cannot be reused or reallocated
             (this will eventually eat up the available memory)
+            (program runs more slowly until it crashes)
     --> you run out of memory (hence your memory is "leaking")
+    --> Examples of memory leaks
+
+    void doSomething() {
+        int *ptr = new int;
+    }
+
     
     
