@@ -16,6 +16,12 @@
         from the heap and returns the address of this allocated memory
 
 3. Delete Keyword
-    --> removes the pointer to that address (doesn't clear the memory)
+    --> returns the memory to the operating system (but doesn't clear the memory)
     --> using delete on non-dynamically allocated memory can cause bad things
+    
+4. Dangling Pointers
+    --> delete does not remove the pointer
+    --> dangling pointer: pointer pointing to deallocated memory
+    --> don't delete or dereference dangling pointers
+    --> avoid these by setting dangling pointers to nullptr (0)
     
