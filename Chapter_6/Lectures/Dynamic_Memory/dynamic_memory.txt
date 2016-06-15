@@ -25,3 +25,10 @@
     --> don't delete or dereference dangling pointers
     --> avoid these by setting dangling pointers to nullptr (0)
     
+5. No Heap Memory Left
+    --> new fails and throws a bad_alloc exception --> crash
+    --> int* ptr = new (std::nothrow) int; // returns nullptr instead of exception
+    --> best practice is to check for nullptr after every allocation
+    
+
+    
