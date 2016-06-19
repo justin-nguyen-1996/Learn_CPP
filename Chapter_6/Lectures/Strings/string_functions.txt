@@ -1,0 +1,35 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/12/2016
+*/
+
+1. Reading String Inputs
+    --> std::cin.getline(var, num_chars);
+    
+    char name[255]; // declare array large enough to hold 255 characters
+    std::cout << "Enter your name: ";
+    std::cin.getline(name, 254);
+    std::cout << "You entered: " << name << '\n';
+    
+    --> reads (num_chars - 1) into var and appends a null zero
+    --> better than std::cin >> var (this way doesn't prevent overflow)
+
+2. String Copying
+    --> strncpy(dest, source, num_chars)
+    
+    char source[] = "Copy this!";
+    char dest[50];
+    strncpy(dest, source, 49); // copy at most 49 characters (indices 0-48)
+    dest[49] = 0; // ensures the last character is a null terminator
+    cout << dest; // prints "Copy this!"
+
+    --> does not automatically terminate with a null zero
+        (practice above is good, assign last index with zero after fxn call)
+    --> copies in zeroes if the destination is bigger than the source
+
+3. String Length
+    --> strlen(string_var)
+    --> char name[20] = "FOUR";
+        sizeof(name) // 20
+        strlen(name) // 4
+
