@@ -1,0 +1,15 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6//18/2016
+*/
+
+1. Passing Arrays (all of these are the same)
+	--> int fxn (int array[])
+	--> int fxn (int array[4])
+	--> int fxn (int* array)
+
+2. Array Documentation
+	--> put enums inside namespaces
+	--> testscores [StudentNames::STAN] = 70;
+
+3. 
