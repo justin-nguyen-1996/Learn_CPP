@@ -24,6 +24,7 @@
 #include <iostream>
 #include <string>
 
+/* use this if need to have ErrorType act as an integer */
 /*namespace ErrorType {
 	enum ErrorType {
 		SUCCESS,
@@ -37,21 +38,26 @@ enum class ErrorType {
 };
 
 ErrorType testBadInput() {
-	if (std::cin.fail()) {
-		std::cin.clear();
-		std::cin.ignore(32767, '\n');
-		std::cout << "Error: you didn't enter a valid integer\n";
+	using namespace std;
+
+	if (cin.fail()) {
+		cin.clear();
+		cin.ignore(32767, '\n');
+		cout << "Error: you didn't enter a valid integer\n";
 		return ErrorType::ERROR;
 	}
 
-	std::cin.ignore(32767, '\n');
+	cin.ignore(32767, '\n');
 	return ErrorType::SUCCESS;
 }
 
 int main() {
+	using namespace std;
+
 	do {
-		std::cout << "How many names would you like to enter? ";
-		int num_names;
-		std::cin >> num_names;
+		cout << "How many names would you like to enter? ";
+		int total_names;
+		cin >> total_names;
 	} while (testBadInput() == ErrorType::ERROR);
+
 }
