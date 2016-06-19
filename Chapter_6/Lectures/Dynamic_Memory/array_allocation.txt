@@ -8,3 +8,7 @@
 
 2. Can't know the size of the dynamically allocated arrays
 	--> for each loops don't work
+
+3. Initialize arrays
+	--> int* array = new int[5] {1, 2, 3, 4, 5};
+	--> int* array = new int[size] (); // all values set to zero
