@@ -6,4 +6,5 @@
 1. Array allocation using dynamic memory
 	--> new[] and delete[] instead of new and delete
 
-2. 
+2. Can't know the size of the dynamically allocated arrays
+	--> for each loops don't work
