@@ -54,10 +54,20 @@ ErrorType testBadInput() {
 int main() {
 	using namespace std;
 
+	int total_names;
 	do {
 		cout << "How many names would you like to enter? ";
-		int total_names;
 		cin >> total_names;
 	} while (testBadInput() == ErrorType::ERROR);
 
+	int name_counter = 0;
+	while (name_counter < total_names) {
+		// indexing at 0 for counter, at 1 for name #
+		cout << "Enter name #" << (name_counter + 1) << ": ";
+		const int MAX_NAME_CHARS = 255;
+		char name[MAX_NAME_CHARS]; 
+
+		cin.getline (name, MAX_NAME_CHARS);
+		name_counter += 1;
+	}
 }
