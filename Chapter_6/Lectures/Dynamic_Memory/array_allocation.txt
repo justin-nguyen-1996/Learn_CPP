@@ -1,0 +1,9 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/18/2016
+*/
+
+1. Array allocation using dynamic memory
+	--> new[] and delete[] instead of new and delete
+
+2. 
