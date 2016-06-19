@@ -24,20 +24,34 @@
 #include <iostream>
 #include <string>
 
-void testBadInput() {
+/*namespace ErrorType {
+	enum ErrorType {
+		SUCCESS,
+		ERROR
+	};
+}*/
+
+enum class ErrorType {
+	SUCCESS,
+	ERROR
+};
+
+ErrorType testBadInput() {
 	if (std::cin.fail()) {
 		std::cin.clear();
 		std::cin.ignore(32767, '\n');
 		std::cout << "Error: you didn't enter a valid integer\n";
+		return ErrorType::ERROR;
 	}
 
 	std::cin.ignore(32767, '\n');
+	return ErrorType::SUCCESS;
 }
 
 int main() {
-	std::cout << "How many names would you like to enter? ";
-
-	int num_names;
-	std::cin >> num_names;
-	testBadInput();
+	do {
+		std::cout << "How many names would you like to enter? ";
+		int num_names;
+		std::cin >> num_names;
+	} while (testBadInput() == ErrorType::ERROR);
 }
