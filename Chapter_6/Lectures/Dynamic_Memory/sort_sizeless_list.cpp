@@ -24,6 +24,20 @@
 #include <iostream>
 #include <string>
 
-int main() {
+void testBadInput() {
+	if (std::cin.fail()) {
+		std::cin.clear();
+		std::cin.ignore(32767, '\n');
+		std::cout << "Error: you didn't enter a valid integer\n";
+	}
 
+	std::cin.ignore(32767, '\n');
+}
+
+int main() {
+	std::cout << "How many names would you like to enter? ";
+
+	int num_names;
+	std::cin >> num_names;
+	testBadInput();
 }
