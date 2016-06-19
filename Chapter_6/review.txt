@@ -12,4 +12,16 @@
 	--> put enums inside namespaces
 	--> testscores [StudentNames::STAN] = 70;
 
-3. 
+3. Null Pointers (nullptr)
+
+4. String Functions
+	--> std::cin.getline(var, num_chars), strncpy(), etc.
+
+5. Dynamic Memory (new and delete)
+
+6. Dangling pointers (point to deallocated memory)
+	--> fix by set to nullptr after delete
+
+7. Memory Leaks
+
+
