@@ -61,13 +61,13 @@ int main() {
 	} while (testBadInput() == ErrorType::ERROR);
 
 	int name_counter = 0;
+	string* name_list = new string[total_names];
 	while (name_counter < total_names) {
 		// indexing at 0 for counter, at 1 for name #
 		cout << "Enter name #" << (name_counter + 1) << ": ";
-		const int MAX_NAME_CHARS = 255;
-		char name[MAX_NAME_CHARS]; 
-
-		cin.getline (name, MAX_NAME_CHARS);
+		cin >> name_list[0];
 		name_counter += 1;
 	}
+
+	
 }
