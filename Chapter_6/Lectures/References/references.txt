@@ -10,4 +10,7 @@
     cout << &value; // prints 0012FF7C
     cout << &ref; // prints 0012FF7C
     
-2. 
+2. Can only reference variables of the same type
+    --> const int x = 5;
+        int &ref = x; // invalid, non-const reference to const object
+
