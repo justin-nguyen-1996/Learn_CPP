@@ -93,4 +93,9 @@ int main() {
 	std::cout << "\nHere is your sorted list:\n";
 	sortNames(name_list, total_names);
 	printNameList(name_list, total_names);
+
+	delete[] names_list;
+	names_list = nullptr;
 }
+
+
