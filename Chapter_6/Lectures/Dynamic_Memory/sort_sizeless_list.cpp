@@ -87,7 +87,8 @@ int main() {
 		getline(cin, name_list[name_counter]);
 	}
 
-	
+	std::cout << "Here is your original list:\n";
+	printNameList (name_list, total_names);
 
 	std::cout << "Here is your sorted list:\n";
 	sortNames(name_list, total_names);
