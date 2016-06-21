@@ -51,6 +51,12 @@ ErrorType testBadInput() {
 	return ErrorType::SUCCESS;
 }
 
+void printNameList (std::string* name_list) {
+	for (int i = 0; i < name_list->length(); i += 1) {
+		std::cout << name_list[i] << "\n";
+	}
+}
+
 int main() {
 	using namespace std;
 
@@ -70,5 +76,6 @@ int main() {
 		getline(cin, name_list[name_counter]);
 	}
 
+	printNameList(name_list);
 	
 }
