@@ -12,5 +12,18 @@
     
 2. Can only reference variables of the same type
     --> const int x = 5;
-        int &ref = x; // invalid, non-const reference to const object
+        int& ref = x; // invalid, non-const reference to const object
 
+3. References are Implicity Const
+    --> cannot be reassigned (bound to the variable it references)
+    
+    int value = 5;
+    int& ref = value; // valid reference
+    int& invalidRef; // invalid, needs to reference something
+    
+    int value1 = 5;
+    int value2 = 6;
+    int& ref = value1; // okay, ref is now an alias for value1
+    ref = value2; // assigns 6 (the value of value2) to value1 -- does NOT change the reference!
+    
+    
