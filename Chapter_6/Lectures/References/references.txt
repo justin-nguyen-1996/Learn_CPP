@@ -3,4 +3,11 @@
     Created: 6/21/2016
 */
 
-1. 
+1. References
+    --> a variable type that acts as an alias to another variable
+    --> int x = 5; int& ref = x;
+    
+    cout << &value; // prints 0012FF7C
+    cout << &ref; // prints 0012FF7C
+    
+2. 
