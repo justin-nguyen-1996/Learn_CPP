@@ -57,6 +57,10 @@ void printNameList (std::string* name_list) {
 	}
 }
 
+void sortNames(std::string* names_list, int total_names) {
+	
+}
+
 int main() {
 	using namespace std;
 
@@ -76,6 +80,8 @@ int main() {
 		getline(cin, name_list[name_counter]);
 	}
 
-	printNameList(name_list);
+	// printNameList(name_list);
 	
+	std::cout << "Here is your sorted list:\n";
+	sortNames(name_list, total_names);
 }
