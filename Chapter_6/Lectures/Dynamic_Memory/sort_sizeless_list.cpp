@@ -23,6 +23,7 @@
 
 #include <iostream>
 #include <string>
+#include <utility>
 
 /* use this if need to have ErrorType act as an integer */
 /*namespace ErrorType {
@@ -61,7 +62,7 @@ void sortNames(std::string* names_list, int total_names) {
 	for (int i = 0; i < total_names - 1; i += 1) {
 		for (int j = i + 1; j < total_names; j += 1) {
 			if (names_list[j] < names_list[i]) {
-				
+				std::swap (names_list[i], names_list[j]);
 			}
 		}
 	}
@@ -86,8 +87,9 @@ int main() {
 		getline(cin, name_list[name_counter]);
 	}
 
-	// printNameList(name_list, total_names);
 	
+
 	std::cout << "Here is your sorted list:\n";
 	sortNames(name_list, total_names);
+	printNameList(name_list, total_names);
 }
