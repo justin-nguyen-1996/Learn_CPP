@@ -3,7 +3,7 @@
     Created: 6/21/2016
 */
 
-1. Constant Pointers
+1. Pointers to Constant Values
     --> only const pointers can point to const variables
     --> const pointers can point to non-const variables too
     	(but still can't change the variable through the pointer
@@ -12,6 +12,7 @@
     		if the variable itself is not const)
     --> const pointers treat the variable as const, but are not const themselves
     	(const pointers can be redirected to point at other things)
+    	(const int* ptr)
 
     int value = 5;
     const int *ptr = &value; // ptr points to a "const int"
@@ -26,3 +27,13 @@
 	int value2 = 6;
 	ptr = &value2; // okay, ptr now points at some other const int
 	
+2. Constant Pointers
+	--> these pointers are constant themselves
+	--> int* const ptr;
+	--> these pointers will always point at the same variable
+		but can change the variable it points at
+		
+	int value = 5;	
+	int *const ptr = &value; // ptr will always point to value
+	*ptr = 6; // allowed, since ptr points to a non-const int
+
