@@ -60,13 +60,14 @@ int main() {
 		cin >> total_names;
 	} while (testBadInput() == ErrorType::ERROR);
 
-	int name_counter = 0;
 	string* name_list = new string[total_names];
-	while (name_counter < total_names) {
+	for (int name_counter = 0; 
+		name_counter < total_names; 
+		name_counter += 1) {
+
 		// indexing at 0 for counter, at 1 for name #
 		cout << "Enter name #" << (name_counter + 1) << ": ";
-		cin >> name_list[0];
-		name_counter += 1;
+		getline(cin, name_list[name_counter]);
 	}
 
 	
