@@ -5,6 +5,11 @@
 
 1. Constant Pointers
     --> only const pointers can point to const variables
+    --> const pointers can point to non-const variables too
+    	(but still can't change the variable through the pointer)
+    	(since const pointers always treat the variable as const)
+    --> const pointers treat the variable as const, but are not const themselves
+    	(const pointers can be redirected to point at other things)
 
     int value = 5;
     const int *ptr = &value; // ptr points to a "const int"
