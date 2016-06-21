@@ -51,8 +51,8 @@ ErrorType testBadInput() {
 	return ErrorType::SUCCESS;
 }
 
-void printNameList (std::string* name_list) {
-	for (int i = 0; i < name_list->length(); i += 1) {
+void printNameList (std::string* name_list, int total_names) {
+	for (int i = 0; i < total_names; i += 1) {
 		std::cout << name_list[i] << "\n";
 	}
 }
@@ -80,7 +80,7 @@ int main() {
 		getline(cin, name_list[name_counter]);
 	}
 
-	// printNameList(name_list);
+	// printNameList(name_list, total_names);
 	
 	std::cout << "Here is your sorted list:\n";
 	sortNames(name_list, total_names);
