@@ -5,5 +5,12 @@
 
 1. Constant Pointers
     --> only const pointers can point to const variables
-    
-    
+
+    int value = 5;
+    const int *ptr = &value; // ptr points to a "const int"
+    value = 6; // the value is non-const when accessed through a non-const identifier
+	
+    int value = 5;
+    const int *ptr = &value; // ptr points to a "const int"
+    *ptr = 6; // ptr treats its value as const, so changing the value through ptr is not legal
+
