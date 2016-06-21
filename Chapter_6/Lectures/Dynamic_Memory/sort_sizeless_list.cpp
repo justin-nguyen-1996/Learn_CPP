@@ -58,7 +58,13 @@ void printNameList (std::string* name_list, int total_names) {
 }
 
 void sortNames(std::string* names_list, int total_names) {
-	
+	for (int i = 0; i < total_names - 1; i += 1) {
+		for (int j = i + 1; j < total_names; j += 1) {
+			if (names_list[j] < names_list[i]) {
+				
+			}
+		}
+	}
 }
 
 int main() {
