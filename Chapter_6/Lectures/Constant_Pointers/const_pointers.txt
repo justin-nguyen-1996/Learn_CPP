@@ -1,0 +1,9 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/21/2016
+*/
+
+1. Constant Pointers
+    --> only const pointers can point to const variables
+    
+    
