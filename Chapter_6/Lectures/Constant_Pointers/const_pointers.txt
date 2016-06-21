@@ -37,3 +37,12 @@
 	int *const ptr = &value; // ptr will always point to value
 	*ptr = 6; // allowed, since ptr points to a non-const int
 
+3. Constant Pointers to Constant Values
+	--> these pointers always point at the same variable and
+		cannot change the variable's value
+		
+	int value = 5;
+	const int *const ptr = &value;
+	value = 6; // works
+	*ptr = 6; // does not work
+	
