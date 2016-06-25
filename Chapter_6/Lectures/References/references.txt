@@ -51,5 +51,13 @@
 		(always refer to an object since they are implicitly constant)
 		(no such thing as a null or dangling reference)
 
+7. Reference Implementation
+	--> supposedly varies
+	--> but most likely implemented using pointers
+
+	void someFxn(int& ref) --> void someFxn(int* ref)
+	int value = 4;
+	int& ref = value; --> int* ref = &value;
+	ref = 5; --> *ref = 5;
 
 
