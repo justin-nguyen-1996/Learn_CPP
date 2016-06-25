@@ -37,4 +37,10 @@
 	value = 7; // works
     
     
-5. 
+5. Passing References as Function Parameters
+	--> copies the value of the reference
+	void changeN(int& ref) { ref = 6; }
+	int main() {int n = 5; changeN(n); } // n = 6
+	void changeN2(const int& ref) { ref = 6; } // does not work
+
+
