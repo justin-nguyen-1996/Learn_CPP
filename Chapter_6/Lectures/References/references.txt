@@ -60,4 +60,10 @@
 	int& ref = value; --> int* ref = &value;
 	ref = 5; --> *ref = 5;
 
+8. Differences between References and Pointers
+	--> can't be null
+	--> must be initialized
+	--> can't be pointed at something else
+
+	--> references are (const var* const pointers) that can't be null
 
