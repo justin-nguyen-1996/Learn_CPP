@@ -31,7 +31,7 @@
 	--> these pointers are constant themselves
 	--> int* const ptr;
 	--> these pointers will always point at the same variable
-		but can change the variable it points at
+		but can be dereferenced (change the variable it points at)
 		
 	int value = 5;	
 	int *const ptr = &value; // ptr will always point to value
@@ -41,8 +41,9 @@
 	--> these pointers always point at the same variable and
 		cannot change the variable's value
 		
-	int value = 5;
+	int value = 5; int value2 = 6;
 	const int *const ptr = &value;
 	value = 6; // works
 	*ptr = 6; // does not work
+	ptr = &value2; // does not work
 	
