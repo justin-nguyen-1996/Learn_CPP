@@ -24,6 +24,17 @@
     int value1 = 5;
     int value2 = 6;
     int& ref = value1; // okay, ref is now an alias for value1
-    ref = value2; // assigns 6 (the value of value2) to value1 -- does NOT change the reference!
+    ref = value2; // does not work (assigns 6 the value of value2) 
+
+4. References to const variables
+	const int value = 5;
+	const int& ref = value;
+	ref = 6; // does not work
+
+	int value = 5;
+	const int& ref = value;
+	ref = 6; // does not work
+	value = 7; // works
     
     
+5. 
