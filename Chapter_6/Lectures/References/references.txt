@@ -43,4 +43,13 @@
 	int main() {int n = 5; changeN(n); } // n = 6
 	void changeN2(const int& ref) { ref = 6; } // does not work
 
+6. Why to use references over pointers
+	--> easier to use 
+		(act like the object they refer to)
+		(no dereferencing needed)
+	--> safer too
+		(always refer to an object since they are implicitly constant)
+		(no such thing as a null or dangling reference)
+
+
 
