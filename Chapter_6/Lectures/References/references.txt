@@ -66,4 +66,25 @@
 	--> can't be pointed at something else
 
 	--> references are (const var* const pointers) that can't be null
+	--> pointers that are implicitly dereferenced
+	--> slightly more limited in functionality 
+		(e.g. can't dynamically allocate memory)
+
+9. Using References as Shortcuts
+	--> struct Something {
+			int value1;
+			float value2;
+		};
+			 
+		struct Other {
+			Something something;
+		    int otherValue;
+		};
+					  
+		Other other;
+
+	--> other.something.value1 = 4;
+		int& ref = other.something.value1;
+		ref = 4;
+
 
