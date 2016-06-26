@@ -14,7 +14,7 @@ int main() {
 	getline(cin, name);
 
 	bool test_is_there = false;
-	for (string s : names_list) {
+	for (const string& s : names_list) {
 		if (name == s){
 			test_is_there = true;
 			break;
