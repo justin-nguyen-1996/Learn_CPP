@@ -11,3 +11,9 @@
 			std::cout << i << " ";
 		}
 
+	--> Version 2 (auto)
+		for (auto i : array) {
+			std::cout << i < " ";
+		}
+
+	
