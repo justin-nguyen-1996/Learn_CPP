@@ -13,7 +13,17 @@
 
 	--> Version 2 (auto)
 		for (auto i : array) {
-			std::cout << i < " ";
+			std::cout << i << " ";
 		}
 
-	
+	--> Version 3 (references)
+		for (auto& i : array) {
+			std::cout << i << " ";
+		}
+
+	--> how for each loops work
+		--> each element iterated over is copied into i
+		--> copying arrays is very expensive
+		--> use references instead for efficiency purposes
+
+	--> Version 4 (const)
