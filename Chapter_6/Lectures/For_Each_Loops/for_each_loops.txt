@@ -1,0 +1,13 @@
+/*
+	Author: Justin Nguyen
+	Created: 6/25/2016
+*/
+
+1. Better For Each Loop Performance
+	int array[4] = {1,2,3,4};
+
+	--> Version 1 (bad/normal)
+		for (int i : array) {
+			std::cout << i << " ";
+		}
+
