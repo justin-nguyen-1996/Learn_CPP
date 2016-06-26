@@ -12,7 +12,6 @@ int main() {
 	cout << "Enter a name: ";
 	string name;
 	getline(cin, name);
-	cin.ignore(32767, '\n');
 
 	bool test_is_there = false;
 	for (string s : names_list) {
@@ -20,6 +19,7 @@ int main() {
 			test_is_there = true;
 			break;
 		}
+		std::cout << s << "\n";
 	}
 
 	string str_temp;
