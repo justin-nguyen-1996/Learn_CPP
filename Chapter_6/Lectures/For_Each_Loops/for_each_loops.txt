@@ -25,5 +25,11 @@
 		--> each element iterated over is copied into i
 		--> copying arrays is very expensive
 		--> use references instead for efficiency purposes
+		--> also lets you change the original array
 
 	--> Version 4 (const)
+		for (const auto& i : array) {
+			std::cout << i << " ";
+		}
+
+		--> good if only reading the elements
