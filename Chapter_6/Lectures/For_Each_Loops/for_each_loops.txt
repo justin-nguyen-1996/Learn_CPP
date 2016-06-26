@@ -33,3 +33,16 @@
 		}
 
 		--> good if only reading the elements
+
+2. When you can't use for each loops
+	--> doesn't work with pointers to an array
+	--> for each loops need to know how big the array is
+		(arrays that have decayed into a pointer don't know their size)
+
+		int someFxn(int array[]) {
+			for (const auto& i : array) { // does not compile
+				std::cout << i << " ";
+			}
+		}
+
+
