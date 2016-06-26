@@ -19,11 +19,13 @@ int main() {
 			test_is_there = true;
 			break;
 		}
-		std::cout << s << "\n";
 	}
 
 	string str_temp;
-	(test_is_there == true) ? 
-		str_temp = "was found" : str_temp = "was not found";
-	cout << name << str_temp;
+	//(test_is_there == true) ? 
+	//	str_temp = " was found\n" : str_temp = " was not found\n";
+	test_is_there ?
+		str_temp = "" : str_temp = "not ";
+	//cout << name << str_temp;
+	cout << name << " was " << str_temp << "found\n";
 }
