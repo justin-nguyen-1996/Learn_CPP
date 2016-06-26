@@ -1,7 +1,7 @@
 OBJS = for_each_example.o
 EXE = for_each
-CFLAGS = -g -Wall
-CPPFLAGS = -g -Wall
+CFLAGS = -g -Wall -std=c++1z
+CPPFLAGS = -g -Wall -std=c++1z
 CC = g++
 
 all: $(OBJS)
