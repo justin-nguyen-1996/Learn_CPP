@@ -6,3 +6,6 @@
 1. No need to set size
     --> vectors dynamically allocate memory as needed
     
+2. Self Cleanup
+    --> memory will be deallocated as soon as the variable goes out of scope
+    
