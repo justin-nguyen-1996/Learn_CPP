@@ -18,3 +18,8 @@
     var_name.at(0) = 0; // works
     var_name.at(3) = 10; // throws an error
     
+4. Miscellaneous
+    --> want to pass std::array be reference
+    --> functions: .size(), .begin(), .end(), etc.
+    
+    
