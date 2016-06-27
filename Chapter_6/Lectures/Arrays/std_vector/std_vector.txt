@@ -1,0 +1,8 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/27/2016
+*/
+
+1. No need to set size
+    --> vectors dynamically allocate memory as needed
+    
