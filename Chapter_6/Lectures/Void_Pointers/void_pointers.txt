@@ -18,3 +18,10 @@
 2. Void Pointer Arithmetic
     --> can't do pointer arithmetic on void pointers
         (don't know the size of the variable)
+
+3. Void References
+    --> can't have void references
+        (no such thing as a variable of type void)
+        
+4. Try to Avoid Void Pointers
+
