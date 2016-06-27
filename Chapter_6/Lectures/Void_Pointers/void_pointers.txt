@@ -1,0 +1,8 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/27/2016
+*/
+
+1. Void Pointers
+    --> pointers that can be pointed at anything
+    
