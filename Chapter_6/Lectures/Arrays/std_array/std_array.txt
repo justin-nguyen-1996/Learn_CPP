@@ -3,4 +3,8 @@
     Created: 6/27/2016
 */
 
-1. 
+1. Include File Name
+    --> #include <array>
+
+2. Initialization Syntax
+    --> std::arrary<int, 3> array = {1, 2, 3};
