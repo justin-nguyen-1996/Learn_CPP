@@ -18,12 +18,19 @@ enum class ItemTypes {
     ARROWS
 };
 
+int countTotalItems(ItemTypes& items_list) {
+    return 
+        items_list.HEALTH_POTIONS + 
+        items_list.TORCHES + 
+        items_list.ARROWS;
+}
+
 int main() {
     ItemTypes items_list[3];
     items_list.HEALTH_POTIONS = 2;
     items_list.TORCHES = 5;
     items_list.ARROWS = 10;
     
-    std::cout << countTotalItems() << "\n";
+    std::cout << "The player has " countTotalItems() << " many items\n";
 }
 
