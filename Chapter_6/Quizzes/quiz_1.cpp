@@ -12,7 +12,14 @@
 
 #include <iostream>
 
+enum class ItemTypes {
+    HEALTH_POTIONS,
+    TORCHES,
+    ARROWS
+};
+
 int main() {
+    ItemTypes items_list[3];
     
 }
 
