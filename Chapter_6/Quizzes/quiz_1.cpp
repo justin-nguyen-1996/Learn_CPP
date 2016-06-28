@@ -20,6 +20,10 @@ enum class ItemTypes {
 
 int main() {
     ItemTypes items_list[3];
+    items_list.HEALTH_POTIONS = 2;
+    items_list.TORCHES = 5;
+    items_list.ARROWS = 10;
     
+    std::cout << countTotalItems() << "\n";
 }
 
