@@ -19,10 +19,12 @@ enum class ItemTypes {
 };
 
 int countTotalItems(ItemTypes& items_list) {
-    return 
-        items_list.HEALTH_POTIONS + 
-        items_list.TORCHES + 
-        items_list.ARROWS;
+    int sum = 0;
+    for (int item_count : items_list) {
+        sum += item_count;
+    }
+    
+    return sum;
 }
 
 int main() {
