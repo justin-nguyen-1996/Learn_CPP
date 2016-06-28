@@ -24,4 +24,12 @@
 
 7. Memory Leaks
 
+8. Void Pointers
+
+9. Selection Sort && Bubble Sort
+
+10. References
+
+11. 
+
 
