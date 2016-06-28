@@ -26,11 +26,7 @@ int countTotalItems(ItemTypes& items_list) {
 }
 
 int main() {
-    ItemTypes items_list[3];
-    items_list.HEALTH_POTIONS = 2;
-    items_list.TORCHES = 5;
-    items_list.ARROWS = 10;
-    
-    std::cout << "The player has " countTotalItems() << " many items\n";
+    ItemTypes items_list[3] {2,5,10};
+    std::cout << "The player has " countTotalItems(items_list) << " many items\n";
 }
 
