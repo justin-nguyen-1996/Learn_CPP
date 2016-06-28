@@ -30,6 +30,9 @@
 
 10. References
 
-11. 
+11. For Each Loops
 
+12. Pointer to const variables, Const Pointers
+
+13. std::array, std::vector
 
