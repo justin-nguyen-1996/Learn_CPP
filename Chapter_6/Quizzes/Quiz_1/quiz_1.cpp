@@ -12,15 +12,18 @@
 
 #include <iostream>
 
-enum class ItemTypes {
-    HEALTH_POTIONS,
-    TORCHES,
-    ARROWS
-};
+namespace ItemTypes {
+	enum ItemTypes {
+		HEALTH_POTIONS,
+		TORCHES,
+		ARROWS
+	};
+}
 
-int countTotalItems(ItemTypes& items_list) {
+int countTotalItems(int items_list[], int size) {
     int sum = 0;
-    for (const auto& item_count : items_list) {
+    //for (const auto& item_count : items_list) {
+	for (auto item_count = 0; item_count < size; item_count += 1) {
         sum += item_count;
     }
     
@@ -28,7 +31,8 @@ int countTotalItems(ItemTypes& items_list) {
 }
 
 int main() {
-    ItemTypes::items_list[3] {2,5,10};
-    std::cout << "The player has " countTotalItems(items_list) << " many items\n";
+	int items_list[] {2,5,10};
+    std::cout << "The player has " << 
+		countTotalItems(items_list, 3) << " items\n";
 }
 
