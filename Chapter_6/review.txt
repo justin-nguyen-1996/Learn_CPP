@@ -24,4 +24,15 @@
 
 7. Memory Leaks
 
+8. Void Pointers
+
+9. Selection Sort && Bubble Sort
+
+10. References
+
+11. For Each Loops
+
+12. Pointer to const variables, Const Pointers
+
+13. std::array, std::vector
 

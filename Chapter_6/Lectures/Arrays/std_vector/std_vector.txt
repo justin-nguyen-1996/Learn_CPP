@@ -1,0 +1,18 @@
+/*
+    Author:  Justin Nguyen
+    Created: 6/27/2016
+*/
+
+1. No need to set size
+    --> vectors dynamically allocate memory as needed
+    
+2. Self Cleanup
+    --> memory will be deallocated as soon as the variable goes out of scope
+    
+3. Available Functions
+    --> .size(), .at()
+    --> std::vector<int> vec = {0, 1, 2, 3, 4}
+        vec.resize(7) // vec = {0, 1, 2, 3, 4, 5, 6}
+        vec.resize(2) // vec = {0, 1}
+        
+        
