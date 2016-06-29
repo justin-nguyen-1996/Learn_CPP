@@ -20,7 +20,7 @@ enum class ItemTypes {
 
 int countTotalItems(ItemTypes& items_list) {
     int sum = 0;
-    for (int item_count : items_list) {
+    for (const auto& item_count : items_list) {
         sum += item_count;
     }
     
@@ -28,7 +28,7 @@ int countTotalItems(ItemTypes& items_list) {
 }
 
 int main() {
-    ItemTypes items_list[3] {2,5,10};
+    ItemTypes::items_list[3] {2,5,10};
     std::cout << "The player has " countTotalItems(items_list) << " many items\n";
 }
 
