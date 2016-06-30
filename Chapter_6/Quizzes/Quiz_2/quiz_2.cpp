@@ -44,7 +44,7 @@ int main() {
 	int num_people;
 	do {
 		std::cin >> num_people;
-	} (while testBadInput() == ErrorType::FAILURE);
+	} while (testBadInput() == ErrorType::FAILURE);
 
 	grade_t person 
 }
