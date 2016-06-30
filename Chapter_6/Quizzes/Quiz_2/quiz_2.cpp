@@ -64,7 +64,7 @@ int main() {
 	} while (testBadInput() == ErrorType::FAILURE);
 
 	/* dynamic array holding all students */
-	int* student_list = new int[num_students];
+	student* student_list = new student[num_students];
 
 	for (int student_i = 0; student_i < num_students; student_i += 1) {
 		/* get names for each student */
@@ -78,5 +78,12 @@ int main() {
 		do {
 			cin >> grade;
 		} while (testBadInput() == ErrorType::FAILURE);
+
+		student_list[student_i] = {name, grade};
+		//student_list[student_i].name = name;
+		//student_list[student_i].grade = grade;
 	}
+
+	/* print the info */
+
 }

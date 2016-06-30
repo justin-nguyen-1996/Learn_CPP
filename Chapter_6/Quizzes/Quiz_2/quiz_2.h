@@ -3,7 +3,7 @@
 
 //#include <string>
 
-struct grade_t {
+struct student {
 	std::string name;
 	int grade;
 };
