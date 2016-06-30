@@ -65,4 +65,10 @@ int main() {
 	int* student_list = new int[num_people];
 
 	/* get names and grades for each student */
+	std::string name;
+	std::getline(std::cin, name);
+
+	do {
+		
+	} while (testBadInput() == ErrorType::FAILURE);
 }
