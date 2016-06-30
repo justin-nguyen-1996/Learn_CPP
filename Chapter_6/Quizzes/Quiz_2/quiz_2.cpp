@@ -39,12 +39,25 @@ Ralph got a grade of 4
 #include "error_type.h"
 #include "quiz_2.h"
 
+ErrorType testBadInput() {
+	using namespace std;
+
+	if (cin.fail()) {
+		cin.clear();
+		cin.ignore(32767, '\n');
+		cout << "Error. Enter a valid integer (0-100): ";
+		return ErrorType::FAILURE;
+	}
+
+	cin.ignore(32767, '\n');
+	return ErrorType::SUCCESS;
+}
+
 int main() {
-	std::cout << "How many people do you want to enter?";
+	std::cout << "How many people do you want to enter? ";
 	int num_people;
 	do {
 		std::cin >> num_people;
 	} while (testBadInput() == ErrorType::FAILURE);
 
-	grade_t person 
 }
