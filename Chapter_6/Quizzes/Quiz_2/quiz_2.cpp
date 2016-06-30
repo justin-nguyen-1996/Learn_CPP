@@ -62,5 +62,7 @@ int main() {
 	} while (testBadInput() == ErrorType::FAILURE);
 
 	/* dynamic array holding all students */
+	int* student_list = new int[num_people];
 
+	/* get names and grades for each student */
 }
