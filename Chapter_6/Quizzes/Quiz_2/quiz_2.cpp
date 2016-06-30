@@ -85,5 +85,11 @@ int main() {
 	}
 
 	/* print the info */
+	cout << "\n";
+	for (int student_i = 0; student_i < num_students; student_i += 1) {
+		cout << student_list[student_i].name << " got a grade of " << 
+			student_list[student_i].grade << "\n";
+	}
 
+	delete[] student_list;
 }
