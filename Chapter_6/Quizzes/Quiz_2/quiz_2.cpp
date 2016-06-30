@@ -54,21 +54,26 @@ ErrorType testBadInput() {
 }
 
 int main() {
+	using namespace std;
+
 	/* get number of students */
-	std::cout << "How many students do you want to enter? ";
+	cout << "How many students do you want to enter? ";
 	int num_people;
 	do {
-		std::cin >> num_people;
+		cin >> num_people;
 	} while (testBadInput() == ErrorType::FAILURE);
 
 	/* dynamic array holding all students */
 	int* student_list = new int[num_people];
 
 	/* get names and grades for each student */
-	std::string name;
-	std::getline(std::cin, name);
+	cout << "Enter a student's name: ";
+	string name;
+	getline(std::cin, name);
 
+	cout << "Enter the student's grade: ";
+	int grade;
 	do {
-		
+		cin >> grade;
 	} while (testBadInput() == ErrorType::FAILURE);
 }
