@@ -6,4 +6,4 @@ struct grade_t {
 	int grade
 };
 
-#endif QUIZ_2
+#endif
