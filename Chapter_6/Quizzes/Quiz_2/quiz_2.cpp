@@ -54,10 +54,13 @@ ErrorType testBadInput() {
 }
 
 int main() {
-	std::cout << "How many people do you want to enter? ";
+	/* get number of students */
+	std::cout << "How many students do you want to enter? ";
 	int num_people;
 	do {
 		std::cin >> num_people;
 	} while (testBadInput() == ErrorType::FAILURE);
+
+	/* dynamic array holding all students */
 
 }
