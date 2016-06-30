@@ -58,22 +58,25 @@ int main() {
 
 	/* get number of students */
 	cout << "How many students do you want to enter? ";
-	int num_people;
+	int num_students;
 	do {
-		cin >> num_people;
+		cin >> num_students;
 	} while (testBadInput() == ErrorType::FAILURE);
 
 	/* dynamic array holding all students */
-	int* student_list = new int[num_people];
+	int* student_list = new int[num_students];
 
-	/* get names and grades for each student */
-	cout << "Enter a student's name: ";
-	string name;
-	getline(std::cin, name);
+	for (int student_i = 0; student_i < num_students; student_i += 1) {
+		/* get names for each student */
+		cout << "Enter a student's name: ";
+		string name;
+		getline(std::cin, name);
 
-	cout << "Enter the student's grade: ";
-	int grade;
-	do {
-		cin >> grade;
-	} while (testBadInput() == ErrorType::FAILURE);
+		/* get grades for each student */
+		cout << "Enter the student's grade: ";
+		int grade;
+		do {
+			cin >> grade;
+		} while (testBadInput() == ErrorType::FAILURE);
+	}
 }
