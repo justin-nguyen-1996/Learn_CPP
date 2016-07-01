@@ -6,6 +6,19 @@
 /* Write your own function to swap the value of two integer variables 
    Write a main() function to test it */
 
+#include <iostream>
+
+void mySwap(int& a, int& b) {
+	int temp = a;
+	a = b;
+	b = a;
+}
+
 int main() {
-	
+	int a = 4; int b = 2;
+	mySwap(a,b);
+
+	(a == 2 && b == 4) ? 
+		std::cout << "works" :
+		std::cout << "failed";
 }
