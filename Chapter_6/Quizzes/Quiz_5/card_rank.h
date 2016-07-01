@@ -1,8 +1,8 @@
-#ifndef card_ranks
-#define card_ranks
+#ifndef card_rank
+#define card_rank
 
-namespace CardRank_t {
-    enum CardRank_t {
+namespace card_rank_t {
+    enum card_rank_t {
         TWO = 2,
         THREE,
         FOUR,
