@@ -8,6 +8,20 @@
    Stop when you hit a null terminator. 
    Write a main function that tests the function. */
 
+#include <iostream>
+
+void printMyString(const char* str) {
+	int i = 0;
+	while (str[i] != 0) {
+		std::cout << str[i];
+		i += 1;
+	}
+
+	std::cout << "\n";
+}
+
 int main() {
-	
+	char* str = "Hello";
+	printMyString(str);
+	std::cout << str << "\n";
 }
