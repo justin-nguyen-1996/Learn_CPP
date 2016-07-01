@@ -55,9 +55,9 @@ ErrorType testBadInput(int input) {
 }
 
 void selectionSort(student* student_list, int num_students) {
-	for (write_i = 0; write_i < num_students -1; write_i += 1) {
-		for (search_i = write_i; search_i < num_students; search_i += 1) {
-			if (student_list[search_i] > student_list[write_1]) {
+	for (int write_i = 0; write_i < num_students -1; write_i += 1) {
+		for (int search_i = write_i; search_i < num_students; search_i += 1) {
+			if (student_list[search_i] > student_list[write_i]) {
 				std::swap(student_list[search_i], student_list[write_i]);
 			}
 		}
