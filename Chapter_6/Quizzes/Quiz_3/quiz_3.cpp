@@ -11,7 +11,7 @@
 void mySwap(int& a, int& b) {
 	int temp = a;
 	a = b;
-	b = a;
+	b = temp;
 }
 
 int main() {
@@ -19,6 +19,6 @@ int main() {
 	mySwap(a,b);
 
 	(a == 2 && b == 4) ? 
-		std::cout << "works" :
-		std::cout << "failed";
+		std::cout << "works\n" :
+		std::cout << "failed\n";
 }
