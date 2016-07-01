@@ -36,6 +36,7 @@ Ralph got a grade of 4
 
 
 #include <iostream>
+#include <algorithm>
 #include "error_type.h"
 #include "quiz_2.h"
 
@@ -51,6 +52,16 @@ ErrorType testBadInput(int input) {
 
 	cin.ignore(32767, '\n');
 	return ErrorType::SUCCESS;
+}
+
+void selectionSort(student* student_list, int num_students) {
+	for (write_i = 0; write_i < num_students -1; write_i += 1) {
+		for (search_i = write_i; search_i < num_students; search_i += 1) {
+			if (student_list[search_i] > student_list[write_1]) {
+				std::swap(student_list[search_i], student_list[write_i]);
+			}
+		}
+	}
 }
 
 int main() {
@@ -80,9 +91,10 @@ int main() {
 		} while (testBadInput(grade) == ErrorType::FAILURE);
 
 		student_list[student_i] = {name, grade};
-		//student_list[student_i].name = name;
-		//student_list[student_i].grade = grade;
 	}
+
+	/* sort the students list by grade */
+	selectionSort(student_list, num_students);
 
 	/* print the info */
 	cout << "\n";
