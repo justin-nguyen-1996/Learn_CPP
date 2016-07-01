@@ -21,7 +21,7 @@ void printMyString(const char* str) {
 }
 
 int main() {
-	char* str = "Hello";
+	const char* str = "Hello";
 	printMyString(str);
 	std::cout << str << "\n";
 }
