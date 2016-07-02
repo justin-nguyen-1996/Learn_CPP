@@ -29,8 +29,8 @@ namespace CardRank {
 }
 
 struct Card {
-	int card_suit;
 	int card_rank;
+	int card_suit;
 };
 
 #endif

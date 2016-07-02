@@ -32,33 +32,37 @@
 void printCard(const Card card) {
 	int card_rank = card.card_rank;
 	switch (card_rank) {
-		case CardRank::TWO:    std::cout << "2";
-        case CardRank::THREE:    std::cout << "3";
-        case CardRank::FOUR:    std::cout << "4";
-        case CardRank::FIVE:    std::cout << "5";
-        case CardRank::SIX:    std::cout << "6";
-        case CardRank::SEVEN:    std::cout << "7";
-        case CardRank::EIGHT:    std::cout << "8";
-        case CardRank::NINE:    std::cout << "9";
-        case CardRank::TEN:    std::cout << "T";
-        case CardRank::JACK:    std::cout << "J";
-        case CardRank::QUEEN:    std::cout << "Q";
-        case CardRank::KING:    std::cout << "K";
-        case CardRank::ACE:    std::cout << "A";
+		case CardRank::TWO:    std::cout << "2"; break;
+        case CardRank::THREE:    std::cout << "3"; break;
+        case CardRank::FOUR:    std::cout << "4"; break;
+        case CardRank::FIVE:    std::cout << "5"; break;
+        case CardRank::SIX:    std::cout << "6"; break;
+        case CardRank::SEVEN:    std::cout << "7"; break;
+        case CardRank::EIGHT:    std::cout << "8"; break;
+        case CardRank::NINE:    std::cout << "9"; break;
+        case CardRank::TEN:    std::cout << "T"; break;
+        case CardRank::JACK:    std::cout << "J"; break;
+        case CardRank::QUEEN:    std::cout << "Q"; break;
+        case CardRank::KING:    std::cout << "K"; break;
+        case CardRank::ACE:    std::cout << "A"; break;
+		default: std::cout << "\nInvalid Choice\n";
 	}
 
 	int card_suit = card.card_suit;
 	switch (card_suit) {
-		case CardSuit::CLUBS: std::cout << "C";
-		case CardSuit::DIAMONDS: std::cout << "D";
-		case CardSuit::HEARTS: std::cout << "H";
-		case CardSuit::SPADES: std::cout << "S";
+		case CardSuit::CLUBS: std::cout << "C"; break;
+		case CardSuit::DIAMONDS: std::cout << "D"; break;
+		case CardSuit::HEARTS: std::cout << "H"; break;
+		case CardSuit::SPADES: std::cout << "S"; break;
+		default: std::cout << "\nInvalid Choice\n";
 		break;
 	}
+
+	std::cout << "\n";
 }
 
 int main() {
-	Card card {CardSuit::CLUBS, CardRank::KING};
+	Card card {CardRank::KING, CardSuit::CLUBS};
 	printCard(card);
 }
 
