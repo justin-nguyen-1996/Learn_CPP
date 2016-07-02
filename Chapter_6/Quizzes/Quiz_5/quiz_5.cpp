@@ -33,7 +33,10 @@ void printCard(const Card card) {
 	int card_suit = card.card_suit;
 	std::string card_suit_str;
 	switch (card_suit) {
-		case CardSuit::CLUBS: card_suit_str = "CLUBS";
+		case CardSuit::CLUBS: card_suit_str = "C";
+		case CardSuit::DIAMONDS: card_suit_str = "D";
+		case CardSuit::HEARTS: card_suit_str = "H";
+		case CardSuit::SPADES: card_suit_str = "S";
 		break;
 	}
 

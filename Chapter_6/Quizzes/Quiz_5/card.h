@@ -21,7 +21,7 @@ namespace CardRank {
         EIGHT,
         NINE,
         TEN,
-        JACK,
+        JACK = 'J',
         QUEEN,
         KING,
         ACE
