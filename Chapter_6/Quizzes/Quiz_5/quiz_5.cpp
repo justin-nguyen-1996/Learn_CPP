@@ -88,6 +88,25 @@ ErrorType isBadInput() {
 	cin.ignore(32767, '\n');
 }*/
 
+int getCardVal(Card& card) {
+	switch (card.card_rank) {
+		case CardRank::TWO : return 2;
+		case CardRank::THREE: return 3;
+		case CardRank::FOUR: return 4;
+		case CardRank::FIVE: return 5;
+		case CardRank::SIX: return 6;
+		case CardRank::SEVEN: return 7;
+		case CardRank::EIGHT: return 8;
+		case CardRank::NINE: return 9;
+		case CardRank::TEN: 
+		case CardRank::JACK: 
+		case CardRank::QUEEN:
+		case CardRank::KING: return 10;
+		case CardRank::ACE: return 11;
+		default: return -100;
+	}
+}
+
 bool isValidChoice(std::string& players_choice) {
 	if (! (players_choice == "Hit" || players_choice == "hit" ||
 		   players_choice == "H" || players_choice == "h")) {
