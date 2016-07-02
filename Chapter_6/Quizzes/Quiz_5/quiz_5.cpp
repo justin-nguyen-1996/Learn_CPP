@@ -87,7 +87,14 @@ ErrorType isBadInput() {
 }
 
 void playBlackjack(Card card_deck[]) {
-	std::
+	/* start the game */
+	std::cout << "\nWelcome. Let's play Blackjack.\n"
+			  << "-----------------------------------\n";
+	int top_card = 0;
+	std::string my_cards = "";
+	std::string dealers_cards = "";
+
+	std::cout << "Your cards: " << my_cards << "\n";
 }
 
 int main() {
