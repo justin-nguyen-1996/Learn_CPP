@@ -195,15 +195,7 @@ int main() {
 		}
 	}
 
-	/* shuffle the deck */ 
 	shuffleDeck(card_deck);
-
-	/* print out the deck */
-	/*for (const auto& card : card_deck) {
-		printCard(card);
-	}*/
-
-	/* play Blackjack */
 	while (1) {
 		playBlackjack(card_deck);
 
