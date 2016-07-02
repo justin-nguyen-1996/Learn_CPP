@@ -72,12 +72,8 @@ int main() {
 		}
 	}
 
-	card = 0;
-	for (int suit = 0; suit < 4; suit += 1) {
-		for (int rank = 0; rank < 13; rank += 1) {
-			printCard(card_deck[card]);
-			card += 1;
-		}
+	for (const auto& card : card_deck) {
+		printCard(card);
 	}
 }
 
