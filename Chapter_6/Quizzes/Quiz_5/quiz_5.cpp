@@ -104,21 +104,28 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 	cout << "\nWelcome. Let's play Blackjack.\n"
 			  << "-----------------------------------\n";
 
-	/* initial cards */
-	string my_cards = "";
-	string dealers_cards = "";
-	my_cards += getCard(card_deck[0]) + " " + getCard(card_deck[1]);
+	/* initial cards for player and dealer */
+	string player_cards = "";
+	string dealer_cards = "";
+	int player_sum = 0;
+	int dealer_sum = 0;
 
+	dealer_cards += getCard(card_deck[0]);
+	player_cards += getCard(card_deck[1]) + " " + getCard(card_deck[2]);
 
+	dealer_sum += card_deck[0].card_rank;
+	player_sum += card_deck[1].card_rank + card_deck[2].card_rank;
+
+	std::cout << dealer_sum << "\n";
+	std::cout << player_sum << "\n";
+
+	string players_choice;
 	do {
 		/* get player's choice */
-		cout << "Your cards: " << my_cards << "\n";
+		cout << "Your cards: " << player_cards << "\n";
 		cout << "Hit or Stand (H or S)? ";
-		string players_choice;
 		cin >> players_choice;
-	} while (isValidChoice(players_choice) && sum <= 21);
-
-	
+	} while (isValidChoice(players_choice) && player_sum <= 21);
 
 }
 
