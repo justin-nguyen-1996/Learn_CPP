@@ -9,7 +9,7 @@ enum CardSuit {
 };
 
 enum CardRank {
-	TWO,
+	TWO, 
 	THREE,
 	FOUR,
 	FIVE,
