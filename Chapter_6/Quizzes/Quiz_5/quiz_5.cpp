@@ -176,6 +176,14 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 	}
 }
 
+void shuffleDeck(std::array<Card,52>& card_deck) {
+	srand(time(NULL));
+	for (int card_i = 0; card_i < 52; card_i += 1) {
+		int rando = rand() % 52;
+		swapCards(card_deck[card_i], card_deck[rando]);
+	}
+}
+
 int main() {
 	/* make the deck */
 	std::array<Card, 52> card_deck;
@@ -188,11 +196,7 @@ int main() {
 	}
 
 	/* shuffle the deck */ 
-	srand(time(NULL));
-	for (int card_i = 0; card_i < 52; card_i += 1) {
-		int rando = rand() % 52;
-		swapCards(card_deck[card_i], card_deck[rando]);
-	}
+	shuffleDeck(card_deck);
 
 	/* print out the deck */
 	/*for (const auto& card : card_deck) {
@@ -210,6 +214,8 @@ int main() {
 			play_again == "N" || play_again == "n") {
 				break;
 		}
+
+		shuffleDeck(card_deck);
 	}
 }
 
