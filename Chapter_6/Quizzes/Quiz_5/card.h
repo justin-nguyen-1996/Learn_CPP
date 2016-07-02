@@ -12,7 +12,7 @@ namespace {
 
 namespace CardRank {
     enum CardRank {
-        TWO = 2,
+        TWO,
         THREE,
         FOUR,
         FIVE,
@@ -21,7 +21,7 @@ namespace CardRank {
         EIGHT,
         NINE,
         TEN,
-        JACK = 'J',
+        JACK,
         QUEEN,
         KING,
         ACE

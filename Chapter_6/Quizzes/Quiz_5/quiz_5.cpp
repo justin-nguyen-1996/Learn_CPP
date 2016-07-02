@@ -30,17 +30,31 @@
 #include "card.h"
 
 void printCard(const Card card) {
-	int card_suit = card.card_suit;
-	std::string card_suit_str;
-	switch (card_suit) {
-		case CardSuit::CLUBS: card_suit_str = "C";
-		case CardSuit::DIAMONDS: card_suit_str = "D";
-		case CardSuit::HEARTS: card_suit_str = "H";
-		case CardSuit::SPADES: card_suit_str = "S";
-		break;
+	int card_rank = card.card_rank;
+	switch (card_rank) {
+		case CardRank::TWO:    std::cout << "2";
+        case CardRank::THREE:    std::cout << "3";
+        case CardRank::FOUR:    std::cout << "4";
+        case CardRank::FIVE:    std::cout << "5";
+        case CardRank::SIX:    std::cout << "6";
+        case CardRank::SEVEN:    std::cout << "7";
+        case CardRank::EIGHT:    std::cout << "8";
+        case CardRank::NINE:    std::cout << "9";
+        case CardRank::TEN:    std::cout << "T";
+        case CardRank::JACK:    std::cout << "J";
+        case CardRank::QUEEN:    std::cout << "Q";
+        case CardRank::KING:    std::cout << "K";
+        case CardRank::ACE:    std::cout << "A";
 	}
 
-	std::cout << card_suit_str << card.card_rank;
+	int card_suit = card.card_suit;
+	switch (card_suit) {
+		case CardSuit::CLUBS: std::cout << "C";
+		case CardSuit::DIAMONDS: std::cout << "D";
+		case CardSuit::HEARTS: std::cout << "H";
+		case CardSuit::SPADES: std::cout << "S";
+		break;
+	}
 }
 
 int main() {
