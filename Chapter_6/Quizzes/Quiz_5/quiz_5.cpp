@@ -118,6 +118,9 @@ PlayerChoice getValidChoice(std::string& player_choice) {
 void playBlackjack(std::array<Card,52>& card_deck) {
 	using namespace std;
 
+	int aces_counter_player = 0;
+	int aces_counter_dealer = 0;
+
 	/* start the game */
 	cout << "\nWelcome. Let's play Blackjack.\n"
 			  << "-----------------------------------\n";
@@ -159,6 +162,33 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 		top_card += 1;
 	}
 
+	/* check aces counters */
+	if (player_sum > 21) {
+		for (char s : player_cards) {
+			if (s == 'A') {
+				aces_counter_player += 1;
+			}
+		}
+	}
+
+	while (player_sum > 21   &&   aces_counter_player > 0) {
+		player_sum -= 10;
+		aces_counter_player -= 1;
+	}
+
+	if (dealer_sum > 21) {
+		for (char s : dealer_cards) {
+			if (s == 'A') {
+				aces_counter_dealer += 1;
+			}
+		}
+	}
+
+	while (dealer_sum > 21   &&   aces_counter_dealer > 0) {
+		dealer_sum -= 10;
+		aces_counter_dealer -= 1;
+	}
+	
 	/* final results */
 	std::cout << "-----------------------------------\n"
 			  << "Final Results:\n"
@@ -183,6 +213,7 @@ void shuffleDeck(std::array<Card,52>& card_deck) {
 		swapCards(card_deck[card_i], card_deck[rando]);
 	}
 }
+
 
 int main() {
 	/* make the deck */
