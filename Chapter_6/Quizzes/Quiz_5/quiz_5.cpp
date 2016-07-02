@@ -88,17 +88,38 @@ ErrorType isBadInput() {
 	cin.ignore(32767, '\n');
 }*/
 
+bool isValidChoice(std::string& players_choice) {
+	if (! (players_choice == "Hit" || players_choice == "hit" ||
+		   players_choice == "H" || players_choice == "h")) {
+				return false;
+	}
+
+	return true;
+}
+
 void playBlackjack(std::array<Card,52>& card_deck) {
+	using namespace std;
+
 	/* start the game */
-	std::cout << "\nWelcome. Let's play Blackjack.\n"
+	cout << "\nWelcome. Let's play Blackjack.\n"
 			  << "-----------------------------------\n";
 
-	std::string my_cards = "";
-	std::string dealers_cards = "";
+	/* initial cards */
+	string my_cards = "";
+	string dealers_cards = "";
+	my_cards += getCard(card_deck[0]) + " " + getCard(card_deck[1]);
 
-	my_cards += getCard(card_deck[0]) + getCard(card_deck[1]);
 
-	std::cout << "Your cards: " << my_cards << "\n";
+	do {
+		/* get player's choice */
+		cout << "Your cards: " << my_cards << "\n";
+		cout << "Hit or Stand (H or S)? ";
+		string players_choice;
+		cin >> players_choice;
+	} while (isValidChoice(players_choice) && sum <= 21);
+
+	
+
 }
 
 int main() {
