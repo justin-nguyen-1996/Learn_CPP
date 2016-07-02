@@ -67,7 +67,7 @@ int main() {
 	int card = 0;
 	for (int suit = 0; suit < 4; suit += 1) {
 		for (int rank = 0; rank < 13; rank += 1) {
-			card_deck[card] = {CardRank(rank), CardSuit(suit)};
+			card_deck[card].card_rank = CardRank(rank);// {CardRank(rank), CardSuit(suit)};
 			card += 1;
 		}
 	}
