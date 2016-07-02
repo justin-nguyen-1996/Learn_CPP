@@ -31,36 +31,38 @@
 #include <time.h>
 #include "card.h"
 
-void printCard(const Card card) {
+std::string getCard(const Card card) {
 	int card_rank = card.card_rank;
+	std::string card_str_val = "";
+
 	switch (card_rank) {
-		case CardRank::TWO:    std::cout << "2"; break;
-        case CardRank::THREE:    std::cout << "3"; break;
-        case CardRank::FOUR:    std::cout << "4"; break;
-        case CardRank::FIVE:    std::cout << "5"; break;
-        case CardRank::SIX:    std::cout << "6"; break;
-        case CardRank::SEVEN:    std::cout << "7"; break;
-        case CardRank::EIGHT:    std::cout << "8"; break;
-        case CardRank::NINE:    std::cout << "9"; break;
-        case CardRank::TEN:    std::cout << "T"; break;
-        case CardRank::JACK:    std::cout << "J"; break;
-        case CardRank::QUEEN:    std::cout << "Q"; break;
-        case CardRank::KING:    std::cout << "K"; break;
-        case CardRank::ACE:    std::cout << "A"; break;
+		case CardRank::TWO:    card_str_val += "2"; break;
+        case CardRank::THREE:    card_str_val += "3"; break;
+        case CardRank::FOUR:    card_str_val += "4"; break;
+        case CardRank::FIVE:    card_str_val += "5"; break;
+        case CardRank::SIX:    card_str_val += "6"; break;
+        case CardRank::SEVEN:    card_str_val += "7"; break;
+        case CardRank::EIGHT:    card_str_val += "8"; break;
+        case CardRank::NINE:    card_str_val += "9"; break;
+        case CardRank::TEN:    card_str_val += "T"; break;
+        case CardRank::JACK:    card_str_val += "J"; break;
+        case CardRank::QUEEN:    card_str_val += "Q"; break;
+        case CardRank::KING:    card_str_val += "K"; break;
+        case CardRank::ACE:    card_str_val += "A"; break;
 		default: std::cout << "\nInvalid Choice\n";
 	}
 
 	int card_suit = card.card_suit;
 	switch (card_suit) {
-		case CardSuit::CLUBS: std::cout << "C"; break;
-		case CardSuit::DIAMONDS: std::cout << "D"; break;
-		case CardSuit::HEARTS: std::cout << "H"; break;
-		case CardSuit::SPADES: std::cout << "S"; break;
+		case CardSuit::CLUBS: card_str_val += "C"; break;
+		case CardSuit::DIAMONDS: card_str_val += "D"; break;
+		case CardSuit::HEARTS: card_str_val += "H"; break;
+		case CardSuit::SPADES: card_str_val += "S"; break;
 		default: std::cout << "\nInvalid Choice\n";
 		break;
 	}
 
-	std::cout << "\n";
+	return card_str_val;
 }
 
 void swapCards(Card& a, Card& b) {
@@ -90,9 +92,11 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 	/* start the game */
 	std::cout << "\nWelcome. Let's play Blackjack.\n"
 			  << "-----------------------------------\n";
-	int top_card = 0;
+
 	std::string my_cards = "";
 	std::string dealers_cards = "";
+
+	my_cards += getCard(card_deck[0]) + getCard(card_deck[1]);
 
 	std::cout << "Your cards: " << my_cards << "\n";
 }
