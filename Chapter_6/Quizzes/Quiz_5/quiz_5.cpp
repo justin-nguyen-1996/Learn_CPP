@@ -141,14 +141,17 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 	int top_card = 3; // game always starts with 3 cards dealt to dealer and player, zero-indexed
 	string player_choice;
 
+	std::cout << "Dealer's cards: " << dealer_cards << "\n";
 	std::cout << "Your cards: " << player_cards << "\n";
 	while (getValidChoice(player_choice) == PlayerChoice::HIT) {
 		/* add to the player's list of cards */
-		player_sum += card_deck[top_card].card_rank;
+		player_sum += getCardVal(card_deck[top_card]);
 		player_cards += " " + getCard(card_deck[top_card]);
 		std::cout << "Your cards: " << player_cards << "\n";
-		//if (player_sum > 21) { break; }
+		std::cout << "Your sum: " << player_sum << "\n";
+
 		top_card += 1;
+		if (player_sum > 21) { break; }
 	}
 
 		/* get player's choice */
