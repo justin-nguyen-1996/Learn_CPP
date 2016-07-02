@@ -27,6 +27,7 @@
 
 #include <iostream>
 #include <string>
+#include <array>
 #include "card.h"
 
 void printCard(const Card card) {
@@ -62,7 +63,21 @@ void printCard(const Card card) {
 }
 
 int main() {
-	Card card {CardRank::KING, CardSuit::CLUBS};
-	printCard(card);
+	std::array<Card, 52> card_deck;
+	int card = 0;
+	for (int suit = 0; suit < 4; suit += 1) {
+		for (int rank = 0; rank < 13; rank += 1) {
+			card_deck[card] = {CardRank(rank), CardSuit(suit)};
+			card += 1;
+		}
+	}
+
+	card = 0;
+	for (int suit = 0; suit < 4; suit += 1) {
+		for (int rank = 0; rank < 13; rank += 1) {
+			printCard(card_deck[card]);
+			card += 1;
+		}
+	}
 }
 
