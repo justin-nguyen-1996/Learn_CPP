@@ -62,6 +62,12 @@ void printCard(const Card card) {
 	std::cout << "\n";
 }
 
+void swapCards(Card& a, Card& b) {
+	Card temp = a;
+	a = b;
+	b = temp;
+}
+
 int main() {
 	std::array<Card, 52> card_deck;
 	int card = 0;
