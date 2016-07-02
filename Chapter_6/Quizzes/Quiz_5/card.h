@@ -1,12 +1,14 @@
 #ifndef card_h
 #define card_h
 
-enum class CardSuit {
-    CLUBS,
-    DIAMONDS,
-    HEARTS,
-    SPADES
-};
+namespace {
+	enum CardSuit {
+		CLUBS,
+		DIAMONDS,
+		HEARTS,
+		SPADES
+	};
+}
 
 namespace CardRank {
     enum CardRank {
@@ -27,8 +29,9 @@ namespace CardRank {
 }
 
 struct Card {
-	CardSuit card_suit,
-	int card_rank
+	int card_suit;
+	int card_rank;
 };
 
 #endif
+
