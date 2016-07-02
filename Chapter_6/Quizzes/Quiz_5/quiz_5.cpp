@@ -26,14 +26,22 @@
    Update your main function to shuffle the deck and print out the shuffled deck. */
 
 #include <iostream>
+#include <string>
 #include "card.h"
 
 void printCard(const Card card) {
-	std::cout << card.card_suit << card.card_rank;
+	int card_suit = card.card_suit;
+	std::string card_suit_str;
+	switch (card_suit) {
+		case CardSuit::CLUBS: card_suit_str = "CLUBS";
+		break;
+	}
+
+	std::cout << card_suit_str << card.card_rank;
 }
 
 int main() {
-	Card card {CardSuit::SPADES, CardRank::KING};
+	Card card {CardSuit::CLUBS, CardRank::KING};
 	printCard(card);
 }
 
