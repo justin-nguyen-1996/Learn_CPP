@@ -69,7 +69,7 @@ void swapCards(Card& a, Card& b) {
 	b = temp;
 }
 
-enum class ErrorType {
+/*enum class ErrorType {
 	SUCCESS,
 	FAILURE
 };
@@ -84,9 +84,9 @@ ErrorType isBadInput() {
 	}
 
 	cin.ignore(32767, '\n');
-}
+}*/
 
-void playBlackjack(Card card_deck[]) {
+void playBlackjack(std::array<Card,52>& card_deck) {
 	/* start the game */
 	std::cout << "\nWelcome. Let's play Blackjack.\n"
 			  << "-----------------------------------\n";
