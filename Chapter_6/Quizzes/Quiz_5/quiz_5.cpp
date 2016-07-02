@@ -71,23 +71,6 @@ void swapCards(Card& a, Card& b) {
 	b = temp;
 }
 
-/*enum class ErrorType {
-	SUCCESS,
-	FAILURE
-};
-
-ErrorType isBadInput() {
-	using namespace std;
-
-	if (cin.fail()) {
-		cin.clear();
-		cin.ignore(32767, '\n');
-		cout << 
-	}
-
-	cin.ignore(32767, '\n');
-}*/
-
 int getCardVal(Card& card) {
 	switch (card.card_rank) {
 		case CardRank::TWO : return 2;
@@ -107,13 +90,24 @@ int getCardVal(Card& card) {
 	}
 }
 
-bool isValidChoice(std::string& player_choice) {
-	if (! (player_choice == "Hit" || player_choice == "hit" ||
-		   player_choice == "H" || player_choice == "h")) {
-				return false;
-	}
+enum class PlayerChoice {
+	HIT,
+	STAND,
+	INVALID
+}
 
-	return true;
+PlayerChoice getValidChoice(std::string& player_choice) {
+	while (1) {
+		if (player_choice == "Hit" || player_choice == "hit" ||
+			player_choice == "H" || player_choice == "h") {
+				return PlayerChoice::HIT;
+		} else if (player_choice == "Stand" || player_choice == "stand" ||
+				   player_choice == "S" || player_choice == "s") {
+				return PlayerChoice::STAND;
+		} else {
+				std::cout << "Invalid choice. Try again.\n";
+		}
+	}
 }
 
 void playBlackjack(std::array<Card,52>& card_deck) {
@@ -135,10 +129,17 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 	dealer_sum += getCardVal(card_deck[0]);
 	player_sum += getCardVal(card_deck[1]) + getCardVal(card_deck[2]);
 
+	/* debugging */
 	std::cout << dealer_sum << "\n";
 	std::cout << player_sum << "\n";
 
+	int top_card = 3; // game always starts with 3 cards dealt to dealer and player, zero-indexed
 	string player_choice;
+
+	while (getValidChoice == HIT) {
+		
+	}
+
 	do {
 		/* get player's choice */
 		cout << "Your cards: " << player_cards << "\n";
