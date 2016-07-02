@@ -143,7 +143,9 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 
 	while (getValidChoice(player_choice) == PlayerChoice::HIT) {
 		std::cout << "Your cards: " << player_cards << "\n";
-		if (player_sum > 21) { break; }
+		player_sum += card_deck[top_card].card_rank;
+		top_card += 1;
+		//if (player_sum > 21) { break; }
 	}
 
 		/* get player's choice */
@@ -164,7 +166,7 @@ int main() {
 	/* shuffle the deck */ 
 	srand(time(NULL));
 	for (int card_i = 0; card_i < 52; card_i += 1) {
-		int rando = (rand() % 52) + 1;
+		int rando = rand() % 52;
 		swapCards(card_deck[card_i], card_deck[rando]);
 	}
 
