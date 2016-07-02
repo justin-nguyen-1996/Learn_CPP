@@ -69,6 +69,27 @@ void swapCards(Card& a, Card& b) {
 	b = temp;
 }
 
+enum class ErrorType {
+	SUCCESS,
+	FAILURE
+};
+
+ErrorType isBadInput() {
+	using namespace std;
+
+	if (cin.fail()) {
+		cin.clear();
+		cin.ignore(32767, '\n');
+		cout << 
+	}
+
+	cin.ignore(32767, '\n');
+}
+
+void playBlackjack(Card card_deck[]) {
+	std::
+}
+
 int main() {
 	/* make the deck */
 	std::array<Card, 52> card_deck;
@@ -88,10 +109,12 @@ int main() {
 	}
 
 	/* print out the deck */
-	for (const auto& card : card_deck) {
+	/*for (const auto& card : card_deck) {
 		printCard(card);
-	}
+	}*/
 
+	/* play Blackjack */
+	playBlackjack(card_deck);
 }
 
 
