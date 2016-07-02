@@ -82,9 +82,9 @@ int main() {
 
 	/* shuffle the deck */ 
 	srand(time(NULL));
-	for (card_i = 0; card_i < 52; card_i += 1) {
-		int rand = rand(52) + 1;
-		swapCards(card_deck[card_i], card_deck[rand]);
+	for (int card_i = 0; card_i < 52; card_i += 1) {
+		int rando = (rand() % 52) + 1;
+		swapCards(card_deck[card_i], card_deck[rando]);
 	}
 
 	/* print out the deck */
