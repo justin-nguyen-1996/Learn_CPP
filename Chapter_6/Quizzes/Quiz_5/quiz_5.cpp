@@ -26,8 +26,14 @@
    Update your main function to shuffle the deck and print out the shuffled deck. */
 
 #include <iostream>
+#include "card.h"
+
+void printCard(const Card card) {
+	std::cout << card.card_suit << card.card_rank;
+}
 
 int main() {
-
+	Card card {CardSuit::SPADES, CardRank::KING};
+	printCard(card);
 }
 
