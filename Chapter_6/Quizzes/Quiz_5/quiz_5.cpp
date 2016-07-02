@@ -165,9 +165,15 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 			  << "Your cards:     " << player_cards << "\n"
 			  << "Dealer's cards: " << dealer_cards << "\n";
 	
-	(player_sum > dealer_sum) ?
-		std::cout << "You Win!" :
-		std::cout << "You Lose!";
+	if (player_sum > 21) {
+		std::cout << "You Lose!\n";
+	} else if (dealer_sum > 21) {
+		std::cout << "You Win!\n";
+	} else if (player_sum > dealer_sum) {
+		std::cout << "You Win!\n";
+	} else {
+		std::cout << "You Lose!\n";
+	}
 }
 
 int main() {
