@@ -94,7 +94,7 @@ enum class PlayerChoice {
 	HIT,
 	STAND,
 	INVALID
-}
+};
 
 PlayerChoice getValidChoice(std::string& player_choice) {
 	while (1) {
@@ -136,16 +136,14 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 	int top_card = 3; // game always starts with 3 cards dealt to dealer and player, zero-indexed
 	string player_choice;
 
-	while (getValidChoice == HIT) {
-		
+	while (getValidChoice(player_choice) == PlayerChoice::HIT) {
+		if (player_sum > 21) { break; }
 	}
 
-	do {
 		/* get player's choice */
 		cout << "Your cards: " << player_cards << "\n";
 		cout << "Hit or Stand (H or S)? ";
 		cin >> player_choice;
-	} while (isValidChoice(player_choice) && player_sum <= 21);
 
 }
 
