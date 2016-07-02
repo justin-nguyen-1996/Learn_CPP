@@ -107,9 +107,9 @@ int getCardVal(Card& card) {
 	}
 }
 
-bool isValidChoice(std::string& players_choice) {
-	if (! (players_choice == "Hit" || players_choice == "hit" ||
-		   players_choice == "H" || players_choice == "h")) {
+bool isValidChoice(std::string& player_choice) {
+	if (! (player_choice == "Hit" || players_choice == "hit" ||
+		   player_choice == "H" || players_choice == "h")) {
 				return false;
 	}
 
@@ -132,19 +132,19 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 	dealer_cards += getCard(card_deck[0]);
 	player_cards += getCard(card_deck[1]) + " " + getCard(card_deck[2]);
 
-	dealer_sum += card_deck[0].card_rank;
-	player_sum += card_deck[1].card_rank + card_deck[2].card_rank;
+	dealer_sum += getCardVal(card_deck[0].card_rank);
+	player_sum += getCardVal(card_deck[1].card_rank) + getCardVal(card_deck[2].card_rank);
 
 	std::cout << dealer_sum << "\n";
 	std::cout << player_sum << "\n";
 
-	string players_choice;
+	string player_choice;
 	do {
 		/* get player's choice */
 		cout << "Your cards: " << player_cards << "\n";
 		cout << "Hit or Stand (H or S)? ";
-		cin >> players_choice;
-	} while (isValidChoice(players_choice) && player_sum <= 21);
+		cin >> player_choice;
+	} while (isValidChoice(player_choice) && player_sum <= 21);
 
 }
 
