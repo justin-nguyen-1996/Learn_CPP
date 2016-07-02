@@ -134,28 +134,40 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 	dealer_sum += getCardVal(card_deck[0]);
 	player_sum += getCardVal(card_deck[1]) + getCardVal(card_deck[2]);
 
-	/* debugging */
-	cout << dealer_sum << "\n";
-	cout << player_sum << "\n";
-
 	int top_card = 3; // game always starts with 3 cards dealt to dealer and player, zero-indexed
 	string player_choice;
 
 	std::cout << "Dealer's cards: " << dealer_cards << "\n";
 	std::cout << "Your cards: " << player_cards << "\n";
+
+	/* player's turn */
 	while (getValidChoice(player_choice) == PlayerChoice::HIT) {
-		/* add to the player's list of cards */
 		player_sum += getCardVal(card_deck[top_card]);
 		player_cards += " " + getCard(card_deck[top_card]);
+
 		std::cout << "Your cards: " << player_cards << "\n";
-		std::cout << "Your sum: " << player_sum << "\n";
 
 		top_card += 1;
 		if (player_sum > 21) { break; }
 	}
 
-		/* get player's choice */
+	/* dealer's turn */
+	while (dealer_sum < 17) {
+		dealer_sum += getCardVal(card_deck[top_card]);
+		dealer_cards += " " + getCard(card_deck[top_card]);
 
+		top_card += 1;
+	}
+
+	/* final results */
+	std::cout << "-----------------------------------\n"
+			  << "Final Results:\n"
+			  << "Your cards:     " << player_cards << "\n"
+			  << "Dealer's cards: " << dealer_cards << "\n";
+	
+	(player_sum > dealer_sum) ?
+		std::cout << "You Win!" :
+		std::cout << "You Lose!";
 }
 
 int main() {
@@ -182,6 +194,16 @@ int main() {
 	}*/
 
 	/* play Blackjack */
-	playBlackjack(card_deck);
+	while (1) {
+		playBlackjack(card_deck);
+
+		std::cout << "Want to play again? ";
+		std::string play_again;
+		std::cin >> play_again;
+		if (play_again == "No" || play_again == "no" ||
+			play_again == "N" || play_again == "n") {
+				break;
+		}
+	}
 }
 
