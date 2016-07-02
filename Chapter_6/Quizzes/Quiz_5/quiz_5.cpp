@@ -98,6 +98,11 @@ enum class PlayerChoice {
 
 PlayerChoice getValidChoice(std::string& player_choice) {
 	while (1) {
+		/* get the player's choice */
+		std::cout << "Hit or Stand (H or S)? ";
+		std::cin >> player_choice;
+
+		/* test the player's choice */
 		if (player_choice == "Hit" || player_choice == "hit" ||
 			player_choice == "H" || player_choice == "h") {
 				return PlayerChoice::HIT;
@@ -130,20 +135,18 @@ void playBlackjack(std::array<Card,52>& card_deck) {
 	player_sum += getCardVal(card_deck[1]) + getCardVal(card_deck[2]);
 
 	/* debugging */
-	std::cout << dealer_sum << "\n";
-	std::cout << player_sum << "\n";
+	cout << dealer_sum << "\n";
+	cout << player_sum << "\n";
 
 	int top_card = 3; // game always starts with 3 cards dealt to dealer and player, zero-indexed
 	string player_choice;
 
 	while (getValidChoice(player_choice) == PlayerChoice::HIT) {
+		std::cout << "Your cards: " << player_cards << "\n";
 		if (player_sum > 21) { break; }
 	}
 
 		/* get player's choice */
-		cout << "Your cards: " << player_cards << "\n";
-		cout << "Hit or Stand (H or S)? ";
-		cin >> player_choice;
 
 }
 
@@ -173,6 +176,4 @@ int main() {
 	/* play Blackjack */
 	playBlackjack(card_deck);
 }
-
-
 
