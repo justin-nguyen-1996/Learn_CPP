@@ -28,6 +28,7 @@
 #include <iostream>
 #include <string>
 #include <array>
+#include <time.h>
 #include "card.h"
 
 void printCard(const Card card) {
@@ -69,6 +70,7 @@ void swapCards(Card& a, Card& b) {
 }
 
 int main() {
+	/* make the deck */
 	std::array<Card, 52> card_deck;
 	int card = 0;
 	for (int suit = 0; suit < 4; suit += 1) {
@@ -78,8 +80,19 @@ int main() {
 		}
 	}
 
+	/* shuffle the deck */ 
+	srand(time(NULL));
+	for (card_i = 0; card_i < 52; card_i += 1) {
+		int rand = rand(52) + 1;
+		swapCards(card_deck[card_i], card_deck[rand]);
+	}
+
+	/* print out the deck */
 	for (const auto& card : card_deck) {
 		printCard(card);
 	}
+
 }
+
+
 
