@@ -21,4 +21,9 @@
 		(*foo_ptr)(5); // explicit dereference
 		foo_ptr(5);    // implicit dereference
 
+4. Function Pointers and Default Parameters
+	--> doesn't work with functions that have default parameters
+	--> default params are resolved at compile time
+	--> but function pointers are resolved at run time
 
+5. 
