@@ -1,0 +1,18 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/3/2016
+*/
+
+1. Null Pointers
+	--> arrays passed by address decay into pointers
+	--> make sure parameters passed by address are not null pointers
+		--> if (!ptr) { return; }
+
+2. Instead of Pointer to Pointer
+	--> use pointer reference
+		
+		void setToNull(int*& ptr) {
+			ptr = nullptr; // changes ptr to become a nullptr
+		}
+
+
