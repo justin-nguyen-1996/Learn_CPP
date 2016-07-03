@@ -1,0 +1,10 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/3/2016
+*/
+
+1. Overloading definition
+	--> when the functions have the same name but different parameters
+	--> difference params as in different type or different amounts of params
+
+
