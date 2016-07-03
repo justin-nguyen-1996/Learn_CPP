@@ -3,13 +3,20 @@
 	Created: 7/3/2016
 */
 
-1. const references
+1. Const References
 	--> use const references as parameters when:
 		--> you want the compiler to ensure the value won't change
 		--> you want to tell the programmer the value won't change
 		--> you need to pass const arguments to the function
 
-2. references in general
+2. References in general
 	--> can return multiple values from a function
 	--> copies the reference, not the value --> faster
 	--> always initialized so no null values
+
+3. Disadvantages and when not to use
+	--> don't use for fundamental variable types (primitives)
+	--> can't tell from function call if the variable will change
+	--> can't pass literals or expressions
+
+
