@@ -15,4 +15,9 @@
 	--> tries standard conversion
 		--> numerics match numerics, pointers match void pointers
 
+3. Ambiguous Matches
+	--> occurs due to type conversion, produces compile-time error
+	--> make a new overloaded function to match
+	--> or type cast
+
 
