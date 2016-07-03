@@ -15,3 +15,10 @@
 	
 	--> dont' do int (*foo_ptr)() = foo(); // assigns ptr to foo's return value
 
+3. Calling Functions with Function Pointers
+	--> int foo(int x) { return x; }
+		int (*foo_ptr)(int) = foo;
+		(*foo_ptr)(5); // explicit dereference
+		foo_ptr(5);    // implicit dereference
+
+
