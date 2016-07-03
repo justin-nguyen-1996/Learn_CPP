@@ -1,0 +1,10 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/3/2016
+*/
+
+1. Default Parameters
+	--> void printValues(int x, int y=10);
+
+2. Quirks
+	-->
