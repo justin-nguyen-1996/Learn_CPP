@@ -1,0 +1,16 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/3/2016
+*/
+
+1. Don't use return by address
+	--> if returning address of a local variable
+
+	int* fxn() {
+		int x = 4;
+		return &x; 
+	} // value gets destroyed here
+	  // dangling pointer
+
+	--> can't use for expressions or literals (these don't have addresses)
+
