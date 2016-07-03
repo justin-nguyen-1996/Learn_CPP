@@ -11,4 +11,13 @@
 		(don't need to know how a fxn is implemented to call it)
 	--> type checking
 
-2.
+2. Downsides of functions
+	--> calling them produces significant overhead
+		--> need to save the return location
+		--> need to perform a branch there and branch back
+		--> need to save snapshot of all registers and values
+		--> need to create variables for parameters and assign values
+
+3. Why use inline functions
+	--> gets the benefit of readable code and no overhead
+	-->
