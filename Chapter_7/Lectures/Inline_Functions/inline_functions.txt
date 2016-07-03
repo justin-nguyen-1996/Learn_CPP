@@ -35,4 +35,9 @@
 		return 0;
 	}
 
-4. When 
+4. When to use inline functions
+	--> only use for short functions
+	--> expands code for every call of the inline function
+	--> potential for code bloat (faster but uses up more memory)
+
+
