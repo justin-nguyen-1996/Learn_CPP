@@ -7,4 +7,13 @@
 	--> void printValues(int x, int y=10);
 
 2. Quirks
-	-->
+	--> default parameters must be the rightmost parameters
+		void printValues(int x=10, int y); // not allowed
+
+	--> default parameters can only be declared once
+		--> put the default values in the function declaration 
+			instead of the function definition
+
+	--> they don't count for differentiating functions for overloading
+		void printValues(int x);
+		void printValues(int x, int y=10); // ambiguous overloading
