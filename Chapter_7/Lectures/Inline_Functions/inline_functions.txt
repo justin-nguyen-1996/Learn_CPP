@@ -40,4 +40,9 @@
 	--> expands code for every call of the inline function
 	--> potential for code bloat (faster but uses up more memory)
 
+5. Note about compilers and inline functions
+	--> keyword inline is only a "suggestion" to the compiler
+		compiler is free to ignore your request
+	--> most compilers will inline certain functions even if you don't
+
 
