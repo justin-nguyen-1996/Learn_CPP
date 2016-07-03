@@ -1,0 +1,10 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/3/2016
+*/
+
+1. Function Pointer Syntax
+	--> int foo();
+		int (*fxn_ptr)();
+
+
