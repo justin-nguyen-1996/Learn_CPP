@@ -1,0 +1,14 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/3/2016
+*/
+
+1. Benefits of functions
+	--> code can be re-used
+	--> easier to change function than every instance of the change
+	--> copying and pasting code is asking for broken code
+	--> easier to read and understand 
+		(don't need to know how a fxn is implemented to call it)
+	--> type checking
+
+2.

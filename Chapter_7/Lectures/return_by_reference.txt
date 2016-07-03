@@ -1,9 +1,0 @@
-/*
-	Author:  Justin Nguyen
-	Created: 7/3/2016
-*/
-
-1. When you can't use return by reference
-	--> can't use for literals and expressions
-	--> don't use for local variables
-
