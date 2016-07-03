@@ -5,6 +5,14 @@
 
 1. Overloading definition
 	--> when the functions have the same name but different parameters
-	--> difference params as in different type or different amounts of params
+	--> different params as in different type or different amounts of params
+	--> different return types doesn't count
+
+2. How Function Calls are Matched
+	--> tries to find an exact type match
+	--> tries type promotion
+		--> char to int, float to double, enum to int
+	--> tries standard conversion
+		--> numerics match numerics, pointers match void pointers
 
 
