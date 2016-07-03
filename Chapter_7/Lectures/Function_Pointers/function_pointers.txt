@@ -22,8 +22,43 @@
 		foo_ptr(5);    // implicit dereference
 
 4. Function Pointers and Default Parameters
-	--> doesn't work with functions that have default parameters
+	--> cannot point to functions that have default parameters
 	--> default params are resolved at compile time
 	--> but function pointers are resolved at run time
 
-5. 
+	--> but the function pointers themselves can 
+		be pointed to default functions
+
+5. Callback Functions
+	--> when function pointers are passed as arguments
+	
+	void selectionSort(int* array, int size)
+	void selectionSort(int* array, int size, 
+						bool (*comparison_fxn)(int, int) = ascending)
+
+	bool ascending(int a, int b) {
+		if (a > b) { return true; }
+		else { return false; }
+	}
+
+	bool descending(int a, int b) {
+		if (a < b) { return true; }
+		else { return false; }
+	}
+
+	int main() {
+		selectionSort(array, 4, descending);
+	}
+
+	--> now you can sort anyway you want, provides "custom" functionality
+
+6. Prettier Syntax
+	--> instead of 
+
+	int foo(double x);
+	int (*foo_ptr)(double) = foo;
+
+	#include <functional>
+	std::function<int(double)> foo_ptr = foo;
+
+
