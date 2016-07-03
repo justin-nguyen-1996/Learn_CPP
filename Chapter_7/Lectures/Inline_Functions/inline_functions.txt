@@ -20,4 +20,19 @@
 
 3. Why use inline functions
 	--> gets the benefit of readable code and no overhead
-	-->
+	--> compiler automatically expands the function definition in place
+	--> no branching or anything, but still read as a function call
+
+	inline int min(int x, int y) {
+		return x > y ? y : x;
+	}
+
+	int main() {
+		std::cout << min(5,6) << '\n';
+			// std::cout << (5 > 6 ? 6 : 5) << '\n';
+		std::cout << min(3,2) << '\n';
+			// std::cout << (3 > 2 ? 2 : 3) << '\n';
+		return 0;
+	}
+
+4. When 
