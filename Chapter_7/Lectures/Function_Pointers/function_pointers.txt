@@ -4,7 +4,14 @@
 */
 
 1. Function Pointer Syntax
-	--> int foo();
-		int (*fxn_ptr)();
+	-->	int (*fxn_ptr)();
 
+2. Assigning Function to Function Pointer
+	--> int foo();
+		double goo(int x);
+
+		int (*foo_ptr)() = foo;
+		double (*goo_ptr)(int) = goo;
+	
+	--> dont' do int (*foo_ptr)() = foo(); // assigns ptr to foo's return value
 
