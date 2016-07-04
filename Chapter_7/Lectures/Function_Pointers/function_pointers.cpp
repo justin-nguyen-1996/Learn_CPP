@@ -82,5 +82,6 @@ int main() {
 	do { int_b = getInteger(); } while (inputStatus() == BadInput::FAILURE);
 	do { op = getChar(); } while (inputStatus(op) == BadInput::FAILURE);
 
-
+	/* calculate the result */
+	int res = getArithmeticFunction(op)(int_a, int_b);
 }
