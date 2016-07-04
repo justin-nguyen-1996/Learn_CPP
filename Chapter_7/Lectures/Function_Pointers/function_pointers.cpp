@@ -20,7 +20,7 @@ inline BadInput inputStatus() {
 	return BadInput::SUCCESS;
 }
 
-inline BadInput inputStatus(char c) {
+inline BadInput inputStatus(char op) {
 	using namespace std;
 
 	if (! (op == '+'   ||   op == '-'   ||
@@ -54,4 +54,5 @@ int main() {
 	do {
 		cout << "Enter a mathematical operation (+,-,*,/): ";
 		cin >> op;
-	} }
+	} while (inputStatus(op) == BadInput::FAILURE);
+}
