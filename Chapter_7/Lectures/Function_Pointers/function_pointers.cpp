@@ -34,6 +34,17 @@ inline BadInput inputStatus(char op) {
 	return BadInput::SUCCESS;
 }
 
+int getInteger() {
+	cout << "Enter an integer: ";
+	return cin;
+}
+
+char getChar() {
+	cout << "Enter a mathematical operation (+,-,*,/): ";
+	return 'c';//cin >> op;
+
+}
+
 int main() {
 	using namespace std;
 
@@ -41,18 +52,7 @@ int main() {
 	int int_a; int int_b;
 	char op;
 
-	do {
-		cout << "Enter an integer: ";
-		cin >> int_a;
-	} while (inputStatus() == BadInput::FAILURE);
-
-	do {
-		cout << "Enter an integer: ";
-		cin >> int_b;
-	} while (inputStatus() == BadInput::FAILURE);
-
-	do {
-		cout << "Enter a mathematical operation (+,-,*,/): ";
-		cin >> op;
-	} while (inputStatus(op) == BadInput::FAILURE);
+	do { int_a = getInteger(); } while (inputStatus() == BadInput::FAILURE);
+	do { int_b = getInteger(); } while (inputStatus() == BadInput::FAILURE);
+	do { op = getChar(); } while (inputStatus(op) == BadInput::FAILURE);
 }
