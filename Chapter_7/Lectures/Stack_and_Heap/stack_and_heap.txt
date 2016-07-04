@@ -30,4 +30,9 @@
 		--> allocated memory stays allocated until specifically deallocated
 			--> memory leaks
 		--> access through a pointer is slower than direct access
+	
+	--> advantages
+		--> the heap is a very large pool of memory
+		--> large arrays, structs, and classes can be stored here 
 		
+3. 
