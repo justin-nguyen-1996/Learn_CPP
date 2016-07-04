@@ -65,7 +65,7 @@ inline int divide(int a, int b) {
 	return a / b;
 }
 
-std::function<int, (int,int)> getArithmeticFunction (char op) {
+std::function<int (int,int)> getArithmeticFunction (char op) {
 	if      (op == '+') { return add; }
 	else if (op == '-') { return subtract; }
 	else if (op == '*') { return multiply; }
