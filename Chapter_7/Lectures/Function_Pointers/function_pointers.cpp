@@ -13,9 +13,11 @@ inline BadInput inputStatus() {
 		cin.clear();
 		cin.ignore(32767, '\n');
 		cout << "Error. ";
+		return BadInput::FAILURE;
 	}
 	
 	cin.ignore(32767, '\n');
+	return BadInput::SUCCESS;
 }
 
 int main() {
@@ -27,17 +29,15 @@ int main() {
 
 	do {
 		cout << "Enter an integer: ";
-		cin >> a;
-	} while (inputStatus == BadInput::FAILURE);
+		cin >> int_a;
+	} while (inputStatus() == BadInput::FAILURE);
 
 	do {
 		cout << "Enter an integer: ";
-		cin >> a;
-	} while (inputStatus == BadInput::FAILURE);
+		cin >> int_b;
+	} while (inputStatus() == BadInput::FAILURE);
 
 	do {
-		cout << "Enter an integer: ";
-		cin >> b;
 		cout << "Enter a mathematical operation (+,-,*,/): ";
 		cin >> op;
 	} while (! (op == '+'   ||   op == '-'   ||
