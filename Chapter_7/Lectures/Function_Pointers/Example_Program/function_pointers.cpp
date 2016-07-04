@@ -6,6 +6,14 @@
 #include <iostream>
 #include <functional>
 #include "BadInput.h"
+#include "Arithmetic.h"
+
+static Arithmetic arithmetic_array[] {
+	{ '+', add },
+	{ '-', subtract },
+	{ '*', multiply },
+	{ '/', divide }
+};
 
 inline BadInput inputStatus() {
 	using namespace std;
