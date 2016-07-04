@@ -84,4 +84,7 @@ int main() {
 
 	/* calculate the result */
 	int res = getArithmeticFunction(op)(int_a, int_b);
+
+	/* print the result */
+	cout << "x " << "op " << "y = " << res << "\n";
 }
