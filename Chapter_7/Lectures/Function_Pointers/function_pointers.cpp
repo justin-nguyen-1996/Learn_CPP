@@ -26,7 +26,7 @@ inline BadInput inputStatus(char op) {
 	if (! (op == '+'   ||   op == '-'   ||
 		   op == '*'   ||   op == '/')) {
 				cin.ignore(32767, '\n');
-		   		cout << "Error";
+		   		cout << "Error. ";
 				return BadInput::FAILURE;
 	}
 
