@@ -17,7 +17,17 @@
 
 2. Heap Segment ("free store")
 	--> memory used for dynamically memory allocation
+
 	--> int* ptr1 = new int; // continuous block of 4 bytes on the heap
 		int* ptr2 = new int; // continuous block of 4 bytes on the heap
 		/* ptr1 and ptr2 may not be connected to each other though */
+
+	--> deleting pointer does not delete the var, 
+		only returns the memory back to the operating system
+
+	--> disadvantages
+		--> allocating memory on the heap is comparatively slow
+		--> allocated memory stays allocated until specifically deallocated
+			--> memory leaks
+		--> access through a pointer is slower than direct access
 		
