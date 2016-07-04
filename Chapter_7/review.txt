@@ -1,0 +1,17 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/4/2016
+*/
+
+1. Returning Values
+	--> by value, by address, by reference
+
+2. Inline Functions
+
+3. Overloading
+
+4. Default Parameters
+
+5. Function Pointers
+
+
