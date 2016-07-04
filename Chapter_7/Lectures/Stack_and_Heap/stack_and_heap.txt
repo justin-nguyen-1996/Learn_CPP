@@ -14,3 +14,10 @@
 			--> where dynamically allocated variables are allocated from
 	--> call stack
 			--> where fxn params, local vars, and fxn-related info is stored
+
+2. Heap Segment ("free store")
+	--> memory used for dynamically memory allocation
+	--> int* ptr1 = new int; // continuous block of 4 bytes on the heap
+		int* ptr2 = new int; // continuous block of 4 bytes on the heap
+		/* ptr1 and ptr2 may not be connected to each other though */
+		
