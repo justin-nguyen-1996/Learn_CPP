@@ -1,0 +1,16 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/4/2016
+*/
+
+1. Memory in a program is divided into several segments
+	--> code segment
+			--> where the compiled program sits in memory, read-only
+	--> bss segment
+			--> where un-initialized global and static vars are stored 
+	--> data segment
+			--> where initialized global and static vars are stored 
+	--> heap
+			--> where dynamically allocated variables are allocated from
+	--> call stack
+			--> where fxn params, local vars, and fxn-related info is stored
