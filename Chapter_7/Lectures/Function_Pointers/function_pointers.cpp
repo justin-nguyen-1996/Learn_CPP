@@ -48,14 +48,30 @@ inline char getChar() {
 	return op;
 }
 
+inline int add(int a, int b) {
+	return a + b;
+}
+
+inline subtract(int a, int b) {
+	return a - b;
+}
+
+inline multiply(int a, int b) {
+	return a * b;
+}
+
+inline divide(int a, int b) {
+	return a / b;
+}
+
 int main() {
 	using namespace std;
 
 	/* get input from user */
-	int int_a; int int_b;
-	char op;
-
+	int int_a; int int_b; char op;
 	do { int_a = getInteger(); } while (inputStatus() == BadInput::FAILURE);
 	do { int_b = getInteger(); } while (inputStatus() == BadInput::FAILURE);
 	do { op = getChar(); } while (inputStatus(op) == BadInput::FAILURE);
+
+
 }
