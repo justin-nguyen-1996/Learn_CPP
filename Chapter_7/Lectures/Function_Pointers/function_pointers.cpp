@@ -4,6 +4,7 @@
 */
 
 #include <iostream>
+#include <functional>
 #include "BadInput.h"
 
 inline BadInput inputStatus() {
@@ -52,16 +53,24 @@ inline int add(int a, int b) {
 	return a + b;
 }
 
-inline subtract(int a, int b) {
+inline int subtract(int a, int b) {
 	return a - b;
 }
 
-inline multiply(int a, int b) {
+inline int multiply(int a, int b) {
 	return a * b;
 }
 
-inline divide(int a, int b) {
+inline int divide(int a, int b) {
 	return a / b;
+}
+
+std::function<int, (int,int)> getArithmeticFunction (char op) {
+	if      (op == '+') { return add; }
+	else if (op == '-') { return subtract; }
+	else if (op == '*') { return multiply; }
+	else if (op == '/') { return divide; }
+	else 			    { return nullptr; }
 }
 
 int main() {
