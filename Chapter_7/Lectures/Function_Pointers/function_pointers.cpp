@@ -34,15 +34,18 @@ inline BadInput inputStatus(char op) {
 	return BadInput::SUCCESS;
 }
 
-int getInteger() {
-	cout << "Enter an integer: ";
-	return cin;
+inline int getInteger() {
+	std::cout << "Enter an integer: ";
+	int a;
+	std::cin >> a;
+	return a;
 }
 
-char getChar() {
-	cout << "Enter a mathematical operation (+,-,*,/): ";
-	return 'c';//cin >> op;
-
+inline char getChar() {
+	std::cout << "Enter a mathematical operation (+,-,*,/): ";
+	char op;
+	std::cin >> op;
+	return op;
 }
 
 int main() {
