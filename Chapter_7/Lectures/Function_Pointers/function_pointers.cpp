@@ -20,6 +20,20 @@ inline BadInput inputStatus() {
 	return BadInput::SUCCESS;
 }
 
+inline BadInput inputStatus(char c) {
+	using namespace std;
+
+	if (! (op == '+'   ||   op == '-'   ||
+		   op == '*'   ||   op == '/')) {
+				cin.ignore(32767, '\n');
+		   		cout << "Error";
+				return BadInput::FAILURE;
+	}
+
+	cin.ignore(32767, '\n');
+	return BadInput::SUCCESS;
+}
+
 int main() {
 	using namespace std;
 
@@ -40,6 +54,4 @@ int main() {
 	do {
 		cout << "Enter a mathematical operation (+,-,*,/): ";
 		cin >> op;
-	} while (! (op == '+'   ||   op == '-'   ||
-				op == '*'   ||   op == '/'));
-}
+	} }
