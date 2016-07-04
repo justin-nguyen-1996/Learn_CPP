@@ -4,6 +4,19 @@
 */
 
 #include <iostream>
+#include "BadInput.h"
+
+inline BadInput isBadInput() {
+	using namespace std;
+
+	if (cin.fail()) {
+		cin.clear();
+		cin.ignore(32767, '\n');
+		cout << "Error";
+	}
+	
+	cin.ignore(32767, '\n');
+}
 
 int main() {
 	using namespace std;
@@ -17,5 +30,5 @@ int main() {
 		cin >> b;
 		cout << "Enter a mathematical operation (+,-,*,/): ";
 		cin >> op;
-	} while (testBadInput == ERROR);
+	} while (isBadInput == BadInput::FAILURE);
 }
