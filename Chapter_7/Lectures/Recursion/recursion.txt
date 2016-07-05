@@ -1,0 +1,19 @@
+/*
+    Author:  Justin Nguyen
+    Created: 7/5/2016
+*/
+
+1. Recursive or Iterative?
+    --> iterative functions are almost always more efficient than recursive solutions 
+    --> every time you call a function there is some overhead due to pushing and popping stack frames
+
+    --> Sometimes the recursive implementation of a function is so much cleaner and easier to follow 
+        that incurring a little extra overhead is more than worth it for the benefit in maintainability,
+        particularly if the algorithm doesn't need to recurse too many times to find a solution.
+
+    --> In general, recursion is a good choice when most of the following are true:
+        The recursive code is much simpler to implement
+        The recursion depth can be limited
+        The iterative version of the algorithm requires managing a stack of data
+        This isn’t a performance-critical section of code
+
