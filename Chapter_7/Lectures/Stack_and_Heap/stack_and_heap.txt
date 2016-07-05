@@ -15,7 +15,7 @@
 	--> call stack
 			--> where fxn params, local vars, and fxn-related info is stored
 
-2. Heap Segment ("free store")
+2. Heap Segment ("Free Store")
 	--> memory used for dynamically memory allocation
 
 	--> int* ptr1 = new int; // continuous block of 4 bytes on the heap
@@ -35,4 +35,7 @@
 		--> the heap is a very large pool of memory
 		--> large arrays, structs, and classes can be stored here 
 		
-3. 
+3. Call Stack ("Stack")
+	--> Keeps track of all the active functions (those that have not terminated) 
+	--> Handles allocation of all function parameters and local variables
+	
