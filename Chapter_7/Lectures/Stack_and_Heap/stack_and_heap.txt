@@ -36,6 +36,13 @@
 		--> large arrays, structs, and classes can be stored here 
 		
 3. Call Stack ("Stack")
-	--> Keeps track of all the active functions (those that have not terminated) 
-	--> Handles allocation of all function parameters and local variables
+	--> keeps track of all active functions (those that have not terminated) 
+	--> handles allocation of all function parameters and local variables
+	
+	--> when the program starts, the main() function is pushed on the stack by the operating system
+	--> when a function call is encountered, the function is pushed onto the call stack
+	--> when the current function ends, that function is popped off the call stack
+	--> the “items” we’re pushing and popping on the stack are called stack frames
+	
+	--> the stack pointer keeps track of the top of the stack
 	
