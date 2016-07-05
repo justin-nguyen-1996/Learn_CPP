@@ -59,4 +59,11 @@
     		The stack frame is popped off the stack and frees the memory for all local variables and arguments.
     	The CPU resumes execution at the return address.
 
+	--> Advantages:
+    		Allocating memory on the stack is comparatively fast
+    		Memory allocated on the stack stays in scope as long as it is on the stack
+    		All memory on the stack is known at compile time and can thus be accessed through a variable
+    	--> Disadvantages:
+    		the stack is relatively small so don't pass by value or create local variables of 
+    		large arrays or other memory-intensive structures. 
 	
