@@ -13,9 +13,9 @@ int factorial(int x) {
 
 int main() {
     std::cout << "Factorial(0): " << factorial(0) << "\n";
-    std::cout << "Factorial(1): " << factorial(0) << "\n";
-    std::cout << "Factorial(2): " << factorial(0) << "\n";
-    std::cout << "Factorial(3): " << factorial(0) << "\n";
-    std::cout << "Factorial(7): " << factorial(0) << "\n";
+    std::cout << "Factorial(1): " << factorial(1) << "\n";
+    std::cout << "Factorial(2): " << factorial(2) << "\n";
+    std::cout << "Factorial(3): " << factorial(3) << "\n";
+    std::cout << "Factorial(7): " << factorial(7) << "\n";
 }
 
