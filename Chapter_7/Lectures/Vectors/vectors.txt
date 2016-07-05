@@ -1,0 +1,20 @@
+/*
+    Author:  Justin Nguyen
+    Created: 7/5/2016
+*/
+
+1. Size vs. Capacity
+    --> std::vector<int> array;
+        array = { 0, 1, 2, 3, 4 }; // okay, array length = 5
+        std::cout << "size: " << array.size() << "  capacity: " << array.capacity() << '\n';
+ 
+        array = { 9, 8, 7 }; // okay, array length is now 3!
+        std::cout << "size: " << array.size() << "  capacity: " << array.capacity() << '\n';
+        
+        size: 5  capacity: 5
+        size: 3  capacity: 5
+    
+    --> array subscripts [] and at() are based on size, not capacity
+        if size = 3 and cap = 5, array[4] fails
+    
+    
