@@ -17,4 +17,8 @@
     --> array subscripts [] and at() are based on size, not capacity
         if size = 3 and cap = 5, array[4] fails
     
-    
+2. Stack Functions
+    --> std::vector<int>& stack;
+        stack.push_back(4); // size = 1, cap = 1
+        stack.pop_back();   // size = 0, cap = 1
+        
