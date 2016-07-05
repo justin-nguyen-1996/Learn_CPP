@@ -46,3 +46,17 @@
 	
 	--> the stack pointer keeps track of the top of the stack
 	
+	The program encounters a function call.
+    	A stack frame is constructed and pushed on the stack. The following are pushed:
+        	The return address
+        	All function arguments
+        	Memory for any local variables.
+        	Saved copies of any registers modified by the function to be restored
+    	The CPU jumps to the function’s start point and begins executing
+    	The instructions inside of the function begin executing.
+	When the function terminates, the following steps happen:
+    		Registers are restored from the call stack
+    		The stack frame is popped off the stack and frees the memory for all local variables and arguments.
+    	The CPU resumes execution at the return address.
+
+	
