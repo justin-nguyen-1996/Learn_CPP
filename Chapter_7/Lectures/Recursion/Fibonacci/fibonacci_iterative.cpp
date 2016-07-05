@@ -21,6 +21,10 @@ int fibonacci(int x) {
 }
 
 int main() {
-
+    std::cout << "Fibonacci(0)" << fibonacci(0) << "\n";
+    std::cout << "Fibonacci(1)" << fibonacci(1) << "\n";
+    std::cout << "Fibonacci(2)" << fibonacci(2) << "\n";
+    std::cout << "Fibonacci(3)" << fibonacci(3) << "\n";
+    std::cout << "Fibonacci(7)" << fibonacci(7) << "\n";
 }
 
