@@ -1,0 +1,10 @@
+/*
+    Author:  Justin Nguyen
+    Created: 7/6/2016
+*/
+
+1. When can assumption errors occur?
+    --> when the program receives input from the user or a file
+    --> when a function receives input (is called) (c
+    --> when a function returns
+    
