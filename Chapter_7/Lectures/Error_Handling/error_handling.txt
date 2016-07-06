@@ -5,7 +5,7 @@
 
 1. When can assumption errors occur?
     --> when the program receives input from the user or a file
-    --> when a function receives input (is called) (c
+    --> when a function receives input (is called)
     --> when a function returns
     
 2. Example Fixes
@@ -33,4 +33,15 @@
     --> use cerr to output to screen or file
     --> used to log errors
     
+4. Assert Statements
+    --> an all-in-one if statement, error printing statement, and program termination
+    --> 
+        #include <cassert>
+        int getArrayValue(const std::array<int, 10> &array, int index) {
+            // we're asserting that index is between 0 and 9
+            assert(index >= 0 && index <= 9); // this is line 6 in Test.cpp
+         
+            return array[index];
+        }
+
 
