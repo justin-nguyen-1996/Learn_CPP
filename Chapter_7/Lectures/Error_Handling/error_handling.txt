@@ -43,6 +43,8 @@
          
             return array[index];
         }
+    --> often used both to check that the parameters passed to a function are valid, 
+        and to check that the return value of a function call is valid
 
 5. Don't get confused
     --> Asserts are for sanity checks and making sure the program
