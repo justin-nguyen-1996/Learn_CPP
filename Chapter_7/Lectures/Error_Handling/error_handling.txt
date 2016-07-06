@@ -44,4 +44,14 @@
             return array[index];
         }
 
+5. Don't get confused
+    --> Asserts are for sanity checks and making sure the program
+        is not in an unstable state --> everything is as expected
+    --> Error Handling is for handling normal cases and reporting
+        errors nicely to the user
+    --> Exceptions are for exceptional cases
+    
+6. Using asserts
+    --> use liberally but main purpose is for sanity checks/debugging
+    --> avoid overuse, will be removed from release builds
 
