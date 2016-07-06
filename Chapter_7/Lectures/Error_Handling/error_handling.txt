@@ -8,3 +8,18 @@
     --> when a function receives input (is called) (c
     --> when a function returns
     
+2. Example Fixes
+    
+    // Only print if cstring is non-null
+    if (cstring)
+        std::cout << cstring;
+        
+    int index = hello.find(ch);
+    if (index != -1) // handle case where find() failed to find the character in the string
+        std::cout << ch << " was found at index " << index << '\n';
+    else
+        std::cout << ch << " wasn't found" << '\n';
+        
+    --> return error message, ask again for new input
+    
+    
