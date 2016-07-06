@@ -22,4 +22,15 @@
         
     --> return error message, ask again for new input
     
+3. Error Stream
+    --> void printString(const char *cstring) {
+            // Only print if strString is non-null
+                if (cstring)
+                    std::cout << cstring;
+                else
+            std::cerr << "function printString() received a null parameter";
+        }
+    --> use cerr to output to screen or file
+    --> used to log errors
     
+
