@@ -53,7 +53,15 @@
         errors nicely to the user
     --> Exceptions are for exceptional cases
     
-6. Using asserts
+6. Using Asserts
     --> use liberally but main purpose is for sanity checks/debugging
     --> avoid overuse, will be removed from release builds
 
+7. Other Considerations
+    --> #define NDEBUG
+        --> turns off all asserts()
+        --> asserts() incur a small performance cost
+        --> exit() and assert() occur immediately without chance for cleanup (e.g. closing a file)
+            so they should be used judiciously 
+            (only in cases where corruption shouldn't occur in the event of unexpected termination)
+    
