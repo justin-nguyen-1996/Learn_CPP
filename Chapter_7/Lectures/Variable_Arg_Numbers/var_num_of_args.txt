@@ -144,4 +144,9 @@ int main()
         	std::cout << findAverage("iiddi", 1, 2, 3.5, 4.5, 5) << '\n';
         }
         
+6. There are other alternatives
+    --> so basically don't use ellipse functions
+    --> could have implemented findAvg() by using a dynamically-sized array of ints as one of the params
+    --> use a count parameter or decoder string as one of the args instead of a sentinel
+        at least this guarantees termination after a certain number of iterations
 
