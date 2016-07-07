@@ -1,0 +1,12 @@
+/*
+    Author:  Justin Nguyen
+    Created: 7/7/2016
+*/
+
+1. Using ellipses 
+    --> double findAverage(int count, ...)
+    --> ellipses have to come after all normal parameters
+    
+2. 
+    
+    First, we have to include the cstdarg header. This header defines va_list, va_start, and va_end, which are macros that we need to use to access the parameters that are part of the ellipsis
