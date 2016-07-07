@@ -68,4 +68,12 @@ int main()
     --> 6. Clean up the va_list pointer
                 --> va_end(list);
 
+4. Why each step is necessary
+    --> 1. #include <cstdarg>   --> to get access to va_list, va_start, va_end
+    --> 2. ellipsis (...)       --> to declare a variable amount of parameters
+    --> 3. va_list list;        --> variable parameters don't have a name and can't otherwise be accessed
+    --> 4. va_start()           --> tell the pointer where the 1st variable arg is (after the last fixed parameter)
+    --> 5. va_arg()             --> variable parameters don't have types (have to explicitly specify the type)
+    --> 6. va_end()             --> free the va_list pointer (it is a pointer afterall)
+    
 
