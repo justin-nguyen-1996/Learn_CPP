@@ -3,7 +3,7 @@
     Created: 7/7/2016
 */
 
-1. Using ellipses 
+1. Using an ellipsis 
     --> double findAverage(int count, ...)
     --> ellipses have to come after all normal parameters
     
@@ -53,5 +53,19 @@ int main()
     --> 2. Declare the function using an ellipsis
                 --> the argument list must have at least one fixed parameter
                 --> the ellipsis always comes last
-    --> 3. Access the values in the ellipsis through a special type known as va_list
-                --> can think of va_list as a pointer that points to the ellipsis array
+    --> 3. Declare a special type of pointer that can point to ellipsis parameters
+                --> va_list list;
+    --> 4. Make the va_list actually point to our ellipsis parameters by calling va_start()
+                --> va_start() takes two parameters: 
+                        the va_list itself and 
+                        the name of the last non-ellipsis parameter
+    --> 5. Access the ellipsis parameters by calling va_arg()
+                --> va_arg() takes two parameters: 
+                        the va_list itself and
+                        the type of the parameter we’re trying to access
+                --> Note that va_arg() also moves the va_list to the next parameter in the ellipsis!
+                --> va_arg() returns the value of the argument and also auto points to the next parameter
+    --> 6. Clean up the va_list pointer
+                --> va_end(list);
+
+
