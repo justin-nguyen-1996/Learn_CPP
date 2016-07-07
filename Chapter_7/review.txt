@@ -13,5 +13,28 @@
 4. Default Parameters
 
 5. Function Pointers
+	--> #include <functional>
+		std::function<int (int,int)> fxn_ptr = fxn;
 
+6. Recursion
 
+7. Stack vs. Heap
+	--> code segment, bss segment, data segment, stack, heap
+	
+8. Ellipse Functions (functions with variable number of parameters)
+
+9. Command Line Arguments
+	--> int main(int argc, char* argv[])
+	--> #include <sstream>
+        std::stringstream convert(argv[1]);
+        int num;
+        convert >> num;
+	
+10. Error Handling
+	--> std::cerr << "error message here"
+	--> Assert Statements
+		--> #include <cassert>
+		--> assert(boolean_condition_here);
+		--> #define NDEBUG (turns off all asserts)
+	--> if(ptr) { then_okay_to_dereference_pointer_here }
+	
