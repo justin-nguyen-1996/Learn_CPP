@@ -76,4 +76,11 @@ int main()
     --> 5. va_arg()             --> variable parameters don't have types (have to explicitly specify the type)
     --> 6. va_end()             --> free the va_list pointer (it is a pointer afterall)
     
+5. Why using an ellipsis function is dangerous
+    --> type-checking is suspended momentarily
+    --> variable args don't have types, so you can send the function anything
+        including types the function isn't prepared to handle
+    --> you will get garbage results if arguments aren't the correct types
+    --> something like this will compile: findAverage(6, 1.0, "Hello, world!", 'G', &findAverage)
 
+    --> 
