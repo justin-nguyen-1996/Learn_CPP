@@ -1,0 +1,13 @@
+/*
+    Author:  Justin Nguyen
+    Created: 7/8/2016
+*/
+
+1. Intro to classes
+    --> Just like a struct declaration, a class declaration does not allocate any memory
+        (it only defines what the class looks like)
+    --> WARNING: class declations need semicolons at the ending brace (just like a struct declaration)
+    --> Use the struct keyword for data-only structures
+        Use the class keyword for objects that have both data and functions
+    
+    
