@@ -6,7 +6,11 @@
 1. New Main()
     --> int main(int argc, char* argv[]) {}
     --> argc is always >= 1, first argument is always the program's name
-    --> argv is the list of actual argument values
+    --> argv is the list of actual argument values, argv[0] is the program's name
     
-2. 
+2. Converting Numeric Arguments
+    --> #include <sstream>
+        std::stringstream convert(argv[1]);
+        int num;
+        convert >> num;
 

@@ -1,0 +1,152 @@
+/*
+    Author:  Justin Nguyen
+    Created: 7/7/2016
+*/
+
+1. Using an ellipsis 
+    --> double findAverage(int count, ...)
+    --> ellipses have to come after all normal parameters
+    
+2. Example Program
+
+#include <iostream>
+#include <cstdarg> // needed to use ellipsis
+ 
+// The ellipsis must be the last parameter
+// count is how many additional arguments we're passing
+double findAverage(int count, ...)
+{
+    double sum = 0;
+ 
+    // We access the ellipsis through a va_list, so let's declare one
+    va_list list;
+ 
+    // We initialize the va_list using va_start.  The first parameter is
+    // the list to initialize.  The second parameter is the last non-ellipsis
+    // parameter.
+    va_start(list, count);
+ 
+    // Loop through all the ellipsis arguments
+    for (int arg=0; arg < count; ++arg)
+         // We use va_arg to get parameters out of our ellipsis
+         // The first parameter is the va_list we're using
+         // The second parameter is the type of the parameter
+         sum += va_arg(list, int);
+ 
+    // Cleanup the va_list when we're done.
+    va_end(list);
+ 
+    return sum / count;
+}
+ 
+int main()
+{
+    std::cout << findAverage(5, 1, 2, 3, 4, 5) << '\n';
+    std::cout << findAverage(6, 1, 2, 3, 4, 5, 6) << '\n';
+}
+
+
+3. Steps to use variable number of arguments
+    --> 1. #include <cstdarg> header. 
+                --> This header defines va_list, va_start, and va_end, 
+                    which are macros used to access the ellipsis parameters
+    --> 2. Declare the function using an ellipsis
+                --> the argument list must have at least one fixed parameter
+                --> the ellipsis always comes last
+    --> 3. Declare a special type of pointer that can point to ellipsis parameters
+                --> va_list list;
+    --> 4. Make the va_list actually point to our ellipsis parameters by calling va_start()
+                --> va_start() takes two parameters: 
+                        the va_list itself and 
+                        the name of the last non-ellipsis parameter
+    --> 5. Access the ellipsis parameters by calling va_arg()
+                --> va_arg() takes two parameters: 
+                        the va_list itself and
+                        the type of the parameter we’re trying to access
+                --> Note that va_arg() also moves the va_list to the next parameter in the ellipsis!
+                --> va_arg() returns the value of the argument and also auto points to the next parameter
+    --> 6. Clean up the va_list pointer
+                --> va_end(list);
+
+4. Why each step is necessary
+    --> 1. #include <cstdarg>   --> to get access to va_list, va_start, va_end
+    --> 2. ellipsis (...)       --> to declare a variable amount of parameters
+    --> 3. va_list list;        --> variable parameters don't have a name and can't otherwise be accessed
+    --> 4. va_start()           --> tell the pointer where the 1st variable arg is (after the last fixed parameter)
+    --> 5. va_arg()             --> variable parameters don't have types (have to explicitly specify the type)
+    --> 6. va_end()             --> free the va_list pointer (it is a pointer afterall)
+    
+5. Why using an ellipsis function is dangerous
+    --> type-checking is suspended momentarily
+    --> variable args don't have types, so you can send the function anything
+        including types the function isn't prepared to handle
+    --> you will get garbage results if arguments aren't the correct types
+    --> something like this will compile: findAverage(6, 1.0, "Hello, world!", 'G', &findAverage)
+
+    --> unknown number of arguments
+    --> Have to manually provide the number of arguments as one of the parameters
+            --> Still dangerous though
+            --> std::cout << findAverage(6, 1, 2, 3, 4, 5)
+                produces garbage because the compiler grabs the 6th value off of the stack (garbage value)
+    --> Or provide a sentinel to halt the function
+            --> what happens if the user forgets to send in the sentinel?
+            --> still need at least one fixed parameter
+    --> Or send in a decoder string (basically printf)
+        
+        #include <iostream>
+        #include <string>
+        #include <cstdarg> // needed to use ellipsis
+         
+        // The ellipsis must be the last parameter
+        double findAverage(std::string decoder, ...)
+        {
+        	double sum = 0;
+         
+        	// We access the ellipsis through a va_list, so let's declare one
+        	va_list list;
+         
+        	// We initialize the va_list using va_start.  The first parameter is
+        	// the list to initialize.  The second parameter is the last non-ellipsis
+        	// parameter.
+        	va_start(list, decoder);
+         
+        	int count = 0;
+        	// Loop indefinitely
+        	while (1)
+        	{
+        		char codetype = decoder[count];
+        		switch (codetype)
+        		{
+        		default:
+        		case '\0':
+        			// Cleanup the va_list when we're done.
+        			va_end(list);
+        			return sum / count;
+         
+        		case 'i':
+        			sum += va_arg(list, int);
+        			count++;
+        			break;
+         
+        		case 'd':
+        			sum += va_arg(list, double);
+        			count++;
+        			break;
+        		}
+        	}
+        }
+        	
+         
+        int main()
+        {
+        	std::cout << findAverage("iiiii", 1, 2, 3, 4, 5) << '\n';
+        	std::cout << findAverage("iiiiii", 1, 2, 3, 4, 5, 6) << '\n';
+        	std::cout << findAverage("iiddi", 1, 2, 3.5, 4.5, 5) << '\n';
+        }
+        
+6. There are other alternatives
+    --> so basically don't use ellipse functions
+    --> could have implemented findAvg() by using a dynamically-sized array of ints as one of the params
+    --> use a count parameter or decoder string as one of the args instead of a sentinel
+        at least this guarantees termination after a certain number of iterations
+
