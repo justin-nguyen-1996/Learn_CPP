@@ -1,5 +1,5 @@
-OBJS = sum_of_digits_iterative.o
-EXE = sum_of_digits_iterative
+OBJS = is_palindrome_recursive.o
+EXE = is_palindrome_recursive
 CFLAGS = -g -Wall -std=c++11
 CPPFLAGS = -g -Wall -std=c++11
 CC = g++
