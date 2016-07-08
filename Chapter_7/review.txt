@@ -11,6 +11,8 @@
 3. Overloading
 
 4. Default Parameters
+	--> All parameters with default values must be to the right of non-default parameters
+	--> A parameter can only be defaulted in one location (better to do this in the forward declaration)
 
 5. Function Pointers
 	--> #include <functional>
