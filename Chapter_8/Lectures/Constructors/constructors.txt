@@ -9,4 +9,28 @@
 	--> must have same name as the class
 	--> must have no return type (not void either)
 
+2. Default Constructors (constructor with no parameters)
+	--> called once the object is declared
+	--> automatically initializes the object
+
+3. Initialization
+	--> 3 methods: copy, direct, uniform initialization
+	--> use direct or uniform initialization for classes
+		class Fraction {
+			Fraction(int a, int b) {}
+		};
+
+		Fraction frac {1, 2}
+
+	--> can use copy, direct, or uniform initialization for primitives
+		(they all do the same thing in these cases)
+
+		int a = 4; int a(4); int a {4};
+
+	--> copy initialization for classes is not as efficient
+		Fraction frac = 7; // calls Fraction(7,1)
+
+		--> compiler tries to convert 7 to a Fraction by calling a constructor 
+
+
 
