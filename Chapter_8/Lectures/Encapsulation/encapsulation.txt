@@ -11,7 +11,22 @@
 	--> encapsulation also involves packaging 
 		data and functions together into objects
 	
-2. Can help protect data and prevent misuse
+2. Encapsulation can help protect data and prevent misuse
 	--> force the user to access members through the public interface
 	--> allows us to do error checking/handling before the user 
 		corrupts the data and puts the program in an unstable state
+
+3. Encapsulated classes are easier to change
+	--> all you have to change are the modifiers
+		(instead of every instance where the member would have been accessed)
+
+4. Encapsulated classes are easier to debug
+	--> can just set a breakpoint in the fxn that accesses the member
+		(instead of finding every instance where the member was accessed)
+
+5. Access Functions
+	--> also known as getters and setters
+	--> only make getters and setters for members
+		that the user should be able to access
+	
+
