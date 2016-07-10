@@ -25,6 +25,15 @@ class Stack {
 			if (stack_length == 0) { return -1; }
 			return num_list[stack_length];
 		}
+
+		void print() {
+			static std::string delimiter = "";
+			for (const auto &num : num_list) {
+				std::cout << delimiter << num;
+				delimiter = ", ";
+			}
+			std::cout << "\n";
+		}
 };
 
 int main() {
