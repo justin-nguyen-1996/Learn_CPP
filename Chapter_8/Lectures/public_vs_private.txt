@@ -9,5 +9,7 @@
 	--> member variables are usually private
 	--> member functions are usually public
 	
-2. 
+2. Difference between a class and a struct
+	--> structs default their members to public
+	--> classes default their members to private
 
