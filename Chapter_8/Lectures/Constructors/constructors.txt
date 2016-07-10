@@ -32,5 +32,12 @@
 
 		--> compiler tries to convert 7 to a Fraction by calling a constructor 
 
+4. Simpler Default Constructors
+	--> instead of
+		Fraction() { numer = 0; denom = 1; }
+		Fraction(int numer, int denom) {}
+
+	--> do this
+		Fraction(int numer = 0, int denom = 1) {}
 
 
