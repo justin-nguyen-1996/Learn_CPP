@@ -54,5 +54,7 @@
 	--> needed for const members since const variables
 		need to be initialized upon declaration
 
+	--> also needed for references b/c references are implicitly const
+
 
 
