@@ -16,8 +16,19 @@ class RGBA {
 		{
 			
 		}
+
+		void print() {
+			std::cout << "r = " << red << " "
+					  << "g = " << green << " "
+					  << "b = " << blue << " " 
+					  << "a = " << alpha << "\n";
+		}
 };
 
 int main() {
-	
+	RGBA teal;
+	teal.print();
+
+	RGBA color { 2, 42, 152 };
+	color.print();
 }
