@@ -1,0 +1,13 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/9/2016
+*/
+
+1. Access Specifiers
+	--> Class members are automatically private 
+		(can only be accessed by other members of the class)
+	--> member variables are usually private
+	--> member functions are usually public
+	
+2. 
+
