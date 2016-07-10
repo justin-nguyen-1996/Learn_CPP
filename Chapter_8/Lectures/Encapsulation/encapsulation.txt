@@ -5,11 +5,13 @@
 
 1. Encapsulation
 	--> also called "information hiding"
-	--> process of keeping how an object is 
-		implemented hidden from the user
+	--> process of keeping how an object is implemented hidden from the user
 	--> allows users to access objects through a public interface
 		(this simplifies things and allows all users to use objects)
 	--> encapsulation also involves packaging 
 		data and functions together into objects
 	
-
+2. Can help protect data and prevent misuse
+	--> force the user to access members through the public interface
+	--> allows us to do error checking/handling before the user 
+		corrupts the data and puts the program in an unstable state
