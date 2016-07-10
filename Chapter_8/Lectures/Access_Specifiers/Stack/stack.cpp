@@ -19,9 +19,10 @@ class Stack {
 		bool push(int num) {
 			if (stack_length == 10) { return false; }
 			num_list[stack_length + 1] = num;
+			return true;
 		}
 
-		int pop(int num) {
+		int pop() {
 			if (stack_length == 0) { return -1; }
 			return num_list[stack_length];
 		}
@@ -37,5 +38,24 @@ class Stack {
 };
 
 int main() {
-	
+	Stack stack;
+	stack.reset();
+
+	stack.print();
+
+	stack.pop();
+	stack.pop();
+
+	stack.push(1);
+	stack.push(2);
+	stack.push(3);
+	stack.print();
+
+	stack.pop();
+	stack.pop();
+	stack.print();
+
+	stack.pop();
+	stack.print();
+
 }
