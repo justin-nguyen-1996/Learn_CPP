@@ -18,17 +18,19 @@ class Stack {
 
 		bool push(int num) {
 			if (stack_length == 10) { return false; }
-			num_list[stack_length + 1] = num;
+			stack_length += 1;
+			num_list[stack_length] = num;
 			return true;
 		}
 
 		int pop() {
 			if (stack_length == 0) { return -1; }
+			stack_length -= 1;
 			return num_list[stack_length];
 		}
 
 		void print() {
-			static std::string delimiter = "";
+			std::string delimiter = "";
 			for (const auto &num : num_list) {
 				std::cout << delimiter << num;
 				delimiter = ", ";
@@ -56,6 +58,9 @@ int main() {
 	stack.print();
 
 	stack.pop();
+	stack.print();
+
+	stack.push(4);
 	stack.print();
 
 }
