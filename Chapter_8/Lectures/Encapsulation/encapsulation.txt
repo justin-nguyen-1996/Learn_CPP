@@ -1,0 +1,15 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/9/2016
+*/
+
+1. Encapsulation
+	--> also called "information hiding"
+	--> process of keeping how an object is 
+		implemented hidden from the user
+	--> allows users to access objects through a public interface
+		(this simplifies things and allows all users to use objects)
+	--> encapsulation also involves packaging 
+		data and functions together into objects
+	
+
