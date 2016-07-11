@@ -71,4 +71,22 @@
 						// just setting default values isn't enough
 		}		
 
-
+7. Delegating Constructors (Constructor Chaining)
+	--> have to call the other constructors from the member initializer list
+	
+	--> class Employee {
+			private:
+			    int m_id;
+			    std::string m_name;
+			public:
+			    Employee(int id, std::string name)
+			    	: m_id(id), m_name(name)
+			    {
+			    }
+			 
+			    // All three of the following constructors use delegating constructors to minimize redundant code
+			    Employee() : Employee(0, "") { }
+			    Employee(int id) : Employee(id, "") { }
+			    Employee(std::string name) : Employee(0, name) { }
+		};
+		
