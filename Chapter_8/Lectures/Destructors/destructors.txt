@@ -9,5 +9,10 @@
         (dynamic memory, or a file or database handle)
         (or if maintenance needs to be done before the object is destroyed)
 
-2. 
+2. Destructor Naming Rules
+    --> must have the same name as the class PRECEDED by a tilde (~)
+    --> can only have one destructor per class
+    
+3. Delete
+    --> delete and delete[] both call the class's destructor
 
