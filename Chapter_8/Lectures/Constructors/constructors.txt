@@ -56,5 +56,19 @@
 
 	--> also needed for references b/c references are implicitly const
 
+6. Can give member variables default values directly
+	--> but still need to make an empty constructor or else compiler error
+	--> class TEMP {
+			private:
+				int a;
+				int b;
+			public:
+				TEMP(){} // needed or else compiler error
+		};
+		
+		int main() {
+			TEMP temp;  // looks for a constructor to resolve this
+						// just setting default values isn't enough
+		}		
 
 
