@@ -1,0 +1,13 @@
+/*
+    Author:  Justin Nguyen
+    Created: 7/11/2016
+*/
+
+1. Purpose of Destructors
+    --> clean up objects just as they are going out of scope
+    --> good for when an object is holding any resources
+        (dynamic memory, or a file or database handle)
+        (or if maintenance needs to be done before the object is destroyed)
+
+2. 
+
