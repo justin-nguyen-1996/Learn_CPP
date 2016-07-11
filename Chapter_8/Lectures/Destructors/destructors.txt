@@ -16,3 +16,11 @@
 3. Delete
     --> delete and delete[] both call the class's destructor
 
+4. Warning about exit()
+    --> exit() terminates the program without calling any destructors
+    --> this could produce memory leaks and other problems
+        (say if you rely on your destructor to write to a log file)
+    --> assert() is basically an if-statement combined with exit()
+        (meaning it won't call any destructors either)
+    
+    
