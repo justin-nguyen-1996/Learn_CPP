@@ -12,6 +12,10 @@
     --> syntax
         /* const comes after parameter list but before function body */
         void fxn() const {}
+    --> RULE: make the member function const if it does not
+              modify the state of the class object
 
-3. 
+3. Const References
+    --> make the parameter a const reference if it does not change the argument
+    --> const references can take literals as arguments but normal references cannot
 
