@@ -33,6 +33,22 @@
 		--> which is why we only need to use std::cout once and
 			call "<<" as many times as why need to output
 	
+	--> instead of this
 	
+		void add(int value) { m_value += value; }
+	    void sub(int value) { m_value -= value; }
+	    void mult(int value) { m_value *= value; }
+
+		calc.add(5); // returns void
+	    calc.sub(3); // returns void
+	    calc.mult(4); // returns void
+
+	--> do this
+
+		Calc& add(int value) { m_value += value; return *this; }
+	    Calc& sub(int value) { m_value -= value; return *this; }
+	    Calc& mult(int value) { m_value *= value; return *this; }
+
+		calc.add(5).sub(3).mult(4);
 
 
