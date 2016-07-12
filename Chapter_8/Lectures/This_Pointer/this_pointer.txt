@@ -6,15 +6,33 @@
 1. This Pointer
     --> a hidden pointer that points the class's object
     --> three implicit steps:
-        --> 1. When using an object to call a function, the compiler automatically 
-               passes the address of the object to the function
+        --> 1. When using an object to call a function,
+			   the compiler automatically passes the address 
+			   of the object to the function
+
                e.g.  simple.setID(2) --> setID(&simple, 2)
                
         --> 2. The member function is given an extra parameter for this
                e.g.  void setID(Simple* const this, int id)
                
-        --> 3. All member variables inside the member function are prefixed with "this"
+        --> 3. All member variables inside the member 
+			   function are prefixed with "this"
+
                e.g.  { this->m_id = id; }
                
+2. Chaining Objects
+	--> returning the same object the function was working on
+
+	--> std::cout is an object and "<<" is a member function
+		--> std::cout << "Hello, " << userName;
+		--> << needs to return a value
+		--> if it returns void then (void) << userName
+			(which returns an error)
+		--> if returns (std::cout) if used correctly
+			(std::cout) << username
+		--> which is why we only need to use std::cout once and
+			call "<<" as many times as why need to output
+	
+	
 
 
