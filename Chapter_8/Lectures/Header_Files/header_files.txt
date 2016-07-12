@@ -1,0 +1,17 @@
+/*
+	Author:  Justin Nguyen
+	Created: 7/11/2016
+*/
+
+1. Separating declaration and implementation
+	--> if you move the definition out of the class definition,
+		you have to prepend the functions with the class name
+	--> you still keep the function declarations inside the class
+	--> but now you define the class using the scope resolutor (::)
+
+2. Getter/Setter definitions are usually still left in
+   the class definition b/c they are simple one-liners
+
+3. 
+
+
