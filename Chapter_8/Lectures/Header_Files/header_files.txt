@@ -22,4 +22,20 @@
 	--> class declarations
 	--> default parameters
 
+5. Libraries
+	--> you normally have to compile the .cpp file into any project that
+		uses the .h file so that the program knows how the classes are implemented
+	--> but you never have to add stuff like "iostream.cpp or string.cpp"
+		into your projects because they are contained in the standard C++ library
+	--> you never see the code implementation, only the declarations
+	
+	--> libraries are precompiled files that are linked in at link time
+	--> you only need to use the declarations from the .h files so that
+		the compiler can tell you if you are writing syntactically valid code
+		
+	--> reasons for using libraries
+	--> 1. it’s faster to link a precompiled library than to recompile it every time you need it
+		2. precompiled libraries can be distributed once, whereas compiled code
+		   gets compiled into every executable that uses it (inflating code size)
+		3. intellectual property reasons (you don’t want people stealing your code)
 
