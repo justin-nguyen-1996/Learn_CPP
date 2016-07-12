@@ -12,7 +12,13 @@
 2. Getter/Setter definitions are usually still left in
    the class definition b/c they are simple one-liners
 
-3. What to put in header files
+3. Why to use header files
+	--> If you put the code in the header file and #include it everywhere
+		then what happens if you need to change the .h file?
+		--> you would have to recompile it in every file the included it (slow)
+		--> also potential for excessive code bloat
+
+4. What to put in header files
 	--> class declarations
 	--> default parameters
 
