@@ -24,6 +24,42 @@
     --> after declaring a static member, you have to define it
     --> static members do not belong to individual class objects, so you have to
         define the static member outside of the class in the global scope
+    --> Do not put the static member definition in a header file
+        (if that header file gets included more than once, 
+         you’ll end up with multiple definitions, which will cause a compile error)
+    --> NOTE: the definition is not subject to access controls
+         
+3. Why use static member variables
+    --> unique ID generator
         
-
+        class Something
+        {
+        private:
+            static int s_idGenerator;
+            int m_id;
+         
+        public:
+            Something() { m_id = s_idGenerator++; } // grab the next value from the id generator
+         
+            int getID() const { return m_id; }
+        };
+         
+        // Note that we're defining and initializing s_idGenerator even though it is declared as private above.
+        // This is okay since the definition isn't subject to access controls.
+        int Something::s_idGenerator = 1; // start our ID generator with value 1
+         
+        int main()
+        {
+            Something first;
+            Something second;
+            Something third;
+         
+            std::cout << first.getID() << '\n';
+            std::cout << second.getID() << '\n';
+            std::cout << third.getID() << '\n';
+            return 0;
+        }
+        
+    --> save memory (if all objects use the same variable then only make one of those variables)
+        (this would mean something like a shared lookup table)
 
