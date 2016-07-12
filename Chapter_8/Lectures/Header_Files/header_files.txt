@@ -12,6 +12,8 @@
 2. Getter/Setter definitions are usually still left in
    the class definition b/c they are simple one-liners
 
-3. 
+3. What to put in header files
+	--> class declarations
+	--> default parameters
 
 
