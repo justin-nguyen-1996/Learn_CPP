@@ -1,0 +1,17 @@
+/*
+    Author:  Justin Nguyen
+    Created: 7/12/2016
+*/
+
+1. Static Member Variables
+    --> static member variables belong to the class and
+        are therefore shared by all objects of the class
+    --> class Something {
+            public:
+                int s_value;
+        }
+        
+        Something::s_value = 1;
+        Something first; first.s_value += 1;
+        Something second; second.s_value += 1;
+
