@@ -9,4 +9,9 @@
 2. Const Member Functions
     --> cannot change any class variables
     --> can only call const member functions
+    --> syntax
+        /* const comes after parameter list but before function body */
+        void fxn() const {}
+
+3. 
 
