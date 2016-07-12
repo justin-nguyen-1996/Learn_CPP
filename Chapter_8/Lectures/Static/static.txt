@@ -6,12 +6,24 @@
 1. Static Member Variables
     --> static member variables belong to the class and
         are therefore shared by all objects of the class
+        
     --> class Something {
             public:
-                int s_value;
+                static int s_value;
         }
         
-        Something::s_value = 1;
-        Something first; first.s_value += 1;
-        Something second; second.s_value += 1;
+        int Something::s_value; // THIS LINE IS NEEDED
+        
+        Something::s_value = 1; // s_value = 1
+        Something first; first.s_value += 1; // s_value = 2
+        Something second; second.s_value += 1; // s_value = 3
+        
+    --> exist even if no objects have been created yet
+
+2. Defining Static Member Variables
+    --> after declaring a static member, you have to define it
+    --> static members do not belong to individual class objects, so you have to
+        define the static member outside of the class in the global scope
+        
+
 
