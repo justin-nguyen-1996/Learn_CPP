@@ -9,5 +9,12 @@
                 friend class B;
         };
 
-
+2. Things to note about friend classes
+    --> friend B still does not have access to
+        the *this pointer of class A
+    --> if class A is a friend of class B,
+        class B is not necessarily a friend of class A
+    --> class A is friend of class B and
+        class B is friend of class C then
+        class A is NOT necessarily a friend of class C
 
