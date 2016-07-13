@@ -50,4 +50,8 @@
             variables inside a global namespace
         --> allows any piece of code to change a value and
             break some other seemingly irrelevant piece of code
+            
+6. Static Constructors
+    --> not supported in C++
+    --> must do normal definition/initialization outside of the class
 
