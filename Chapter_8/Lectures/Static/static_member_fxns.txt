@@ -37,4 +37,17 @@
         int Something::getVal() {
             return s_val;
         }
+        
+5. Purely Static Classes
+    --> don't do this
+    --> can't have unique objects of a purely static class
+        (all objects share the same fxns and vars
+         so basically all objects are the same)
+    --> basically creating global variables and global functions
+        --> static members and functions belong to the class and 
+            class declarations usually have global scope
+        --> so basically declaring functions and 
+            variables inside a global namespace
+        --> allows any piece of code to change a value and
+            break some other seemingly irrelevant piece of code
 
