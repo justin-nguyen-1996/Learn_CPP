@@ -15,5 +15,14 @@
                 static int getValue() { return m_value; }
         };
 
-2. 
+2. Static Member Functions have no *this pointer
+    --> *this always points to the object
+        (but static member functions belong to the
+         class and have no object to work on)
+
+3. Static Member Functions can only access static member variables
+    --> non-static member variables belong to particular instances of the class
+        (and static member functions have no object to work on)
+        
+
 
