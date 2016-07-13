@@ -9,4 +9,20 @@
     --> must pass the friend fxn an object to modify
         (since not a member function)
     
+2. Friend Function Syntax
+    --> class Temperature {
+            private:
+                int m_temp;
+            public:
+                friend void printTemperature(const Temperature &temperature);
+        };
+        
+        void printTemperature(const Temperature &temperature) {
+            std::cout << temperature.m_temp << "\n";
+        }
+        
+    --> when defining outside the class,
+        --> 1. don't use the friend keyword
+            2. don't use a scope resolution (::)
+                --> it's a "friend" of that class (isn't actually a member fxn)
 
