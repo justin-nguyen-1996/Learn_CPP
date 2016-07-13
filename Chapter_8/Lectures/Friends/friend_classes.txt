@@ -1,0 +1,13 @@
+/*
+    Author:  Justin Nguyen
+    Created: 7/13/2016
+*/
+
+1. Friend Class Syntax
+    --> class A {
+            private:
+                friend class B;
+        };
+
+
+
