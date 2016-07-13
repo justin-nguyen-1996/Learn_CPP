@@ -24,5 +24,17 @@
     --> non-static member variables belong to particular instances of the class
         (and static member functions have no object to work on)
         
-
+4. Defining Static Member Functions outside of the class
+    --> don't need keyword static on them
+    --> class Something {
+            private:
+                static int s_val;
+            public:
+                static int getVal() {}
+        };
+        
+        int Something::s_val = 1;
+        int Something::getVal() {
+            return s_val;
+        }
 
