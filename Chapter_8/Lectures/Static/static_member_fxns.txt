@@ -3,5 +3,17 @@
     Created: 7/12/2016
 */
 
-1. 
+1. Static Member Functions
+    --> what happens if you make a static member private?
+        --> normally use a public accessor function
+        --> but then you'd have to make an instance of the class to use the fxn
+        --> make the function static to avoid this
+    --> class Somthing {
+            private:
+                static int m_value;
+            public:
+                static int getValue() { return m_value; }
+        };
+
+2. 
 
