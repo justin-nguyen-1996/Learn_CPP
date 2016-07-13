@@ -26,3 +26,23 @@
             2. don't use a scope resolution (::)
                 --> it's a "friend" of that class (isn't actually a member fxn)
 
+3. Class Prototype
+    --> used to let the compiler know we are going to define the class later
+        (same utility as a function prototype)
+    --> used when using classes with multiple friends
+        (can't put one class above the other since each class
+         references at least two total classes)
+
+    --> 
+        class Temperature;
+        
+        class Humidity {
+            public:
+                friend void printWeather(Temperature &t, Humidity &h);
+        };
+        
+        class Temperature {};
+        
+    --> syntax is always class ClassName
+    
+
