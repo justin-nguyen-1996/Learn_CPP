@@ -13,11 +13,11 @@ class Point2d {
 		double m_x = 0.0;
 		double m_y = 0.0;
 	public:
-		Point2d();
+		Point2d() {}
 		Point2d(double x, double y) : m_x(x), m_y(y) {}
-		
+
 		void print() const;
-		
+
 		double getX() const { return m_x; }
 		double getY() const { return m_y; }
 		void setX(double x) { m_x = x; }

@@ -1,5 +1,5 @@
 OBJS = Point2d.o
-CFLAGS = -Wall -g -std=gnu0x
+CFLAGS = -Wall -g -std=gnu++0x
 CPPFLAGS = -Wall -g -std=gnu++0x
 CC = g++
 EXE = POINT2D
