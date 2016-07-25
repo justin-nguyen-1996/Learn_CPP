@@ -1,0 +1,20 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 7/24/2016
+ */
+
+1. Classes
+	--> bind together data and functions into objects
+	--> members are the elements inside the class
+2. Access Specifiers
+	--> public vs. private vs. protected
+3. Encapsulation
+	--> make members private to prevent misuse
+4. Getters vs. Setters
+	--> used in conjunction with encapsulation
+	--> allow for input verification
+5. Constructors vs. Destructors (~)
+6. Member Initializer Lists
+	--> type_here fxn_name(params)
+			: mem1(x), mem2(x) { }
+7. 
