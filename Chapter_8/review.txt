@@ -17,4 +17,23 @@
 6. Member Initializer Lists
 	--> type_here fxn_name(params)
 			: mem1(x), mem2(x) { }
-7. 
+7. Constructor Chaining
+	--> constructors can call other constructors
+8. *This Pointer
+9. Header Files for Class Definitions
+10. Const
+	--> all member functions that do not modify the 
+		state of the object should be made const
+	--> const class objects can only call const member functions
+	--> i.e. objects passed as const references
+11. Static
+	--> static members belong to the class, not the object
+	--> can be referenced using the class scope resolutor
+	--> static functions don't have a *this pointer so
+		they can't access normal member functions
+		--> they can only access static members
+	--> have that weird initialization rule
+		--> initialize outside of the class
+12. 
+
+
