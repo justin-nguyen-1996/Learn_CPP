@@ -18,7 +18,17 @@ double Point2d::distanceTo(Point2d& point2) const {
 	double y_diff = m_y - point2.getY();
 	double y_diff-squared = pow(y_diff, 2);
 	
-	return sqrt(x_diff_squared, y_diff_squared);
+	return sqrt(x_diff_squared + y_diff_squared);
+}
+
+double distanceFrom(Point2d& p1, Point2d& p2) const {
+	double x_diff = p1.getX() - p2.getX();
+	double x_diff_squared = pow(x_diff, 2);
+	
+	double y_diff = p2.getY() - p2.getY();
+	double y_diff_squared = pow(y_diff, 2);
+	
+	return sqrt(x_diff_squared + y_diff_squared);
 }
 
 int main() {
@@ -30,6 +40,9 @@ int main() {
 	
 	std::cout << "distance from point 1 to point 2: "
 			  << point1.distanceTo(point2) << "\n";
+			  
+	std::cout << "distance from point 1 to point 2: "
+			  << distanceFrom(point1, point2) << "\n";
 }
 
 
