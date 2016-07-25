@@ -34,6 +34,6 @@
 		--> they can only access static members
 	--> have that weird initialization rule
 		--> initialize outside of the class
-12. 
+12. Friend Functions
 
 
