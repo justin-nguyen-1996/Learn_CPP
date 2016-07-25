@@ -16,12 +16,12 @@ class Point2d {
 		Point2d();
 		Point2d(double x, double y) : m_x(x), m_y(y) {}
 		
-		void print();
+		void print() const;
 		
-		double getX() { return m_x; }
-		double getY() { return m_y; }
+		double getX() const { return m_x; }
+		double getY() const { return m_y; }
 		void setX(double x) { m_x = x; }
 		void setY(double y) { m_y = y; }
-}
+};
 
 #endif
