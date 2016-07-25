@@ -4,10 +4,21 @@
  */
 
 #include <iostream>
+#include <cmath>
 #include "Point2d.h"
 
 void Point2d::print() const {
 	std::cout << "(" << m_x << ", " << m_y << ")" << "\n";
+}
+
+double Point2d::distance(Point2d& point2) const {
+	double x_diff = m_x - point2.getX();
+	double x_diff_squared = pow(x_diff, 2);
+	
+	double y_diff = m_y - point2.getY();
+	double y_diff-squared = pow(y_diff, 2);
+	
+	return sqrt(x_diff_squared, y_diff_squared);
 }
 
 int main() {
