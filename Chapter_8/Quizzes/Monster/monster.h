@@ -6,8 +6,24 @@
 #ifndef MONSTER_H
 #define MONSTER_H
 
-class Monster {
-    
+#include <string>
+
+enum class MonsterType {
+    Dragon, 
+    Goblin, 
+    Ogre, 
+    Orc, 
+    Skeleton, 
+    Troll, 
+    Vampire, 
+    Zombie
 }
+
+class Monster {
+    MonsterType monster_type;
+    std::string name;
+    std::string roar;
+    int hp;
+};
 
 #endif
