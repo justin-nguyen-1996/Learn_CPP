@@ -6,7 +6,7 @@
 #ifndef MONSTER_GENERATOR_H
 #define MONSTER_GENERATOR_H
 
-class Monster_Generator {
+class MonsterGenerator {
     public:
         static Monster generateMonster() {
             return Monster(Monster::Skeleton, "Bones", "rattle", 4);
