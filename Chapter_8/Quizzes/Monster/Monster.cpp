@@ -5,7 +5,7 @@
  
 #include <iostream>
 #include <string>
-#include "monster.h"
+#include "Monster.h"
 
 Monster::print() const {
     std::string m_type_string = getTypeString(m_type);
@@ -15,5 +15,6 @@ Monster::print() const {
  
 int main() {
     Monster skeleton(MonsterType::Skeleton, "Bones", "rattle", 4);
+    Monster m = MonsterGenerator();
 }
 
