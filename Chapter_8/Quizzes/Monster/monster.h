@@ -14,6 +14,21 @@ class Monster {
         std::string m_name = "";
         std::string m_roar = "";
         int m_hp = 0;
+        
+        std::string getTypeString() const {
+            switch (m_type) {
+                case Dragon:     return "Dragon";
+                case Goblin:     return "Goblin";
+                case Ogre:       return "Ogre";
+                case Orc:        return "Orc";
+                case Skeleton:   return "Skeleton";
+                case Troll:      return "Troll";
+                case Vampire:    return "Vampire";
+                case Zombie:     return "Zombie";
+                case NO_TYPE:    return "NO_TYPE";
+                case default:    return "NO_TYPE";
+            }
+        }
 
     public:
         enum class MonsterType {
@@ -32,7 +47,7 @@ class Monster {
         Monster(MonsterType type, std::string name, std::string roar, int hp)
             : m_type(type), m_name(name), m_roar(roar), m_hp(hp) {}
         
-        
+        void print() const;
 };
 
 #endif
