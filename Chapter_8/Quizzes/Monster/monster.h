@@ -8,22 +8,31 @@
 
 #include <string>
 
-enum class MonsterType {
-    Dragon, 
-    Goblin, 
-    Ogre, 
-    Orc, 
-    Skeleton, 
-    Troll, 
-    Vampire, 
-    Zombie
-}
-
 class Monster {
-    MonsterType m_type;
-    std::string m_name;
-    std::string m_roar;
-    int m_hp;
+    private:
+        MonsterType m_type = MonsterType::NO_TYPE;
+        std::string m_name = "";
+        std::string m_roar = "";
+        int m_hp = 0;
+
+    public:
+        enum class MonsterType {
+            Dragon, 
+            Goblin, 
+            Ogre, 
+            Orc, 
+            Skeleton, 
+            Troll, 
+            Vampire, 
+            Zombie,
+            NO_TYPE
+        }
+        
+        Monster() {}
+        Monster(MonsterType type, std::string name, std::string roar, int hp)
+            : m_type(type), m_name(name), m_roar(roar), m_hp(hp) {}
+        
+        
 };
 
 #endif
