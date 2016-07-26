@@ -20,10 +20,10 @@ enum class MonsterType {
 }
 
 class Monster {
-    MonsterType monster_type;
-    std::string name;
-    std::string roar;
-    int hp;
+    MonsterType m_type;
+    std::string m_name;
+    std::string m_roar;
+    int m_hp;
 };
 
 #endif
