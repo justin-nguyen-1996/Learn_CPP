@@ -11,7 +11,6 @@
 class MonsterGenerator {
     public:
         static Monster generateMonster();
-        static std::string getTypeString(MonsterType type);
 };
 
 #endif
