@@ -14,7 +14,9 @@ Monster::print() const {
 }
  
 int main() {
-    Monster skeleton(MonsterType::Skeleton, "Bones", "rattle", 4);
+    srand(static_cast<unsigned int>(time(0))); // set initial seed value to system clock
+    
     Monster m = MonsterGenerator();
+    m.print();
 }
 
