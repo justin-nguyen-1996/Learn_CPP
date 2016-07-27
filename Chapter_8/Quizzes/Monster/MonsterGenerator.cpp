@@ -4,9 +4,17 @@
  */
  
 static MonsterGenerator::generateMonster() {
-	MonsterType type = MonsterType[getRandomNumber(0, MAX_MONSTER_TYPES - 1)];
+	static std::string s_names[6]
+		{ "Blarg", "Moog", "Pksh", "Tyrn", "Mort", "Hans" };
+	static std::string s_roars[6]
+		{ "*ROAR*", "*peep*", "*squeal*", "*whine*", "*hum*", "*burp*" }
 	
-    return Monster(type, "Bones", "rattle", 4);
+	MonsterType type = MonsterType[getRandomNumber(0, MAX_MONSTER_TYPES - 1)];
+	std::string name = s_names[getRandomNumber(0, 5)];
+	std::string roar = s_roars[getRandomNumber(0, 5)];
+	int hp = getRandomNumber(1, 100);
+	
+    return Monster(type, name, roar, hp);
 }
 
 /* Generate a random number between min and max (inclusive)
