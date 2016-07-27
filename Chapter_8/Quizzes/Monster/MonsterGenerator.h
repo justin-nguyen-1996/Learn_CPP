@@ -8,9 +8,7 @@
 
 class MonsterGenerator {
     public:
-        static Monster generateMonster() {
-            return Monster(Monster::Skeleton, "Bones", "rattle", 4);
-        }
+        static Monster generateMonster();
 };
 
 #endif
