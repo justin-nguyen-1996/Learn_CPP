@@ -41,6 +41,10 @@ class Card {
 		Card() {}
 		Card(CardSuit suit, CardValue value) : m_suit(suit), m_value(value) {}
 		
+		CardSuit getSuit() const { return m_suit; }
+		CardValue getValue() const { return m_value; }
+		void setSuit(CardSuit suit) { m_suit(suit); }
+		void setValue(CardValue value) { m_value(value); }
 };
 
 #endif
