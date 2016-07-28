@@ -7,7 +7,7 @@
 #include <string>
 #include "Card.h"
 
-char Card::getSuitString() {
+char Card::getSuitString() const {
     switch (m_suit) {
         case CLUBS:        return 'C';
         case DIAMONDS:     return 'D';
@@ -17,7 +17,7 @@ char Card::getSuitString() {
     }
 }
 
-char Card::getValueString() {
+char Card::getValueString() const {
     switch (m_value) {
         case TWO:          return '2';
         case THREE:        return '3';
@@ -36,7 +36,7 @@ char Card::getValueString() {
     }
 }
 
-void Card::printCard() {
+void Card::printCard() const {
     
 }
 
