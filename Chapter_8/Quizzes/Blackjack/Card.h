@@ -8,15 +8,16 @@
 
 class Card {
     private:
-        m_suit;
-        m_value;
+        CardSuit m_suit = DEFAULT_SUIT;
+        CardValue m_value = DEFAULT_VALUE;
     public:
         enum CardSuit {
             CLUBS,
             DIAMONDS,
             HEARTS,
             SPADES,
-            MAX_CARD_SUITS
+            MAX_CARD_SUITS,
+            DEFAULT_SUIT
         };
         
         enum CardValue {
@@ -33,8 +34,13 @@ class Card {
             QUEEN,
             KING,
             ACE,
-            MAX_CARD_VALUES
+            MAX_CARD_VALUES,
+            DEFAULT_VALUE
         };
+		
+		Card() {}
+		Card(CardSuit suit, CardValue value) : m_suit(suit), m_value(value) {}
+		
 };
 
 #endif
