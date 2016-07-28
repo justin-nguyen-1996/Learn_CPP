@@ -47,6 +47,8 @@ class Card {
         void setValue(CardValue value) { m_value(value); }
         
         void printCard() const;
+        char getSuitString() const;
+        char getValueString() const;
 };
 
 #endif
