@@ -4,5 +4,7 @@
  */
  
 void Deck::printDeck() const {
-
+    for (const auto& card : m_deck) {
+        printCard(card);
+    }
 }
