@@ -11,6 +11,8 @@
 class Deck {
     private:
         std::array<Card, 52> m_deck;
+        int top_card_i = 0;
+        const int TOTAL_NUM_CARDS = 52;
     
     public:
         Deck() {
@@ -25,6 +27,7 @@ class Deck {
         
         void printDeck() const;
         void shuffleDeck() const;
+        Card& dealCard();
         
         static int getRandomNumber(int min, int max) const;
         static void swapCard() const;
