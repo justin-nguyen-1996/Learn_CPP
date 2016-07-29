@@ -41,6 +41,10 @@ void Card::printCard() const {
 }
 
 int main() {
+    const Card queen_hearts (CardSuit::HEARTS, CardValue::QUEEN);
+    queen_hearts.printCard();
     
+    const Card two_spades (CardValue::TWO, CardSuit::SPADES);
+    two_spades.printCard();
 }
 
