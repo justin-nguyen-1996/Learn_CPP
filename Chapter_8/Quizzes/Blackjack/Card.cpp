@@ -37,7 +37,7 @@ char Card::getValueString() const {
 }
 
 void Card::printCard() const {
-    
+    std::cout <<  getValueString() << " " << getSuitString() << "\n";
 }
 
 int main() {
