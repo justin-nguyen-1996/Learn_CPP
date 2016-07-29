@@ -24,6 +24,9 @@ class Deck {
         }
         
         void printDeck() const;
+        
+        static int getRandomNumber(int min, int max) const;
+        static void swapCard() const;
 };
 
 #endif
