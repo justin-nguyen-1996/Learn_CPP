@@ -23,7 +23,7 @@ class Deck {
             }
         }
         
-        
+        void printDeck() const;
 };
 
 #endif
