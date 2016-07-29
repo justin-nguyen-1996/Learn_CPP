@@ -1,0 +1,11 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 7/29/2016
+ */
+
+1. Operators are implemented as functions
+    --> so we can function overload them as well
+    --> this is called "operator overloading"
+    
+2. 
+
