@@ -22,10 +22,16 @@ void Deck::printDeck() const {
     }
 }
 
+Card& Deck::dealCard() {
+    assert(m_top_card_i < 52);
+    return m_deck[m_top_card_i];
+}
+
 void Deck::shuffleDeck() const {
     for (int i = 0; i < TOTAL_NUM_CARDS; ++i) {
         int swap_i = getRandomNumber(0, TOTAL_NUM_CARDS);
         swapCard(m_deck[i], m_deck.at(swap_i));
     }
+    top_card_i = 0;
 }
 
