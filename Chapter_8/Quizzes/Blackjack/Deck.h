@@ -11,7 +11,7 @@
 class Deck {
     private:
         std::array<Card, 52> m_deck;
-        int top_card_i = 0;
+        int m_top_card_i = 0;
         const int TOTAL_NUM_CARDS = 52;
     
     public:
