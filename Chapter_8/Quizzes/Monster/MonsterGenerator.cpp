@@ -6,11 +6,11 @@
 #include <iostream>
 #include "MonsterGenerator.h"
  
-static Monster MonsterGenerator::generateMonster() {
+Monster MonsterGenerator::generateMonster() {
 	static std::string s_names[6]
 		{ "Blarg", "Moog", "Pksh", "Tyrn", "Mort", "Hans" };
 	static std::string s_roars[6]
-		{ "*ROAR*", "*peep*", "*squeal*", "*whine*", "*hum*", "*burp*" }
+		{ "*ROAR*", "*peep*", "*squeal*", "*whine*", "*hum*", "*burp*" };
 	
 	MonsterType type = MonsterType[getRandomNumber(0, MAX_MONSTER_TYPES - 1)];
 	std::string name = s_names[getRandomNumber(0, 5)];
