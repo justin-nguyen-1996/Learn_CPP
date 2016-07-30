@@ -7,6 +7,7 @@
 #define MONSTER_GENERATOR_H
 
 #include <string>
+#include "Monster.h"
 
 class MonsterGenerator {
     public:

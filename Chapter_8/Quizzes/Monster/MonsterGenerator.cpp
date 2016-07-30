@@ -2,8 +2,11 @@
  * Author:  Justin Nguyen
  * Created: 7/27/2016
  */
+
+#include <iostream>
+#include "MonsterGenerator.h"
  
-static MonsterGenerator::generateMonster() {
+static Monster MonsterGenerator::generateMonster() {
 	static std::string s_names[6]
 		{ "Blarg", "Moog", "Pksh", "Tyrn", "Mort", "Hans" };
 	static std::string s_roars[6]
