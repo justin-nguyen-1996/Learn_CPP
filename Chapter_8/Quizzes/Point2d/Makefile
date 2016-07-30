@@ -2,8 +2,8 @@ CFLAGS = -Wall -g -std=gnu++0x
 CPPFLAGS = -Wall -g -std=gnu++0x
 CC = g++
 
-SRCS = Point2d.cpp
-OBJS = $(subst .cpp,.o,$(SRCS))
+SRCS = $(shell find . -name "*.cpp")
+OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 EXE = MAIN
 
 all: $(OBJS)
