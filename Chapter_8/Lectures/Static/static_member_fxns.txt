@@ -30,7 +30,7 @@
             private:
                 static int s_val;
             public:
-                static int getVal() {}
+                static int getVal();
         };
         
         int Something::s_val = 1;

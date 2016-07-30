@@ -2,6 +2,7 @@ CFLAGS = -Wall -g -std=gnu++0x
 CPPFLAGS = -Wall -g -std=gnu++0x
 CC = g++
 RM = rm
+EXE = MAIN
 
 SRCS = $(shell find . -name "*.cpp")
 OBJS = $(patsubst %.cpp,%.o,$(SRCS))
