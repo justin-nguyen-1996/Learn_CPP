@@ -17,7 +17,7 @@ class Point2d {
 		Point2d(double x, double y) : m_x(x), m_y(y) {}
 
 		void print() const;
-		double distanceTo(Point2d point2) const;
+		double distanceTo(const Point2d& point2) const;
 
 		double getX() const { return m_x; }
 		double getY() const { return m_y; }
