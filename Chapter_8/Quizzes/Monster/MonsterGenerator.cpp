@@ -5,18 +5,27 @@
 
 #include <iostream>
 #include "MonsterGenerator.h"
- 
+
 Monster MonsterGenerator::generateMonster() {
+	/* only initialize these arrays once */
 	static std::string s_names[6]
 		{ "Blarg", "Moog", "Pksh", "Tyrn", "Mort", "Hans" };
 	static std::string s_roars[6]
 		{ "*ROAR*", "*peep*", "*squeal*", "*whine*", "*hum*", "*burp*" };
-	
-	MonsterType type = MonsterType[getRandomNumber(0, MAX_MONSTER_TYPES - 1)];
-	std::string name = s_names[getRandomNumber(0, 5)];
-	std::string roar = s_roars[getRandomNumber(0, 5)];
+
+	/* randomize the Monster type, name, roar, and health */
+	int random_type_num = getRandomNumber(0, Monster::MAX_MONSTER_TYPES - 1);
+	Monster::MonsterType type
+		= static_cast<Monster::MonsterType>(random_type_num);
+
+	int random_name_num = getRandomNumber(0, 5);
+	std::string name = s_names[random_name_num];
+
+	int random_roar_num = getRandomNumber(0, 5);
+	std::string roar = s_roars[random_roar_num];
+
 	int hp = getRandomNumber(1, 100);
-	
+
     return Monster(type, name, roar, hp);
 }
 
@@ -28,5 +37,5 @@ static int MonsterGenerator::getRandomNumber(int min, int max) {
 	// evenly distribute the random number across our range
 	return static_cast<int>(rand() * fraction * (max - min + 1) + min);
 }
-	
-	
+
+

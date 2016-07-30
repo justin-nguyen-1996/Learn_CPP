@@ -19,6 +19,7 @@ class Monster {
             Troll,
             Vampire,
             Zombie,
+            MAX_MONSTER_TYPES,
             NO_TYPE
         };
 
@@ -28,21 +29,6 @@ class Monster {
         std::string m_roar = "";
         int m_hp = 0;
 
-        std::string getTypeString() const {
-            switch (m_type) {
-                case Dragon:     return "Dragon";
-                case Goblin:     return "Goblin";
-                case Ogre:       return "Ogre";
-                case Orc:        return "Orc";
-                case Skeleton:   return "Skeleton";
-                case Troll:      return "Troll";
-                case Vampire:    return "Vampire";
-                case Zombie:     return "Zombie";
-                case NO_TYPE:    return "NO_TYPE";
-                default:    	 return "NO_TYPE";
-            }
-        }
-
     public:
 
         Monster() {}
@@ -50,6 +36,7 @@ class Monster {
             : m_type(type), m_name(name), m_roar(roar), m_hp(hp) {}
 
         void print() const;
+        std::string getTypeString() const;
 };
 
 #endif
