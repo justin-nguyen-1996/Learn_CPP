@@ -24,7 +24,7 @@ class Deck {
                         = static_cast<Card::CardSuit>(suit_i);
                     Card::CardValue rank
                         = static_cast<Card::CardValue>(rank_i);
-                    m_deck[card_i] = Card(suit, rank);
+                    m_deck[card_i++] = Card(suit, rank);
                 }
             }
         }

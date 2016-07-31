@@ -21,9 +21,8 @@ int main() {
 //     two_spades2.printCard();
     
     Deck deck;
+    deck.shuffleDeck();
     deck.printDeck();
-//     deck.shuffleDeck();
-//     deck.printDeck();
     
 //     std::cout << "First card is: ";
 //     deck.dealCard().printCard();
