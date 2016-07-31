@@ -42,5 +42,15 @@
 8. Overloading operators when the operands are different types
     --> operator+(Cents, int)   and   operator+(int, Cents)
     --> have to write two functions to overload the operators
+
+    MinMax operator+(const MinMax &m, int value) {
+        int min = m.m_min < value ? m.m_min : value;
+        int max = m.m_max > value ? m.m_max : value;
+        return MinMax(min, max);
+    }
+ 
+    MinMax operator+(int value, const MinMax &m) {
+        return (m + value);
+    } 
     
 
