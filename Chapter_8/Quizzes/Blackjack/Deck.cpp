@@ -33,7 +33,8 @@ Card& Deck::dealCard() {
 
 void Deck::shuffleDeck() {
     for (int i = 0; i < TOTAL_NUM_CARDS; ++i) {
-        int swap_i = getRandomNumber(0, TOTAL_NUM_CARDS);
+        int swap_i = getRandomNumber(0, TOTAL_NUM_CARDS - 1);
+//         std::cout << "swap_i: " << swap_i << "\n";
         swapCard(m_deck[i], m_deck.at(swap_i));
     }
     m_top_card_i = 0;
