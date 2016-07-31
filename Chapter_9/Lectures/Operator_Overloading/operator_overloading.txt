@@ -18,6 +18,11 @@
             --> if none, tries overloaded typcast conversion
             --> if that fails, throws a compiler error
  
- 4. 
+ 4. Limitations for operator overloading
+    --> A) operators ?, sizeof, ::, ., .*
+    --> B) cannot create operators that don't exist
+    --> C) at least one of the operands has to be a user-defined type
+           (e.g. adding an int and a double does not work)
+    --> D) cannot change the number of operands for an operator 
         
 
