@@ -24,12 +24,12 @@ int main() {
     deck.shuffleDeck();
     deck.printDeck();
     
-//     std::cout << "First card is: ";
-//     deck.dealCard().printCard();
-//     std::cout << "\n";
-//     
-//     std::cout << "Second card is: ";
-//     deck.dealCard().printCard();
-//     std::cout << "\n";
+    std::cout << "First card is: ";
+    deck.dealCard().printCard();
+    std::cout << "\n";
+    
+    std::cout << "Second card is: ";
+    deck.dealCard().printCard();
+    std::cout << "\n";
 }
 
