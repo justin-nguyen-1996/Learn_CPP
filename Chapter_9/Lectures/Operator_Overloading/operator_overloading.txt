@@ -36,4 +36,11 @@
     --> the (+) operator, (<<) operator, (==) operator
     --> addition, printing, comparison
 
+7. Overloading using friend functions
+    --> class Cents { friend Cents operator+(Cents& c1, Cents& c2); }
+
+8. Overloading operators when the operands are different types
+    --> operator+(Cents, int)   and   operator+(int, Cents)
+    --> have to write two functions to overload the operators
+    
 
