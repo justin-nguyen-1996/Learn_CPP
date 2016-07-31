@@ -13,7 +13,7 @@ char Card::getSuitString() const {
         case DIAMONDS:     return 'D';
         case HEARTS:       return 'H';
         case SPADES:       return 'S';
-        case default:      return '?';
+        default:           return '?';
     }
 }
 
@@ -32,7 +32,7 @@ char Card::getValueString() const {
         case QUEEN:        return 'Q';
         case KING:         return 'K';
         case ACE:          return 'A';
-        case default:      return '?';
+        default:           return '?';
     }
 }
 
