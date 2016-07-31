@@ -6,6 +6,8 @@
 #ifndef CARD_H
 #define CARD_H
 
+#include <iostream>
+
 class Card {
     public:
         enum CardSuit {
@@ -26,8 +28,10 @@ class Card {
 
     public:
         Card() {}
-        Card(CardSuit suit, CardValue value) : m_suit(suit), m_value(value) {}
-        Card(CardValue value, CardSuit suit) { Card(suit, value); }
+        Card(CardSuit suit, CardValue value) 
+            : m_suit(suit), m_value(value) {} 
+        Card(CardValue value, CardSuit suit) 
+            : Card(suit, value) {}
 
         CardSuit getSuit() const { return m_suit; }
         CardValue getValue() const { return m_value; }

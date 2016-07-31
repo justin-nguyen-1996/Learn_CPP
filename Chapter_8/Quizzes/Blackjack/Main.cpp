@@ -13,21 +13,24 @@ int main() {
     const Card queen_hearts 
         (Card::CardSuit::HEARTS, Card::CardValue::QUEEN);
     queen_hearts.printCard();
-    const Card two_spades
-        (Card::CardValue::TWO, Card::CardSuit::SPADES);
+    const Card two_spades 
+        (Card::CardSuit::SPADES, Card::CardValue::TWO);
     two_spades.printCard();
+    const Card two_spades2
+        (Card::CardValue::TWO, Card::CardSuit::SPADES);
+    two_spades2.printCard();
     
-    Deck deck;
-    deck.printDeck();
-    deck.shuffleDeck();
-    deck.printDeck();
-    
-    std::cout << "First card is: ";
-    deck.dealCard().printCard();
-    std::cout << "\n";
-    
-    std::cout << "Second card is: ";
-    deck.dealCard().printCard();
-    std::cout << "\n";
+//     Deck deck;
+//     deck.printDeck();
+//     deck.shuffleDeck();
+//     deck.printDeck();
+//     
+//     std::cout << "First card is: ";
+//     deck.dealCard().printCard();
+//     std::cout << "\n";
+//     
+//     std::cout << "Second card is: ";
+//     deck.dealCard().printCard();
+//     std::cout << "\n";
 }
 
