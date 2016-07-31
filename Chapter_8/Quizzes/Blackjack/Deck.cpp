@@ -3,6 +3,7 @@
  * Created: 7/29/2016
  */
 
+#include <cassert>
 #include "Deck.h"
 #include "Card.h"
 
@@ -21,7 +22,7 @@ void Deck::swapCard(Card& a, Card& b) {
 
 void Deck::printDeck() const {
     for (const auto& card : m_deck) {
-        printCard(card);
+        card.printCard();
     }
 }
 
@@ -30,11 +31,11 @@ Card& Deck::dealCard() {
     return m_deck[m_top_card_i];
 }
 
-void Deck::shuffleDeck() const {
+void Deck::shuffleDeck() {
     for (int i = 0; i < TOTAL_NUM_CARDS; ++i) {
         int swap_i = getRandomNumber(0, TOTAL_NUM_CARDS);
         swapCard(m_deck[i], m_deck.at(swap_i));
     }
-    top_card_i = 0;
+    m_top_card_i = 0;
 }
 

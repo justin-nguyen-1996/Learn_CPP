@@ -30,11 +30,11 @@ class Deck {
         }
         
         void printDeck() const;
-        void shuffleDeck() const;
+        void shuffleDeck();
         Card& dealCard();
         
         static int getRandomNumber(int min, int max);
-        static void swapCard();
+        static void swapCard(Card& a, Card& b);
 };
 
 #endif
