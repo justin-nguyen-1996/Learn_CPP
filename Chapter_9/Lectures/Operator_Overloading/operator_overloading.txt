@@ -6,7 +6,7 @@
 1. Operators are implemented as functions
     --> so we can function overload them as well
     --> this is called "operator overloading"
-    
+
 2. What arithmetic actually looks like
     --> int x; int y;
         x = y --> operator+(x, y)
@@ -17,12 +17,23 @@
             --> checks for a matching overloaded operator function
             --> if none, tries overloaded typcast conversion
             --> if that fails, throws a compiler error
- 
- 4. Limitations for operator overloading
+
+4. Limitations for operator overloading
     --> A) operators ?, sizeof, ::, ., .*
     --> B) cannot create operators that don't exist
     --> C) at least one of the operands has to be a user-defined type
            (e.g. adding an int and a double does not work)
-    --> D) cannot change the number of operands for an operator 
-        
+    --> D) cannot change the number of operands for an operator
+    --> E) cannot change operator precedence and associativity
+
+5. Using a named function or overloading an operator?
+    --> Operators are not named and their use can therefore be unclear
+    --> operator+() for the string class obviously means concatentation
+        operator-() for the string class is unclear
+    --> use a named function instead
+
+6. Good operators to overload in general
+    --> the (+) operator, (<<) operator, (==) operator
+    --> addition, printing, comparison
+
 
