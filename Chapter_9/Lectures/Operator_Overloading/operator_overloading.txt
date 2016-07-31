@@ -7,5 +7,17 @@
     --> so we can function overload them as well
     --> this is called "operator overloading"
     
-2. 
+2. What arithmetic actually looks like
+    --> int x; int y;
+        x = y --> operator+(x, y)
+
+3. Rules for resolving overloaded operators
+    --> A) all operands are primitives --> call built-in operator fxn
+    --> B) any operands are not primitives
+            --> checks for a matching overloaded operator function
+            --> if none, tries overloaded typcast conversion
+            --> if that fails, throws a compiler error
+ 
+ 4. 
+        
 
