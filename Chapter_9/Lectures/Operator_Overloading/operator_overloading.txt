@@ -130,4 +130,11 @@
             else { ++m_digit; }
             return *this;
         }
+    
+16. Overloading postfix increment/decrement operators
+    --> Digit& Digit::operator++ (int) {
+            Digit temp(m_digit);
+            ++(*this);
+            return temp
+        }
 
