@@ -146,8 +146,7 @@
            compiler to treat this variable as a placeholder, 
            (i.e. don’t warn us that we declared a variable but never used it)
         3. A temporary variable is created to hold the value of the 
-           object before it is incremented or decremented. 
-           
+           object before it is incremented or decremented.
            Then the object itself can be incremented or decremented. 
            
            The return value is actually a copy of the object.
@@ -155,5 +154,9 @@
            Meaning the return value of the function must not be a reference, 
            because we can’t return a reference to a local variable that
            will be destroyed when the function exits. 
-           Also note that this means the postfix operators are typically less efficient than the prefix operators because of the added overhead of instantiating a temporary variable and returning by value instead of reference.
+           
+           Also note that this means the postfix operators are typically 
+           less efficient than the prefix operators because of the
+           added overhead of instantiating a temporary variable and 
+           returning by value instead of reference.
 
