@@ -137,4 +137,12 @@
             ++(*this);
             return temp
         }
+        
+    --> things to note
+    --> 1. Distinguished the prefix from the postfix operators by 
+           providing a dummy integer parameter on the postfix version
+        2. The dummy parameter is not given a name since it is 
+           not used in the function implementation. This tells the 
+           compiler to treat this variable as a placeholder, 
+           (i.e. don’t warn us that we declared a variable but never used it)
 
