@@ -123,4 +123,11 @@
     --> bool operator!= (const Car& c1, const Car& c2) {
             return !(c1 == c2);
         }
+        
+15. Overloading prefix increment/decrement operators
+    --> Digit& Digit::operator++ () {
+            if (m_digit == 9) { m_digit == 0; }
+            else { ++m_digit; }
+            return *this;
+        }
 
