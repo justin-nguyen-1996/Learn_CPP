@@ -65,5 +65,8 @@
         you need to change the object's members
     --> example:
         friend std::istream& operator>> (std::istream& cin, Point& p);
+        std::istream& operator>> (std::istream& cin, Point& p) {
+            cin >> p.x; cin >> p.y; cin >> p.z;
+        }
 
 
