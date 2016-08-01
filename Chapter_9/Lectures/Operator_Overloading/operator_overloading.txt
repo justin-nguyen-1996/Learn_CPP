@@ -70,6 +70,13 @@
         }
 
 11. Overloading using member functions
+
+    --> three things to be aware of
+    --> 1. The overloaded operator must be added as 
+           a member function of the left operand.
+    --> 2. The left operand becomes the implicit *this object
+    --> 3. All other operands become function parameters.
+
     --> three things change
     --> 1. The overloaded operator is defined as a member instead of a friend 
            (Cents::operator+ instead of friend operator+)
@@ -88,4 +95,6 @@
     In the member function version, the expression cents1 + 2 becomes the 
     function call cents1.operator+(2). Note that there is now only 
     one explicit function parameter, and cents1 has become an object prefix. 
+    
+
 
