@@ -48,14 +48,17 @@
         int max = m.m_max > value ? m.m_max : value;
         return MinMax(min, max);
     }
- 
+
     MinMax operator+(int value, const MinMax &m) {
         return (m + value);
-    } 
+    }
 
 9. Overloading IO operators
     --> different because you return a reference to an ostream object
+    --> do this to let you chain output commands
     --> example:
         friend std::ostream& operator<< (std::ostream& cout, const Point& p);
-    
+
+10. 
+
 
