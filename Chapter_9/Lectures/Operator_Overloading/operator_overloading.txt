@@ -108,3 +108,9 @@
         --> normal function or friend function
         --> e.g. output operator (<<) and when left operand is an unmodifiable class (int, etc.)
 
+13. Overloading unary operators
+    --> don't forget to make them const
+    --> Point Point::operator- () const {
+            return Point(-m_x, -m_y, -m_z);
+        }
+
