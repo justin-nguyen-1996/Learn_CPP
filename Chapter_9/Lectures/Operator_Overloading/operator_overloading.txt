@@ -106,4 +106,5 @@
         --> member function
     --> If overloading a binary operator that does not modify its left operand (e.g. operator+)
         --> normal function or friend function
+        --> e.g. output operator (<<) and when left operand is an unmodifiable class (int, etc.)
 
