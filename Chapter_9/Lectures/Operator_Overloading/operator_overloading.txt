@@ -96,5 +96,14 @@
     function call cents1.operator+(2). Note that there is now only 
     one explicit function parameter, and cents1 has become an object prefix. 
     
-
+12. Which one to use? Member or Friend?
+    --> If overloading the assignment operator (=), subscript operator ([]), 
+        function call operator (()), or member selection operator (->), 
+        --> member function
+    --> If overloading a unary operator
+        --> member function
+    --> If overloading a binary operator that modifies its left operand (e.g. operator+=)
+        --> member function
+    --> If overloading a binary operator that does not modify its left operand (e.g. operator+)
+        --> normal function or friend function
 
