@@ -53,12 +53,17 @@
         return (m + value);
     }
 
-9. Overloading IO operators
+9. Overloading output operator
     --> different because you return a reference to an ostream object
     --> do this to let you chain output commands
     --> example:
         friend std::ostream& operator<< (std::ostream& cout, const Point& p);
 
-10. 
+10. Overloading input operator
+    --> return a reference to an istream object, can still chain
+    --> don't make the Point object const because
+        you need to change the object's members
+    --> example:
+        friend std::istream& operator>> (std::istream& cin, Point& p);
 
 
