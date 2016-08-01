@@ -113,4 +113,14 @@
     --> Point Point::operator- () const {
             return Point(-m_x, -m_y, -m_z);
         }
+        
+14. Overloading comparison operators
+    --> bool operator== (const Car& c1, const Car& c2) {
+            return (c1.make == c2.make &&
+                    c1.model == c2.model);
+        }
+    
+    --> bool operator!= (const Car& c1, const Car& c2) {
+            return !(c1 == c2);
+        }
 
