@@ -1,0 +1,48 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/2/2016
+ */
+ 
+1. Overloading unary operators
+    --> don't forget to make them const
+    --> Point Point::operator- () const {
+            return Point(-m_x, -m_y, -m_z);
+        }
+        
+2. Overloading prefix increment/decrement operators
+    --> Digit& Digit::operator++ () {
+            if (m_digit == 9) { m_digit == 0; }
+            else { ++m_digit; }
+            return *this;
+        }
+    
+3. Overloading postfix increment/decrement operators
+    --> Digit& Digit::operator++ (int) {
+            Digit temp(m_digit);
+            ++(*this);
+            return temp
+        }
+        
+    --> things to note
+    --> 1. Distinguished the prefix from the postfix operators by 
+           providing a dummy integer parameter on the postfix version
+        2. The dummy parameter is not given a name since it is 
+           not used in the function implementation. This tells the 
+           compiler to treat this variable as a placeholder, 
+           (i.e. don’t warn us that we declared a variable but never used it)
+        3. A temporary variable is created to hold the value of the 
+           object before it is incremented or decremented.
+           Then the object itself can be incremented or decremented. 
+           
+           The return value is actually a copy of the object.
+           
+           Meaning the return value of the function must not be a reference, 
+           because we can’t return a reference to a local variable that
+           will be destroyed when the function exits. 
+           
+           Also note that this means the postfix operators are typically 
+           less efficient than the prefix operators because of the
+           added overhead of instantiating a temporary variable and 
+           returning by value instead of reference.
+           
+           
