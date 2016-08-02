@@ -9,4 +9,11 @@
             return m_list[index]
         }
     --> lets you easily get AND set members
+    --> make sure to return a reference
+        --> else the following statement doesn't compile
+            list[2] = 3;
+                --> say m_list[2] = 6
+                --> the code produces 6 = 3 // makes no sense
+                --> supposed to be list.m_list[2] = 3
+        --> left operand has to be an l-value
     
