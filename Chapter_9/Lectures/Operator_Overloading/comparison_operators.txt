@@ -1,0 +1,17 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/2/2016
+ */
+ 
+        
+1. Overloading comparison operators
+    --> bool operator== (const Car& c1, const Car& c2) {
+            return (c1.make == c2.make &&
+                    c1.model == c2.model);
+        }
+    
+    --> bool operator!= (const Car& c1, const Car& c2) {
+            return !(c1 == c2);
+        }
+        
+        
