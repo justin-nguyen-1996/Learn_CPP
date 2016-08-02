@@ -8,4 +8,5 @@
     --> int& Intlist::operator[] (const int index) {
             return m_list[index]
         }
+    --> lets you easily get AND set members
     
