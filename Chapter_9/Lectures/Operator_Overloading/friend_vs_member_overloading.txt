@@ -1,0 +1,44 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/2/2016
+ */
+ 
+1. Overloading using member functions
+
+    --> three things to be aware of
+    --> 1. The overloaded operator must be added as 
+           a member function of the left operand.
+    --> 2. The left operand becomes the implicit *this object
+    --> 3. All other operands become function parameters.
+
+    --> three things change
+    --> 1. The overloaded operator is defined as a member instead of a friend 
+           (Cents::operator+ instead of friend operator+)
+    --> 2. The left param is removed because it becomes the implicit *this object
+    --> 3. Inside the function body, all references to the left parameter can 
+           be removed (e.g. cents.m_cents becomes m_cents)
+    
+    Cents operator+(int value);
+    Cents Cents::operator+(int value) {
+        return Cents(m_cents + value);
+    }
+    
+    In the friend function version, the expression cents1 + 2 becomes the
+    function call operator+(cents1, 2). Note that there are two function parameters.
+
+    In the member function version, the expression cents1 + 2 becomes the 
+    function call cents1.operator+(2). Note that there is now only 
+    one explicit function parameter, and cents1 has become an object prefix. 
+    
+2. Which one to use? Member or Friend?
+    --> If overloading the assignment operator (=), subscript operator ([]), 
+        function call operator (()), or member selection operator (->), 
+        --> member function
+    --> If overloading a unary operator
+        --> member function
+    --> If overloading a binary operator that modifies its left operand (e.g. operator+=)
+        --> member function
+    --> If overloading a binary operator that does not modify its left operand (e.g. operator+)
+        --> normal function or friend function
+        --> e.g. output operator (<<) and when left operand is an unmodifiable class (int, etc.)
+
