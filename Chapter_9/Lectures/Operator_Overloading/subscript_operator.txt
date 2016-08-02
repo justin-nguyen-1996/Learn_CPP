@@ -1,0 +1,11 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/2/2016
+ */
+ 
+1. Subscript Operator
+    --> []
+    --> int& Intlist::operator[] (const int index) {
+            return m_list[index]
+        }
+    
