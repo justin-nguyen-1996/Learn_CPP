@@ -4,11 +4,27 @@
  */
 
 1. Overloading the parenthesis operator
-    --> double& Matrix::operator()(int row, int col) {
+    --> double& Matrix::operator() (int row, int col) {
             assert(col >= 0 && col < 4);
             assert(row >= 0 && row < 4);
             return data[row][col];
         }
+        
+        Matrix m; m(1, 2) = 4;
+        
     --> can't overload the subscript operator for 2d matrices
         --> [] operator only accepts one parameter
+        
+2. Bad example of overloading the parenthesis operator
+    --> void Matrix::operator() () { // operator() with no parameters
+            for (int i = 0; i < 4; ++i) {
+                for (int j = 0; j < 4; ++j) {
+                    matrix[i][j] = 0.0;
+                }
+            }
+        }
+        
+    --> Matrix m; m(1, 2) = 4;
+        m(); // clears matrix m
+        
 
