@@ -22,5 +22,10 @@
             return m_list[index]
         }
         
-
+3. Bounds Checking
+    --> #include <cassert>
+        int& Intlist::operator[] (const int index) {
+            assert(index >= 0   &&   index < MAX_INDEX);
+            return m_list[index]
+        }
     
