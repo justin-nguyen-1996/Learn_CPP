@@ -28,4 +28,11 @@
             assert(index >= 0   &&   index < MAX_INDEX);
             return m_list[index]
         }
+        
+4. Don't call an overloaded operator[] on a pointer to an object
+    --> IntList *list = new IntList;
+        list [2] = 3; // doesn't work
+                      // need to do m_list[2] = 3
+    --> (*list)[2] = 3 // works
+                       // but ugly and error prone
     
