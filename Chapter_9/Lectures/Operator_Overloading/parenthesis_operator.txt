@@ -26,5 +26,7 @@
         
     --> Matrix m; m(1, 2) = 4;
         m(); // clears matrix m
-        
+    
+    --> works but bad because too ambiguous
+    --> just make an erase() or clear() function instead
 
