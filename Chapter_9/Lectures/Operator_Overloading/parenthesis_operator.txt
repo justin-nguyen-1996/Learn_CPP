@@ -1,0 +1,14 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/3/2016
+ */
+
+1. Overloading the parenthesis operator
+    --> double& Matrix::operator()(int row, int col) {
+            assert(col >= 0 && col < 4);
+            assert(row >= 0 && row < 4);
+            return data[row][col];
+        }
+    --> can't overload the subscript operator for 2d matrices
+        --> [] operator only accepts one parameter
+
