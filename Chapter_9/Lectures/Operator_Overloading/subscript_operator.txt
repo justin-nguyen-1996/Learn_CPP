@@ -16,4 +16,11 @@
                 --> the code produces 6 = 3 // makes no sense
                 --> supposed to be list.m_list[2] = 3
         --> left operand has to be an l-value
+        
+2. Const Version
+    --> const int& Intlist::operator[] (const int index) const {
+            return m_list[index]
+        }
+        
+
     
