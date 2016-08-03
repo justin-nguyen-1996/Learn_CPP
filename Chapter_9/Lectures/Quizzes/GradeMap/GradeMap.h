@@ -13,6 +13,7 @@ class GradeMap {
         std::vector<StudentGrades> m_map;
     public:
         GradeMap() {}
+        char& operator[] (const std::string& name);
 };
 
 #endif
