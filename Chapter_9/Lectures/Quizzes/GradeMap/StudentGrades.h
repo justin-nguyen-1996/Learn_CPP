@@ -9,8 +9,13 @@
 #include <string>
 
 class StudentGrades {
-    std::string name;
-    char grade;
+    private:
+        std::string m_name = "";
+        char m_grade = 'Z';
+    public:
+        StudentGrades() {}
+        StudentGrades(std::string name, char grade) 
+            : m_name(name), m_grade(grade) {}
 };
 
 #endif
