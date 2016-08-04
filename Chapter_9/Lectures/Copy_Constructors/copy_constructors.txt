@@ -1,0 +1,17 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/4/16
+ */
+ 
+1. Copy Constructors
+    --> like the default constructor, C++ will
+        automatically make one for you
+    --> default copy constructors simply make the
+        copy's members the same as the copied object
+    --> example:
+        Fraction(const Fraction &fraction) :
+            m_numerator(fraction.m_numerator),
+            m_denominator(fraction.m_denominator) {}
+            
+2. 
+
