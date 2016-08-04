@@ -10,8 +10,11 @@
 
 class MyString {
     private:
-        std::string m_string;
+        std::string m_string = "";
     public:
+        MyString() {}
+        MyString(const std::string str) : m_string(str) {}
+        
         std::string operator() (int start_i, int num_chars);
 };
 
