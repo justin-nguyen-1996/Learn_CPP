@@ -23,4 +23,21 @@
 3. Use uniform initialization because it is more efficient
     --> doesn't invoke unnecessary constructor calls
     --> doesn't create unnecessary objects 
+    
+4. Hidden copy constructor calls (implicit)
+    --> Fraction makeNegative(Fraction f) {
+            f.setNumerator(-f.getNumerator());
+            return f;
+        }
+         
+        int main() {
+            Fraction fiveThirds(5, 3);
+            std::cout << makeNegative(fiveThirds);
+        }
+    
+    --> one copy ctor call for makeNegative(fiveThirds)
+    --> one copy ctor call for the return value
+    
+    --> change to this:
+        Fraction& makeNegative(Fraction& f);
 
