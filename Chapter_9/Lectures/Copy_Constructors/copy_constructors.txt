@@ -42,8 +42,8 @@
         Fraction& makeNegative(Fraction& f);
         
 5. Explicit Keyword
-    --> put this in front of constructors' names to
-        prevent implicit conversion
+    --> put this in front of constructors' 
+        names to prevent implicit conversion
     --> explicit MyString(int x) {
     		m_string.resize(x);
     	}
@@ -59,4 +59,9 @@
         
     --> without the explicit keyword, MyString x = 'x' will
         try to convert 'x' to an int by calling the MyString(int x) ctor
+        
+6. Delete Keyword
+    --> prevents a constructor from being
+        called (both explicitly and implicitly)
+    --> MyString(char) = delete; // any use of this constructor is an error
         
