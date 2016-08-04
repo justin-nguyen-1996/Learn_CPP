@@ -9,4 +9,22 @@
     --> things to note:
         1. There is a space between the word 'operator' and the type we are casting to
         2. Casting operators do not have a return type
+        
+2. Explicityly Cast
+    --> Cents cents(7); int cents = static_cast<int>(cents);
+    
+3. Implicitly Cast
+    --> operator int() { return m_cents; }
+        operator Cents() { return Cents(m_dollars * 100); }
+        
+        void printCents(Cents cents) {
+            // cents will be implicitly cast to an int here
+            std::cout << cents;
+        }
+         
+        int main() {
+            // dollars will be implicitly cast to a Cents here
+            Dollars dollars(9);
+            printCents(dollars);
+        }
 
