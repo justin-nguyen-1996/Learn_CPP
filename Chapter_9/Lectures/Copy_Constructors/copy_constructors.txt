@@ -40,4 +40,21 @@
     
     --> change to this:
         Fraction& makeNegative(Fraction& f);
+        
+5. Explicit Keyword
+    --> put this in front of constructors' names to
+        prevent implicit conversion
+    --> explicit MyString(int x) {
+    		m_string.resize(x);
+    	}
+ 
+    	MyString(const char *string) {
+    		m_string = string;
+    	}
+     
+        int main() {
+        	MyString x = 'x'; // compile error
+        	std::cout << x;
+        }
 
+        
