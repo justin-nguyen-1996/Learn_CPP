@@ -56,5 +56,7 @@
         	MyString x = 'x'; // compile error
         	std::cout << x;
         }
-
+        
+    --> without the explicit keyword, MyString x = 'x' will
+        try to convert 'x' to an int by calling the MyString(int x) ctor
         
