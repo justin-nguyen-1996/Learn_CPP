@@ -13,5 +13,10 @@
             m_numerator(fraction.m_numerator),
             m_denominator(fraction.m_denominator) {}
             
-2. 
+2. Eliding
+    --> when the compiler optimizes your 
+        constructor calls in the case of redundancy
+    --> Fraction fiveThirds(Fraction(5, 3));
+        Fraction fiveThirds(5, 3);
+    --> skips the call to the copy constructor
 
