@@ -19,4 +19,8 @@
     --> Fraction fiveThirds(Fraction(5, 3));
         Fraction fiveThirds(5, 3);
     --> skips the call to the copy constructor
+    
+3. Use uniform initialization because it is more efficient
+    --> doesn't invoke unnecessary constructor calls
+    --> doesn't create unnecessary objects 
 
