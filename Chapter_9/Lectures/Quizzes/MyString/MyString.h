@@ -11,6 +11,8 @@
 class MyString {
     private:
         std::string m_string;
+    public:
+        std::string operator() (int start_i, int num_chars);
 };
 
 #endif
