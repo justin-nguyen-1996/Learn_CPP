@@ -3,5 +3,10 @@
  * Created: 8/3/2016
  */
  
-1. 
+1. Overloading Typecasting Operators
+    --> example:
+        operator int() { return m_cents; }
+    --> things to note:
+        1. There is a space between the word 'operator' and the type we are casting to
+        2. Casting operators do not have a return type
 
