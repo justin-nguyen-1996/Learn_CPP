@@ -1,0 +1,14 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/5/2016
+ */
+ 
+1. Difference between assignment and copy constructor
+    --> copy constructor is called if a new object has to
+        be created before copying can occur
+        (e.g. passing and returning objects by value)
+    --> assignment occurs if the object already exists
+
+2. 
+    
+    
