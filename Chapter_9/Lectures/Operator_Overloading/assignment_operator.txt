@@ -9,6 +9,20 @@
         (e.g. passing and returning objects by value)
     --> assignment occurs if the object already exists
 
-2. 
+2. Need to protect against self-assignment
+    --> Fraction& Fraction::operator= (const Fraction& frac) {
+            if (this == &frac) { return *this; }
+            
+            m_numerator = frac.m_numerator;
+            m_denom = frac.m_denom
+            
+            return *this // allow for chaining
+        }
     
-    
+    --> compare pointers, no need to check against all elements
+    --> why self-assignment could be bad:
+        --> imagine the case where a member is a pointer to some data
+            so both of the objects' pointers point to the same data
+            if one of them deletes it, then we will have a dangling pointer
+
+
