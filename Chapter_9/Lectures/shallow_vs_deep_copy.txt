@@ -28,23 +28,52 @@
 3. Deep Copying
     --> copies the values such that the copy lies in a
         different memory location from the original
+
+4. Copy Constructor with deep copying
     --> need to 
         --> check if the original is null,
         --> allocate memory for the copy
         --> copy the values over one at a time
-    --> example of copy constructor using a deep copy
-    
-        MyString::MyString(const MyString& str) {
-            m_length = str.m_length;
-            
-            if (str.m_data) {
-                m_data = new char[m_length];
+        
+    --> example
+            MyString::MyString(const MyString& str) {
+                m_length = str.m_length;
                 
-                for (int i = 0; i < m_length; ++i) {
-                    m_data[i] = str.m_data[i];
+                if (str.m_data) {
+                    m_data = new char[m_length];
+                    
+                    for (int i = 0; i < m_length; ++i) {
+                        m_data[i] = str.m_data[i];
+                    }
+                } else {
+                    m_data = 0;
                 }
-            } else {
-                m_data = 0;
             }
-        }
+    
+5. Assignment Operator with deep copying
+    --> need to
+        --> check against self-assignment
+        --> deallocate the current string (to avoid memory leaks)
+        --> same steps as for copy constructor
+        --> return *this for operator chaining
+        --> return a reference since this operator will 
+            only be called if the object already exists
+
+    --> example of overloaded assignment operator using deep copy
+            MyString& Mystring::operator= (const Mystring& src) {
+                if (this == &src) { return *this; }
+                
+                delete[] m_data;
+                
+                if (src.m_data) {
+                    m_data = new char[m_length];
+                    for (int i = 0; i < m_length; ++i) {
+                        m_data[i] = src.m_data[i];
+                    }
+                } else {
+                    m_data = 0;
+                }
+                
+                return *this;
+            }
 
