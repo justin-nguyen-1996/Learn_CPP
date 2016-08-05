@@ -1,0 +1,14 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/5/2016
+ */
+ 
+1. Composition
+    --> the process of building complex objects from smaller ones
+
+2. Why is it useful
+    --> Each individual class can be kept relatively simple
+    --> Each subobject can be self-contained, which makes them reusable. 
+    --> The complex class can have the simple subclasses do most of the work, 
+        instead focusing on coordinating the data flow between the subclasses. 
+        
