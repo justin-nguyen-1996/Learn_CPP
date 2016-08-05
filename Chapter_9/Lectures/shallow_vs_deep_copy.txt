@@ -7,6 +7,21 @@
     --> when the members are copied verbatim
     --> dangerous when dealing with dynamic memory
         --> copies will copy the address held by the pointer
-            (not copy the actual data)
+            (no additional memory is allocated)
             (so now we have two pointers to the same data)
+            
+2. This will break
+    --> int main() {
+            MyString hello("Hello, world!");
+            
+            {
+                MyString copy = hello; // use default copy constructor
+            } // copy gets destroyed here
+         
+            std::cout << hello.getString() << '\n'; // breaks here
+        }
+    
+    --> once copy goes out of scope due to the braces,
+        the pointers will be deleted so we are left with
+        hello.m_data being a dangling pointer
             
