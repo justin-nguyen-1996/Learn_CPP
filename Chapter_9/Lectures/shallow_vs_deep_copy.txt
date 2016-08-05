@@ -24,4 +24,13 @@
     --> once copy goes out of scope due to the braces,
         the pointers will be deleted so we are left with
         hello.m_data being a dangling pointer
+        
+3. Deep Copying
+    --> copies the values such that the copy lies in a
+        different memory location from the original
+    --> need to 
+        --> check if the original is null,
+        --> allocate memory for the copy
+        --> copy the values over one at a time
+    
             
