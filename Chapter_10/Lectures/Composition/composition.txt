@@ -12,3 +12,10 @@
     --> The complex class can have the simple subclasses do most of the work, 
         instead focusing on coordinating the data flow between the subclasses. 
         
+3. When to use composition
+    --> Each class should be built to accomplish a single task. 
+        (either storage and manipulation of some kind of data, 
+         OR the coordination of subclasses. Not both)
+    --> upper level should focus on data flow and coordination b/w subclasses
+    --> lower levels should focus on how the the data is manipulated
+        
