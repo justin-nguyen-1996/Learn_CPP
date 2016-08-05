@@ -32,5 +32,19 @@
         --> check if the original is null,
         --> allocate memory for the copy
         --> copy the values over one at a time
+    --> example of copy constructor using a deep copy
     
+        MyString::MyString(const MyString& str) {
+            m_length = str.m_length;
             
+            if (str.m_data) {
+                m_data = new char[m_length];
+                
+                for (int i = 0; i < m_length; ++i) {
+                    m_data[i] = str.m_data[i];
+                }
+            } else {
+                m_data = 0;
+            }
+        }
+
