@@ -1,0 +1,12 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/5/2016
+ */
+ 
+1. Shallow Copying
+    --> when the members are copied verbatim
+    --> dangerous when dealing with dynamic memory
+        --> copies will copy the address held by the pointer
+            (not copy the actual data)
+            (so now we have two pointers to the same data)
+            
