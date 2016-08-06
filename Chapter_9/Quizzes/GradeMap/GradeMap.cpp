@@ -9,10 +9,9 @@
 char& GradeMap::operator[] (const std::string& name) {
  
     // check to see if the student is already on the list
-    bool found_student = false;
     for (const auto& student : m_map) {
-        if (student.name == name) { // found the student
-            return student.grade;
+        if (student.getName() == name) { // found the student
+            return student.getGrade();
         }
     }
     

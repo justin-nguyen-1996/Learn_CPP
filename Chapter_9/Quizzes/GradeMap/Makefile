@@ -4,8 +4,8 @@ CPPFLAGS = -Wall -g -std=gnu++0x
 CC = g++
 RM = rm
 
-SRCS = $(shell find -name . "*.cpp")
-OBJS = $(PATSUBST ".cpp",".o",$(SRCS))
+SRCS = $(shell find . -name "*.cpp")
+OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 EXE = MAIN
 
 all: $(OBJS)

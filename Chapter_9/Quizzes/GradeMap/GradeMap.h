@@ -7,6 +7,7 @@
 #define GRADE_MAP_H
 
 #include <vector>
+#include "StudentGrades.h"
 
 class GradeMap {
     private:

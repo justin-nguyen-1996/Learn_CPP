@@ -2,7 +2,7 @@
  * Author:  Justin Nguyen
  * Created: 8/3/2016
  */
- 
+
 #ifndef STUDENT_GRADES_H
 #define STUDENT_GRADES_H
 
@@ -14,8 +14,12 @@ class StudentGrades {
         char m_grade = 'Z';
     public:
         StudentGrades() {}
-        StudentGrades(std::string name, char grade) 
+        StudentGrades(const std::string name, const char grade) 
             : m_name(name), m_grade(grade) {}
+
+		std::string getName() const { return m_name; }
+		char getGrade() const { return m_grade; }
+		void setName(const std::string& name) { m_name = name; }
 };
 
 #endif
