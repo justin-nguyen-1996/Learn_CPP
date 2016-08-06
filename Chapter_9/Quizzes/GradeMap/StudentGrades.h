@@ -18,7 +18,7 @@ class StudentGrades {
             : m_name(name), m_grade(grade) {}
 
 		std::string getName() const { return m_name; }
-		char getGrade() const { return m_grade; }
+		char& getGrade() { return m_grade; }
 		void setName(const std::string& name) { m_name = name; }
 };
 
