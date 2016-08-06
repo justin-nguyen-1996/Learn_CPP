@@ -1,0 +1,12 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/6/2016
+ */
+
+1. Aggregation
+	--> type of composition where there is no ownership
+		between the upper-level class and its subclasses
+	--> when the upper-level class is destroyed,
+		its subclasses are not affected
+
+
