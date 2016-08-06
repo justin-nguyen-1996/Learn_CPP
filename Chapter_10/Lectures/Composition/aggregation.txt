@@ -17,4 +17,21 @@
 		--> use pointers to objects that live outside of the aggregate class
 		--> not responsible for creation/destruction of subclasses
 
+3. Example
+	--> private:
+    		Teacher *m_pcTeacher; // This dept holds only one teacher
+		public:
+			Department(Teacher *pcTeacher=NULL)
+				: m_pcTeacher(pcTeacher) {}
+	--> int main() {
+			// Create a teacher outside the scope of the Department
+			Teacher *pTeacher = new Teacher("Bob"); // create a teacher
+			{
+				Department cDept(pTeacher);
+			} // cDept goes out of scope here and is destroyed
+		 
+			// pTeacher still exists here because cDept did not destroy it
+			delete pTeacher;
+		}
+	--> pointer was destroyed but the memory was not deallocated
 
