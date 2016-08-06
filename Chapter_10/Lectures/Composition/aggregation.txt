@@ -9,4 +9,12 @@
 	--> when the upper-level class is destroyed,
 		its subclasses are not affected
 
+2. Difference between aggregation and composition
+	--> Composition:
+		--> use normal member variables
+		--> responsible for creation/destruction of subclasses
+	--> Aggregation:
+		--> use pointers to objects that live outside of the aggregate class
+		--> not responsible for creation/destruction of subclasses
+
 
