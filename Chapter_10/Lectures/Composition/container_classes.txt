@@ -3,4 +3,8 @@
  * Created: 8/6/2016
  */
 
+1. Container Classes
+    --> classes designed to hold/organize
+        instances of another class
+    --> provide additional benefits (convenience and safety)
 
