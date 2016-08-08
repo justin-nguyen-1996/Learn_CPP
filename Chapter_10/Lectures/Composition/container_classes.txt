@@ -26,6 +26,13 @@
             IntArray() {}
             IntArray(int my_size, int my_data) 
                 : size(my_size), data(my_data) {}
+                
+            ~IntArray() { delete[] data; }
+            void Erase() {
+                delete[] data;
+                data = 0;
+                size = 0;
+            }
             
             int getSize() { return size; }
             int getData() { return data; }
