@@ -68,5 +68,17 @@
                 data = new_data;
                 size = new_size;
             }
+            
+            void insert(int value, int index = size) {
+                assert(index >= 0   &&   index <= size);
+                
+                int new_data = new int[size + 1];
+                
+                for (int i = 0; i < index; ++i) {
+                    new_data[i] = data[i];
+                }
+                
+                
+            }
     };
             
