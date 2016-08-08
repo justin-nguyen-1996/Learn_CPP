@@ -58,7 +58,7 @@
                     return;
                 }
                 
-                int new_data = new int[new_size];
+                int* new_data = new int[new_size];
                 for (int i = 0; i < new_size; ++i) {
                     new_data[i] = data[i];
                 }
@@ -72,13 +72,19 @@
             void insert(int value, int index = size) {
                 assert(index >= 0   &&   index <= size);
                 
-                int new_data = new int[size + 1];
-                
+                int* new_data = new int[size + 1];
                 for (int i = 0; i < index; ++i) {
                     new_data[i] = data[i];
                 }
                 
+                new_data[index] = value;
+                for (int i = (index + 1); i < (size + 1); ++i) {
+                    new_data[i] = data[i - 1];
+                }
                 
+                delete[] data;
+                data = new_data;
+                size += 1;
             }
     };
             
