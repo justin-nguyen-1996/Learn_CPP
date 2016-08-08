@@ -51,5 +51,22 @@
                 data = new int[new_size];
                 size = new_size;
             }
+            
+            void resize(int new_size) {
+                if (size <= 0) { 
+                    Erase(); 
+                    return;
+                }
+                
+                int new_data = new int[new_size];
+                for (int i = 0; i < new_size; ++i) {
+                    new_data[i] = data[i];
+                }
+                
+                delete[] data;
+                
+                data = new_data;
+                size = new_size;
+            }
     };
             
