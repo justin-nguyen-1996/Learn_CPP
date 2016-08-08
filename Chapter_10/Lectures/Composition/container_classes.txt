@@ -20,10 +20,15 @@
         
     class IntArray {
         private:
-            int size;
-            int* data;
+            int size = 0;
+            int* data = 0;
         public:
-            IntArray()
+            IntArray() {}
+            IntArray(int my_size, int my_data) 
+                : size(my_size), data(my_data) {}
+            
+            int getSize() { return size; }
+            int getData() { return data; }
     
     };
             
