@@ -42,5 +42,14 @@
                 assert(index >= 0   &&   index < size);
                 return data[index];
             }
+            
+            void reallocate(int new_size) {
+                Erase();
+                
+                if (size <= 0) { return; }
+                
+                data = new int[new_size];
+                size = new_size;
+            }
     };
             
