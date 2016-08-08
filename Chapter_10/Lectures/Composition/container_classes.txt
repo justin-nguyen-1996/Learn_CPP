@@ -24,8 +24,9 @@
             int* data = 0;
         public:
             IntArray() {}
-            IntArray(int my_size, int my_data) 
-                : size(my_size), data(my_data) {}
+            IntArray(int my_size) : size(my_size) {
+                data = new int[size];
+            }
                 
             ~IntArray() { delete[] data; }
             void Erase() {
@@ -36,6 +37,10 @@
             
             int getSize() { return size; }
             int getData() { return data; }
-    
+            
+            int& operator[] (int index) {
+                assert(index >= 0   &&   index < size);
+                return data[index];
+            }
     };
             
