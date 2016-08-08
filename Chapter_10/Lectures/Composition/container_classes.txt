@@ -16,6 +16,14 @@
         --> aggregations that store pointers or references to other objects 
             (and thus are not responsible for creation or destruction of those objects)
             
-3. 
+3.  Implementing the std::array container
         
+    class IntArray {
+        private:
+            int size;
+            int* data;
+        public:
+            IntArray()
+    
+    };
             
