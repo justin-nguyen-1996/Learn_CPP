@@ -63,5 +63,11 @@
 			--> variables can only be set in an initializer list of a
 				constructor if that constructor belongs to that class
 			--> inherited variables can't be changed in the initializer list
+		
+		--> can't change the inherited var in the body of the ctor either
+			--> what if the inherited variable is const or a reference?
+			--> also inefficient (the variable gets assigned a value twice)
+	
+	--> 
 
 
