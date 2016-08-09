@@ -3,4 +3,88 @@
  * Created: 8/6/2016
  */
 
+1. Container Classes
+    --> classes designed to hold/organize
+        instances of another class
+    --> provide additional benefits (convenience and safety)
 
+2. Types of Containers
+    --> value containers
+        --> compositions that store copies of the objects they are holding 
+            (and thus are responsible for creating and destroying those copies)
+    --> reference containers
+        --> aggregations that store pointers or references to other objects 
+            (and thus are not responsible for creation or destruction of those objects)
+            
+3.  Implementing the std::array container
+        
+    class IntArray {
+        private:
+            int size = 0;
+            int* data = 0;
+        public:
+            IntArray() {}
+            IntArray(int my_size) : size(my_size) {
+                data = new int[size];
+            }
+                
+            ~IntArray() { delete[] data; }
+            void Erase() {
+                delete[] data;
+                data = 0;
+                size = 0;
+            }
+            
+            int getSize() { return size; }
+            int getData() { return data; }
+            
+            int& operator[] (int index) {
+                assert(index >= 0   &&   index < size);
+                return data[index];
+            }
+            
+            void reallocate(int new_size) {
+                Erase();
+                
+                if (size <= 0) { return; }
+                
+                data = new int[new_size];
+                size = new_size;
+            }
+            
+            void resize(int new_size) {
+                if (size <= 0) { 
+                    Erase(); 
+                    return;
+                }
+                
+                int* new_data = new int[new_size];
+                for (int i = 0; i < new_size; ++i) {
+                    new_data[i] = data[i];
+                }
+                
+                delete[] data;
+                
+                data = new_data;
+                size = new_size;
+            }
+            
+            void insert(int value, int index = size) {
+                assert(index >= 0   &&   index <= size);
+                
+                int* new_data = new int[size + 1];
+                for (int i = 0; i < index; ++i) {
+                    new_data[i] = data[i];
+                }
+                
+                new_data[index] = value;
+                for (int i = (index + 1); i < (size + 1); ++i) {
+                    new_data[i] = data[i - 1];
+                }
+                
+                delete[] data;
+                data = new_data;
+                size += 1;
+            }
+    };
+            
