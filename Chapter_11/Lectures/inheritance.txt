@@ -68,6 +68,15 @@
 			--> what if the inherited variable is const or a reference?
 			--> also inefficient (the variable gets assigned a value twice)
 	
-	--> 
+	--> Just choose which base constructor to call instead
+		--> example:
+			
+			class Derived : public Base {
+				public:
+					Derived(double x, int y) 
+						: m_x(x), Base(y) {}
+			}
+
+	
 
 
