@@ -10,6 +10,11 @@
 	--> Cars have a wheel, tires, etc.
 	--> Apples and bananas are a fruit
 
-2. 
+2. Inheritance Properties
+	--> by default children inherit all of the parent's attributes
+	--> but can: 
+		--> redefine inherited properties
+		--> add new properties
+		--> hide some of the inherited properties
 
 
