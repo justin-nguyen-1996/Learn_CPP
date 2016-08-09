@@ -17,4 +17,10 @@
 		--> add new properties
 		--> hide some of the inherited properties
 
+3. Why we use inheritance
+	--> instead of manually copying & pasting then remodifying the code
+	--> we can just inherit the class then add/hide features as needed
+	--> instead of redefining everything, just modify what changed
+	--> changing the base class will propogate changes to all children
+
 
