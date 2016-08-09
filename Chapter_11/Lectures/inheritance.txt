@@ -1,0 +1,15 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/9/2016
+ */
+
+1. Inheritance Definition
+	--> as opposed to composition where objects have a "has-a" relationship
+	--> inheritance involves objects that have a "are-a" relationship
+
+	--> Cars have a wheel, tires, etc.
+	--> Apples and bananas are a fruit
+
+2. 
+
+
