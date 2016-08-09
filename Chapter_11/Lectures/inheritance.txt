@@ -77,6 +77,12 @@
 						: m_x(x), Base(y) {}
 			}
 
-	
+8. Something to note
+	--> constructors can only call their immediate parent's ctors
+	--> i.e. if C inherits from B and B inherits from A
+		then C can only call B's ctors, it can't call A's ctors
+
+9. Order of destructor destruction
+	--> the derived classes are destroyed first, then the base classes
 
 
