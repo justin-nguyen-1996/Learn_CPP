@@ -22,5 +22,15 @@
 	--> we can just inherit the class then add/hide features as needed
 	--> instead of redefining everything, just modify what changed
 	--> changing the base class will propogate changes to all children
+	--> inherit the member functions and the member variables
+		--> making changes becomes both intuitive and low-maintenance
+
+4. Order of Inheritance Construction
+	--> the base class is constructed first, then the derived classes
+	--> make sense too
+		--> a child cannot exist without a parent
+		--> each derived class likely uses the 
+			variables and functions created in the base class
+		--> so we need to create the parent class for these to exist first
 
 
