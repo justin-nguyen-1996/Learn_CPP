@@ -27,10 +27,25 @@
 
 4. Order of Inheritance Construction
 	--> the base class is constructed first, then the derived classes
+	--> create the "first"/most base class then walk down inheritance tree
 	--> make sense too
 		--> a child cannot exist without a parent
 		--> each derived class likely uses the 
 			variables and functions created in the base class
 		--> so we need to create the parent class for these to exist first
+
+5. What actually happens when constructing an object
+	--> 1. Memory for the object is set aside
+	--> 2. The appropriate constructor is called
+	--> 3. Initializer list initializes members
+	--> 4. Body of the constructor executes
+	--> 5. Control is returned to the caller
+
+6. Constructing a derived object
+	--> not much difference
+	--> memory is allocated (enough for the base and derived class)
+	--> base constructor is called before the derived class's constructor
+
+7. 
 
 
