@@ -12,7 +12,7 @@
 
 2. Inheritance Properties
 	--> by default children inherit all of the parent's attributes
-	--> but can: 
+	--> but can:
 		--> redefine inherited properties
 		--> add new properties
 		--> hide some of the inherited properties
@@ -30,7 +30,7 @@
 	--> create the "first"/most base class then walk down inheritance tree
 	--> make sense too
 		--> a child cannot exist without a parent
-		--> each derived class likely uses the 
+		--> each derived class likely uses the
 			variables and functions created in the base class
 		--> so we need to create the parent class for these to exist first
 
@@ -50,30 +50,30 @@
 	--> let's say x is a member belonging to Derived class and
 		y is a member belonging to Base class
 	--> What not to do:
-		--> can't use the initializer list in 
+		--> can't use the initializer list in
 			the derived class's constructor
 			--> class Derived : public Base {
 					public:
-						Derived (double x, int y) 
+						Derived (double x, int y)
 							: m_x(x), m_y(y) {}
 				}
-			--> not allowed because what if y was 
+			--> not allowed because what if y was
 				a const or reference variable?
 			--> these variables must be initialized at the time of creation
 			--> variables can only be set in an initializer list of a
 				constructor if that constructor belongs to that class
 			--> inherited variables can't be changed in the initializer list
-		
+
 		--> can't change the inherited var in the body of the ctor either
 			--> what if the inherited variable is const or a reference?
 			--> also inefficient (the variable gets assigned a value twice)
-	
+
 	--> Just choose which base constructor to call instead
 		--> example:
-			
+
 			class Derived : public Base {
 				public:
-					Derived(double x, int y) 
+					Derived(double x, int y)
 						: m_x(x), Base(y) {}
 			}
 
@@ -84,5 +84,20 @@
 
 9. Order of destructor destruction
 	--> the derived classes are destroyed first, then the base classes
+
+10. Protected Keyword
+	--> an access specifier (like public or private) that
+		lets derived classes access those members
+
+11. Public vs. Private vs. Protected
+	--> any can access public
+	--> only base class can access private
+	--> base and derived classes can access protected
+
+12. Something to Note
+	--> class Derived can access class Base's protected members
+	--> but anything outside class Derived cannot
+		(i.e. Derived object in main() cannot access protected members)
+		(This is just like private members)
 
 
