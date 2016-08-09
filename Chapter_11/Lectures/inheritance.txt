@@ -46,6 +46,22 @@
 	--> memory is allocated (enough for the base and derived class)
 	--> base constructor is called before the derived class's constructor
 
-7. 
+7. Initializing base class members
+	--> let's say x is a member belonging to Derived class and
+		y is a member belonging to Base class
+	--> What not to do:
+		--> can't use the initializer list in 
+			the derived class's constructor
+			--> class Derived : public Base {
+					public:
+						Derived (double x, int y) 
+							: m_x(x), m_y(y) {}
+				}
+			--> not allowed because what if y was 
+				a const or reference variable?
+			--> these variables must be initialized at the time of creation
+			--> variables can only be set in an initializer list of a
+				constructor if that constructor belongs to that class
+			--> inherited variables can't be changed in the initializer list
 
 
