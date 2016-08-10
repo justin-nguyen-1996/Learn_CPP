@@ -1,0 +1,10 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/10/2016
+ */
+ 
+1. Overwrite Inherited Functions
+    --> the same as function overloading
+    --> redefining a function in the derived class overwrites
+        the function's access specifications
+
