@@ -100,4 +100,7 @@
 		(i.e. Derived object in main() cannot access protected members)
 		(This is just like private members)
 
+13. Public Inheritance
+	--> 
+
 
