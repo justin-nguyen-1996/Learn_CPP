@@ -95,12 +95,12 @@
 	--> base and derived classes can access protected
 
 12. Something to Note
-	--> class Derived can access class Base's protected members
-	--> but anything outside class Derived cannot
-		(i.e. Derived object in main() cannot access protected members)
-		(This is just like private members)
+	--> Classes can access their own members regardless of the access specifier
+	--> Derived class uses its immediate parent's access specifications
+		--> Derived classes can't directly access private members of the base class
+	--> Outside access uses the access specifiers of the class being accessed
 
 13. Public Inheritance
-	--> 
+	-->	
 
 
