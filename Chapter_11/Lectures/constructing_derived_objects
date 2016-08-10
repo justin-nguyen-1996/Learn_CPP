@@ -1,0 +1,66 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/10/2016
+ */
+ 
+1. Order of Inheritance Construction
+	--> the base class is constructed first, then the derived classes
+	--> create the "first"/most base class then walk down inheritance tree
+	--> make sense too
+		--> a child cannot exist without a parent
+		--> each derived class likely uses the
+			variables and functions created in the base class
+		--> so we need to create the parent class for these to exist first
+
+2. What actually happens when constructing an object
+	--> 1. Memory for the object is set aside
+	--> 2. The appropriate constructor is called
+	--> 3. Initializer list initializes members
+	--> 4. Body of the constructor executes
+	--> 5. Control is returned to the caller
+
+3. Constructing a derived object
+	--> not much difference
+	--> memory is allocated (enough for the base and derived class)
+	--> base constructor is called before the derived class's constructor
+
+4. Initializing base class members
+	--> let's say x is a member belonging to Derived class and
+		y is a member belonging to Base class
+	--> What not to do:
+		--> can't use the initializer list in
+			the derived class's constructor
+			--> class Derived : public Base {
+					public:
+						Derived (double x, int y)
+							: m_x(x), m_y(y) {}
+				}
+			--> not allowed because what if y was
+				a const or reference variable?
+			--> these variables must be initialized at the time of creation
+			--> variables can only be set in an initializer list of a
+				constructor if that constructor belongs to that class
+			--> inherited variables can't be changed in the initializer list
+
+		--> can't change the inherited var in the body of the ctor either
+			--> what if the inherited variable is const or a reference?
+			--> also inefficient (the variable gets assigned a value twice)
+
+	--> Just choose which base constructor to call instead
+		--> example:
+
+			class Derived : public Base {
+				public:
+					Derived(double x, int y)
+						: m_x(x), Base(y) {}
+			}
+
+5. Something to note
+	--> constructors can only call their immediate parent's ctors
+	--> i.e. if C inherits from B and B inherits from A
+		then C can only call B's ctors, it can't call A's ctors
+
+6. Order of destructor destruction
+	--> the derived classes are destroyed first, then the base classes
+	
+	
