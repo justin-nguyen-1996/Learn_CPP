@@ -7,4 +7,13 @@
     --> the same as function overloading
     --> redefining a function in the derived class overwrites
         the function's access specifications
+        
+2. Add Functionality
+    --> what if don't want to completely replace base class's
+        method but instead want to add to its functionality?
+    --> example:
+        void Identify() {
+            Base::Identify(); // call Base::Identify() first
+            cout << "I am a Derived"; // then identify ourselves
+        }
 
