@@ -16,4 +16,17 @@
             Base::Identify(); // call Base::Identify() first
             cout << "I am a Derived"; // then identify ourselves
         }
+        
+3. Changing Access Levels
+    --> class Base {
+            protected: void PrintValue() { cout << m_nValue; }
+        };
+    --> class Derived: public Base {
+            public: using Base::PrintValue;
+        };
+    --> Note:
+        --> there are no parentheses at the end of PrintValue
+        --> Derived class can only change access level of
+            functions that it already has access too
+            (i.e. can't change private to public)
 
