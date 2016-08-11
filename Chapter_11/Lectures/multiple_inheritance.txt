@@ -7,5 +7,14 @@
     --> a single class can inherit from multiple classes
     --> class Teacher: public Person, public Employee {};
     
-2. 
+2. Problems with multiple inheritance
+    --> naming conflicts
+        --> class WirelessAdaptor: public USBDevice, public NetworkDevice {};
+        --> WirelessAdaptor c54G(5442, 181742); 
+            cout << c54G.GetID();
+        --> but what if USBDevice and NetworkDevice both have a GetID method?
+            --> use explicit call --> cout << c54G.USBDevice::GetID();
+        --> can get way out of hand really quickly
+    
+    --> 
 
