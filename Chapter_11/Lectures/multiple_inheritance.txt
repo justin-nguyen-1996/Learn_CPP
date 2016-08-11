@@ -23,5 +23,10 @@
             class D does not overload that function,
             --> from which class does class D inherit?
         --> ambiguous
-    
+
+3. Advice on multiple inheritance
+    --> generally considered to be more trouble than they're worth
+    --> many languages such as Java only have single inheritance
+        --> though Java interfaces do have multiple inheritance
+    --> though cin and cout are implemented using multiple inheritance
 
