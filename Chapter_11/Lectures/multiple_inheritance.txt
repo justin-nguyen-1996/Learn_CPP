@@ -16,5 +16,12 @@
             --> use explicit call --> cout << c54G.USBDevice::GetID();
         --> can get way out of hand really quickly
     
-    --> 
+    --> Diamond Problem
+        --> class D inherits from class's B & C,
+            but classes B & C inherit from class A
+        --> If B & C overload a function inherited from class A and
+            class D does not overload that function,
+            --> from which class does class D inherit?
+        --> ambiguous
+    
 
