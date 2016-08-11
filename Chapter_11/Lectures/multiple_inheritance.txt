@@ -1,0 +1,11 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/11/2016
+ */
+
+1. Multiple Inheritance
+    --> a single class can inherit from multiple classes
+    --> class Teacher: public Person, public Employee {};
+    
+2. 
+
