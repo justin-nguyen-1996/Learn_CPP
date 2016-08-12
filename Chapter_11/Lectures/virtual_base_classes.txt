@@ -23,4 +23,15 @@
     Copier(int nScanner, int nPrinter, int nPower)
         : Scanner(nScanner, nPower), 
           Printer(nPrinter, nPower), PoweredDevice(nPower) {}
+          
+3. Things to Note
+    --> the most derived class constructs the virtual base class
+    --> virtual base classes are created before non-virtual base classes, 
+        which ensures all bases get created before their derived classes
+    --> if we create an instance of Copier, Printer and Scanner's 
+        calls to construct PoweredDevice are ignored because 
+        Copier is responsible for creating the PoweredDevice
+    --> if we were create an instance of Scanner or Printer, however, 
+        the virtual keyword is ignored, those constructor calls would be used, 
+        and normal inheritance rules apply.
 
