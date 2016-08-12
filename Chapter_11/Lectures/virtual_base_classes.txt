@@ -1,0 +1,26 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/12/2016
+ */
+ 
+1. Virtual Base Classes
+    --> a way of preventing multiple instances of a class
+    --> use the keyword virtual to have the base class be shared
+    
+2. Example
+
+    class PoweredDevice
+    class Scanner: public PoweredDevice
+    class Printer: public PoweredDevice
+    class Copier: public Scanner, public Printer
+    Copier(int nScanner, int nPrinter, int nPower)
+        : Scanner(nScanner, nPower), Printer(nPrinter, nPower) {}
+    
+    class PoweredDevice
+    class Scanner: virtual public PoweredDevice
+    class Printer: virtual public PoweredDevice
+    class Copier: public Scanner, public Printer
+    Copier(int nScanner, int nPrinter, int nPower)
+        : Scanner(nScanner, nPower), 
+          Printer(nPrinter, nPower), PoweredDevice(nPower) {}
+
