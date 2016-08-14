@@ -1,0 +1,15 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/14/2016
+ */
+
+1. Pure Virtual Functions
+	--> also called abstract functions
+	--> placeholders that are meant to be redefined in the derived classes
+	--> example:
+		virtual void fxn() = 0 // set the function "equal" to zero
+
+2. What happens when you use a virtual function
+	
+
+
