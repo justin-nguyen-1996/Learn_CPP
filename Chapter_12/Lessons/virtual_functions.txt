@@ -62,4 +62,17 @@
 			--> this increases the size of each class object
 			--> this also means these hidden pointers become inherited 
 
+7. Inefficiency Explanation
+	--> steps to calling a virtual function
+		--> 1. dereference the *__vptr to find that object's virtual table
+		--> 2. walk down the table to find the correct function to call
+		--> 3. call that function
+
+	--> steps to indirectly calling a function (i.e. through pointers)
+		--> 1. dereference the pointer
+		--> 2. call that function
+
+	--> steps to directly calling a function (i.e. normal way)
+		--> 1. call that function
+
 
