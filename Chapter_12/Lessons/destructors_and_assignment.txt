@@ -20,7 +20,7 @@
 	--> resolving a call to a virtual function 
 		--> has to walk down the recursion tree by following 
 			pointers to find the most derived version of that function
-	--> the compiler has to allocate an extra pointer for eeach
+	--> the compiler has to allocate an extra pointer for each
 		class object that has at least one virtual function
 
 	

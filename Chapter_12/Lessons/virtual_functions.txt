@@ -11,7 +11,7 @@
 		--> see virtual functions
 
 2. Virtual Functions
-    --> special functions that resolve to the most derived 
+    --> special functions that resolve to the most derived
         version of the function with the same signature
     --> this capability is called polymorphism
 	--> example:
@@ -26,14 +26,14 @@
 3. Polymorphic Array
 	--> Cat cFred("Fred"), cTyson("Tyson"), cZeke("Zeke");
 		Dog cGarbo("Garbo"), cPooky("Pooky"), cTruffle("Truffle");
-		 
-		Animal *apcAnimals[] 
+
+		Animal *apcAnimals[]
 			= { &cFred, &cGarbo, &cPooky, &cTruffle, &cTyson, &cZeke };
 		for (int iii=0; iii < 6; iii++)
-			cout << apcAnimals[iii]->GetName() << " says " 
+			cout << apcAnimals[iii]->GetName() << " says "
 				 << apcAnimals[iii]->Speak() << endl;
 
-4. Protip				 
+4. Protip
 	--> use the virtual keyword on derived classes even though not needed
 	--> good reminder that those functions are virtual functions
 
@@ -43,5 +43,16 @@
 			then it is called static binding
 		--> if translation can only be determined at runtime
 			then it is called dynamic binding
+
+6. Virtual Function Table
+	--> every class that uses virtual functions is 
+		given its own virtual function table
+	
+	--> 1. This lookup table is created at compile time
+	--> 2. the table contains one entry for each 
+   		   virtual function that can be called by that class
+	--> 3. each entry in the table is a function pointer that 
+		   points to the most derived version of that function 
+		   that is accessible by that class
 
 
