@@ -3,13 +3,16 @@
  * Created: 8/14/2016
  */
 
-1. Pure Virtual Functions
+1. Pure Virtual Functions (pvf)
 	--> also called abstract functions
 	--> placeholders that are meant to be redefined in the derived classes
 	--> example:
 		virtual void fxn() = 0 // set the function "equal" to zero
 
 2. What happens when you use a virtual function
-	
+	--> any class with one or more pure virtual 
+		functions becomes an abstract base class (abc)
+	--> any derived class that does not redefine the pvf
+		will also become an abstract base class
 
 
