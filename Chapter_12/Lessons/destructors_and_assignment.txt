@@ -1,0 +1,18 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/14/2016
+ */
+
+1. Virtual Destructors
+	--> always make destructors virtual if using inheritance
+
+2. Overriding Virtualization
+	--> generally not a good idea
+	--> if want to call base class's version and its a virtual function,
+		just use the scope resolution operator (::)
+	--> example:
+		Derived derived;
+		Base& base = derived;
+		base.Base::GetName();
+
+	
