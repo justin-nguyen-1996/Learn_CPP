@@ -3,5 +3,9 @@
  * Created: 8/13/2016
  */
  
-1. 
+1. Pointer with inheritance
+	--> can make pointers from derived objects to base class (duh)
+	--> but can also make pointers from base class to derived class
+		--> but base class can only see itself so unexpected results
+
 
