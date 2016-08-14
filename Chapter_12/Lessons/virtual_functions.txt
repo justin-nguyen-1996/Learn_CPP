@@ -23,6 +23,14 @@
 	    Base &rBase = cDerived;
 	    cout << "rBase is a " << rBase.GetName() << endl;
 
-3. 
+3. Polymorphic Array
+	--> Cat cFred("Fred"), cTyson("Tyson"), cZeke("Zeke");
+		Dog cGarbo("Garbo"), cPooky("Pooky"), cTruffle("Truffle");
+		 
+		Animal *apcAnimals[] 
+			= { &cFred, &cGarbo, &cPooky, &cTruffle, &cTyson, &cZeke };
+		for (int iii=0; iii < 6; iii++)
+			cout << apcAnimals[iii]->GetName() << " says " 
+				 << apcAnimals[iii]->Speak() << endl;
 
 
