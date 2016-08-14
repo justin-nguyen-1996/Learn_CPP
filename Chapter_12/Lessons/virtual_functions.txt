@@ -2,12 +2,27 @@
  * Author:  Justin Nguyen
  * Created: 8/13/2016
  */
- 
+
 1. Pointer with inheritance
 	--> can make pointers from derived objects to base class (duh)
 	--> but can also make pointers from base class to derived class
 		--> but base class can only see itself so unexpected results
 		--> more convenient if call the derived version instead
 		--> see virtual functions
+
+2. Virtual Functions
+    --> special functions that resolve to the most derived 
+        version of the function with the same signature
+    --> this capability is called polymorphism
+	--> example:
+
+		virtual const char* GetName() { return "Base"; }
+		virtual const char* GetName() { return "Derived"; }
+
+		Derived cDerived;
+	    Base &rBase = cDerived;
+	    cout << "rBase is a " << rBase.GetName() << endl;
+
+3. 
 
 
