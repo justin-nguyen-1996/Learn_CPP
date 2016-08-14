@@ -49,10 +49,17 @@
 		given its own virtual function table
 	
 	--> 1. This lookup table is created at compile time
-	--> 2. the table contains one entry for each 
+	--> 2. The table contains one entry for each 
    		   virtual function that can be called by that class
-	--> 3. each entry in the table is a function pointer that 
+	--> 3. Each entry in the table is a function pointer that 
 		   points to the most derived version of that function 
 		   that is accessible by that class
+	--> 4. The compiler adds a hidden pointer to the base class
+			--> different from the hidden *this pointer
+			--> as opposed to being added as a function parameter,
+				these hidden virtual pointers are added to 
+				the base class as actual members
+			--> this increases the size of each class object
+			--> this also means these hidden pointers become inherited 
 
 
