@@ -33,4 +33,8 @@
 			cout << apcAnimals[iii]->GetName() << " says " 
 				 << apcAnimals[iii]->Speak() << endl;
 
+4. Protip				 
+	--> use the virtual keyword on derived classes even though not needed
+	--> good reminder that those functions are virtual functions
+
 
