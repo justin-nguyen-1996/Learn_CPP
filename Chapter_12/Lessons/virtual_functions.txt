@@ -7,5 +7,7 @@
 	--> can make pointers from derived objects to base class (duh)
 	--> but can also make pointers from base class to derived class
 		--> but base class can only see itself so unexpected results
+		--> more convenient if call the derived version instead
+		--> see virtual functions
 
 
