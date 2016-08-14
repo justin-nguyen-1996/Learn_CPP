@@ -37,4 +37,11 @@
 	--> use the virtual keyword on derived classes even though not needed
 	--> good reminder that those functions are virtual functions
 
+5. Static Binding vs. Dynamic Binding
+	--> Function calls and variables are translated into machine code
+		--> if translation can be determined at compile time
+			then it is called static binding
+		--> if translation can only be determined at runtime
+			then it is called dynamic binding
+
 
