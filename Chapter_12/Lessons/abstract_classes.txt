@@ -15,4 +15,16 @@
 	--> any derived class that does not redefine the pvf
 		will also become an abstract base class
 
+3. Abstract Base Classes
+	--> cannot be instantiated
+	--> if you make an object and try to call a 
+		pvf it will have undefined behavior
+
+4. Interface Classes
+	--> have no member variables
+	--> all of the functions are purely virtual
+	--> the class is essentially just a definition with no implementation
+	--> create an outline of the functionality desired,
+		but leave the implementation up to the derived classes
+
 
