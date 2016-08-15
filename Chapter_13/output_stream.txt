@@ -1,0 +1,11 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/15/2016
+ */
+ 
+1. Formatting using the insertion operator (<<)
+    --> flags (boolean variables that can be turned on and off)
+    --> manipulators (objects placed in a stream to change input/output behavior)
+    
+2. 
+
