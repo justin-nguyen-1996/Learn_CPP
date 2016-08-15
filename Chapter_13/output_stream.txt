@@ -17,9 +17,10 @@
         --> need to turn off these defaults before using the ones you want,
             otherwise the default flag will override your new flag
         --> cout.unsetf(ios::dec); // turn off decimal output
-            cout.setf(ios::hex); // turn on hexadecimal output
-            cout << 27 << endl;
+            cout.setf(ios::hex);   // turn on hexadecimal output
 
 3. Manipulators for cout
-    --> 
+    --> cout << hex << 27 << endl; // print 27 in hex
+        cout << 28 << endl;        // we're still in hex
+        cout << dec << 29 << endl; // back to decimal
 
