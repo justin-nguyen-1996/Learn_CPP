@@ -7,5 +7,19 @@
     --> flags (boolean variables that can be turned on and off)
     --> manipulators (objects placed in a stream to change input/output behavior)
     
-2. 
+2. Flags and setf()
+    --> use setf() to turn on flags
+        --> cout.setf(ios::showpos); // outputs '+' for positive numbers, e.g. +42
+        --> cout.setf(ios::showpos | ios::uppercase) // turn on multiple flags
+    --> use unsetf() to turn off flags
+    --> format groups
+        --> groups of flags that have default flag settings
+        --> need to turn off these defaults before using the ones you want,
+            otherwise the default flag will override your new flag
+        --> cout.unsetf(ios::dec); // turn off decimal output
+            cout.setf(ios::hex); // turn on hexadecimal output
+            cout << 27 << endl;
+
+3. Manipulators for cout
+    --> 
 
