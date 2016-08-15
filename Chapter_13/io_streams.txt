@@ -34,3 +34,15 @@
                 cin >> setw(10) >> buf;
             --> this will read in 9 characters (leaving room for a terminator)
 
+6. Extraction and Whitespace
+    --> extraction operator ignores whitespace
+    --> can use the get() method to resolve this
+        --> char c; cin.get(c); // reads a character from cin into c
+        --> char str_buffer[11]; cin.get(c, 11); // reads in 10 chars
+    --> characters not read are left in the stream to be read later
+    
+7. getline() function
+    --> works like get() but also reads in newlines
+    
+8. 
+
