@@ -1,0 +1,21 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/15/2016
+ */
+ 
+1. Streams
+    --> a sequence of characters that can be accessed sequentially
+    
+2. Input Stream
+    --> istream
+    --> uses the extraction operator (>>)
+        --> when a user presses a key, the value is put into the input stream
+        --> the program then extracts this value from the stream to use it
+
+3. Output Stream
+    --> ostream
+    --> uses the insertion operator (<<)
+    
+4. Input/Output Stream
+    --> iostream
+
