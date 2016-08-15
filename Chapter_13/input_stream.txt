@@ -1,0 +1,41 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/15/2016
+ */
+ 
+1. Manipulators
+    --> objects used to modify a stream when applied with 
+        the extraction (>>) or insertion (<<) operators
+    --> examples:
+        --> endl
+            --> outputs a newline character and flushes any buffered output
+            --> unbuffered output is written immediately
+            --> buffered output is written to a buffer and then read out in blocks
+        --> setw
+            --> can be used to limit the number of input characters read
+            --> #include <iomanip.h>
+                char buf[10];
+                cin >> setw(10) >> buf;
+            --> this will read in 9 characters (leaving room for a terminator)
+
+2. Extraction and Whitespace
+    --> extraction operator ignores whitespace
+    --> can use the get() method to resolve this
+        --> char c; cin.get(c); // reads a character from cin into c
+        --> char str_buffer[11]; cin.get(c, 11); // reads in 10 chars
+    --> characters not read are left in the stream to be read later
+    
+3. getline() function
+    --> works like get() but also reads in newlines
+    --> cin.getline(str_buffer, 100)
+    --> reads one-hundred characters from cin into str_buffer
+    
+4. gcount() function
+    --> tells you how many characters were just extracted
+    
+5. String version of getline()
+    --> belongs in the std::string library, not iostream
+    --> getline(cin, str_buffer)
+    --> reads from cin into str_buffer
+    
+    
