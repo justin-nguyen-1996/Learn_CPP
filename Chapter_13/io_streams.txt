@@ -43,6 +43,14 @@
     
 7. getline() function
     --> works like get() but also reads in newlines
+    --> cin.getline(str_buffer, 100)
+    --> reads one-hundred characters from cin into str_buffer
     
-8. 
+8. gcount() function
+    --> tells you how many characters were just extracted
+    
+9. String version of getline()
+    --> belongs in the std::string library, not iostream
+    --> getline(cin, str_buffer)
+    --> reads from cin into str_buffer
 
