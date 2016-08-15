@@ -12,4 +12,25 @@
         --> when a user presses a key, the value is put into the input stream
         --> the program then extracts this value from the stream to use it
 
+3. Output Stream
+    --> ostream
+    --> uses the insertion operator (<<)
+    
+4. Input/Output Stream
+    --> iostream
+    
+5. Manipulators
+    --> objects used to modify a stream when applied with 
+        the extraction (>>) or insertion (<<) operators
+    --> examples:
+        --> endl
+            --> outputs a newline character and flushes any buffered output
+            --> unbuffered output is written immediately
+            --> buffered output is written to a buffer and then read out in blocks
+        --> setw
+            --> can be used to limit the number of input characters read
+            --> #include <iomanip.h>
+                char buf[10];
+                cin >> setw(10) >> buf;
+            --> this will read in 9 characters (leaving room for a terminator)
 
