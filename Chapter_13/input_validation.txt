@@ -1,0 +1,14 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/16/2016
+ */
+ 
+1. Status flags for input/output
+    --> goodbit --> everything is okay
+    --> badbit --> some kind of fatal error
+    --> eofbit --> stream has reached the end of the file
+    --> failbit --> some kind of non-fatal error
+    
+2. Failbit
+    --> set when the user enters invalid input (e.g. string instead of an int)
+
