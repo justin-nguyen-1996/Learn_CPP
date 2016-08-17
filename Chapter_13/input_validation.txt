@@ -11,4 +11,75 @@
     
 2. Failbit
     --> set when the user enters invalid input (e.g. string instead of an int)
+    --> further stream operations on that stream will be ignored until
+        the fail bit is cleared (use the clear() method)
 
+3. Input Validation
+    --> two categories: strings and numbers
+    --> strings
+        --> can accept any input, so make sure the input is formatted correctly
+    --> numbers
+        --> usually check if the number is within a range
+        --> also check if the input is actually a number
+        
+4. Numeric Validation
+    int main() {
+        int nAge;
+     
+        while (1) {
+            cout << "Enter your age: ";
+            cin >> nAge;
+     
+            if (cin.fail()) // no extraction took place {
+                cin.clear(); // reset the state bits back to goodbit so we can use ignore()
+                cin.ignore(1000, '\n'); // clear out the bad input from the stream
+                continue; // try again
+            }
+     
+            cin.ignore(1000, '\n'); // clear out any additional input from the stream
+            if (cin.gcount() > 1) // if we cleared out more than one additional character
+                continue; // we'll consider this input to be invalid
+     
+            if (nAge <= 0) // make sure nAge is positive
+                continue;
+     
+    	    break;
+        }
+     
+        cout << "You entered: " << nAge << endl;
+    }
+        
+5. Numeric Validation as a string
+    int main() {
+    	int nAge;
+     
+        while (1) {
+            cout << "Enter your age: ";
+            string strAge;
+            cin >> strAge;
+     
+            // Check to make sure each character is a digit
+            bool bValid = true;
+            for (unsigned int nIndex=0; nIndex < strAge.length(); nIndex++)
+                if (!isdigit(strAge[nIndex])) {
+                    bValid = false;
+                    break;
+                }
+            if (!bValid)
+                continue;
+     
+            // At this point, we have something that can be converted to a number
+            // So we'll use stringstream to do that conversion
+            stringstream strStream;
+            strStream << strAge;
+            strStream >> nAge;
+     
+            if (nAge <= 0) // make sure nAge is positive
+                continue;
+    		
+    	    break;
+        }
+     
+        cout << "You entered: " << nAge << endl;
+    }
+    
