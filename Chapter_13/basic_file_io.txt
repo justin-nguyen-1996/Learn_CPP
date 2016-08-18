@@ -13,7 +13,7 @@
     --> close the file by calling close() or by
         letting the file I/O object go out of scope (the destructor will close the file)
 
-3. Example
+3. Example (writing to a file)
 
     #include <fstream>
     #include <iostream>
@@ -33,5 +33,15 @@
     	
         // When outf goes out of scope, the ofstream
         // destructor will close the file
+    }
+    
+4. Example (reading from a file)
+    
+    same as above except:
+    
+    while (inf) {
+        std::string str;
+        inf >> str;
+        cout << str;
     }
 
