@@ -1,0 +1,17 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/18/2016
+ */
+ 
+1. File Stream
+    --> #include <fstream>
+    --> ifstream, ofstream, fstream
+
+2. Steps to using a file stream
+    --> open the file by instantiating an object of the appropriate file stream
+    --> read/write to the stream using the extraction/insertion operators
+    --> close the file by calling close() or by
+        letting the file I/O object go out of scope (the destructor will close the file)
+
+
+
