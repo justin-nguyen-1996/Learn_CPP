@@ -41,7 +41,18 @@
     
     while (inf) {
         std::string str;
-        inf >> str;
+        getline(inf, str);
         cout << str;
     }
+    
+5. Buffered Output
+    --> output is often buffered (i.e. not immediately written to disk)
+    --> writing to the disk is called "flushing"
+    --> closing a file automatically flushes the buffer so usually not a problem
+    --> problems occur when the buffer is not flushed properly
+        --> usually occurs when the program crashes or when the file is not closed
+        --> calling exit() does not invoke the file's destructor, so file is not closed
+        --> meaning data in the buffer is lost
+    --> can flush using ostream::flush
+    --> flushing too much can decrease performance (so don't use endl too much)
 
