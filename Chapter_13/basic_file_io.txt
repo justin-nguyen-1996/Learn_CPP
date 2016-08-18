@@ -13,5 +13,25 @@
     --> close the file by calling close() or by
         letting the file I/O object go out of scope (the destructor will close the file)
 
+3. Example
 
+    #include <fstream>
+    #include <iostream>
+    #include <cstdlib> // for exit()
+     
+    int main() {
+        using namespace std;
+        ofstream outf("Sample.dat");
+        if (!outf) {
+            cerr << "Uh oh, Sample.dat could not be opened for writing!" << endl;
+            exit(1);
+        }
+     
+        // We'll write two lines into this file
+        outf << "This is line 1" << endl;
+        outf << "This is line 2" << endl;
+    	
+        // When outf goes out of scope, the ofstream
+        // destructor will close the file
+    }
 
