@@ -12,6 +12,20 @@
         catch block handles exceptions of all types
     --> put the catch-all handler last in the catch block chain
         --> allows the more specific handlers to execute first
-        
+    --> particularly useful when wrapping main()
+        int main() {
+            try {
+                RunGame();
+            } catch(...) {
+                cerr << "Abnormal termination" << endl;
+            }
+
+            SaveState(); // Save user's game
+        }
+    --> prevents main() from terminating by catching unexpected errors
+    --> this allows us to
+            1. print the error of our choosing
+            2. save the game's state
+            3. catch
 
 
