@@ -32,4 +32,10 @@
         } catch (PersonException &cException) {
             cerr << "Failed to process person: " << cException.what() << endl;
         }
+        
+2. Exceptions and Destructors
+    --> don't use exceptions inside destructors
+    --> program won't know to continue stack unwinding or handle new exception
+        --> causes program to terminate immediately
+    --> just write a message to a log file instead
 
