@@ -12,5 +12,18 @@
     --> std::deque
         --> stands for "double ended queue"
         --> a queue that can grow from both ends
-    
+    --> std::list
+        --> implemented as a doubly linked list
 
+2. Associative Containers
+    --> containers that automatically sort their elements
+    
+    --> set --> no duplicate elements, elements sorted by value
+    --> multiset --> a set where duplicate elements are allowed
+    --> map --> a set where each element is a key/value pair
+    --> multimap
+        --> a map that allows duplicate keys
+        --> also called a dictionary
+            --> real dictionaries are multimaps
+            --> this is because a word can have multiple meanings
+    
