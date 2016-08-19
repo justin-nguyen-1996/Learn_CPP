@@ -8,4 +8,16 @@
         your code's normal control flow
     --> allows for more freedom when handling error codes
     
+2. Try keyword
+    --> look for any exceptions that occur in this block
+    
+3. Throw keyword
+    --> a signal indicating that an exception has occurred
+    --> can throw primitives, strings, etc.
+    
+4. Catch keyword
+    --> handles exceptions for a single data type
+
+5. Try and Catch go together
+    --> every try block must have at least one catch block attached to it
 
