@@ -1,0 +1,15 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/19/2016
+ */
+ 
+1. Ordering of the catch blocks with inheritance
+    --> can throw classes so inheritance with exceptions makes sense
+    --> handlers for derived classes should be put before those of base classes
+    --> put the more specific handlers first 
+        (same as for catch-all handlers)
+    --> otherwise the base class handler will 
+        execute instead of the derived class handler
+        --> this happens because the compiler checks
+            for exceptions sequentially
+
