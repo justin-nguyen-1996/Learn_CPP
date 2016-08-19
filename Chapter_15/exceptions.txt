@@ -49,4 +49,17 @@
             cerr << "Error: " << strException << endl;
         }
     }
+    
+8. Why it's a good idea to pass errors back to the handler
+    --> different applications may want to handle the error differently
+    --> print an error message or display an error dialog
+        might be fatal for one application, but not for the other
+    --> also keeps the program more modular
+        --> leave the error handling for the other parts of the code
+
+9. Difference between asserts and exceptions
+    --> asserts immediately stop the program's execution
+    --> exceptions are handled and don't necessarily stop the program immediately
+
+
 
