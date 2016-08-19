@@ -29,5 +29,24 @@
         4. else look for the next try block with an appropriate catch handler
         5. repeat until no try blocks left --> program fails with exception error
 
-7. 
+7. Don't have to put the throw statement inside a try block
+
+    double MySqrt(double dX) {
+        if (dX < 0.0)
+            throw "Can not take sqrt of negative number"; // throw exception of type char*
+        return sqrt(dX);
+    }
+     
+    int main() {
+        cout << "Enter a number: ";
+        double dX;
+        cin >> dX;
+     
+        // Look for exceptions that occur within try block and route to attached catch block(s)
+        try {
+            cout << "The sqrt of " << dX << " is " << MySqrt(dX) << endl;
+        } catch (const char* strException) {
+            cerr << "Error: " << strException << endl;
+        }
+    }
 
