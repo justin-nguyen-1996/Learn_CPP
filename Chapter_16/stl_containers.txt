@@ -1,0 +1,16 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/19/2016
+ */
+ 
+1. Sequence Containers
+    --> container classes that maintain the order of inserted elements
+    --> the STL currently has 6 sequence containers
+        --> std::vector, std::deque, std::array, 
+            std::list, std::forward_list, std::basic_string
+    --> std::vectors can dynamically grow
+    --> std::deque
+        --> stands for "double ended queue"
+        --> a queue that can grow from both ends
+    
+
