@@ -1,0 +1,22 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/18/2016
+ */
+
+1. Function Templates
+	--> functions that act as patterns for other functions
+	--> don't have to specify the exact type of the variable
+	--> use template type parameters
+
+2. Example
+	--> template <typename T>
+		T max(T var_1, T var_2) {
+			return (var_1 > var_2) ? var_1 : var_2;
+		}
+	--> keyword template indicates that the following will
+		be a list of template type parameters
+	
+3. Example of more than one template type
+	--> template <typename T1, typename T2>
+
+
