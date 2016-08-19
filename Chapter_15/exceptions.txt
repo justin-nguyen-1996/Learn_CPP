@@ -59,7 +59,10 @@
 
 9. Difference between asserts and exceptions
     --> asserts immediately stop the program's execution
-    --> exceptions are handled and don't necessarily stop the program immediately
-
-
+    --> exceptions are handled and don't necessarily stop the program
+        --> once an exception has been thrown,
+            control flow is immediately disrupted and the 
+            program starts popping the stack to look for try/catch blocks
+        --> once the exception has been handled,
+            control flow proceeds as normal
 
