@@ -25,5 +25,17 @@
 		replaces all instances of "T" with the actual variable type
 	--> compiler only creates one instance per set of unique type params
 	--> if template exists but not called, no instance is created
+	--> templates are compiled like normal types
+		--> the operators and variable types must already be defined
+		--> comparing instances of the Cents class with '>' operator,
+			i.e. need to overload the '>' operator for the template
+
+5. Defining a template member outside of the class
+	--> template <typename T>
+		int class_name<T>::fxn_name(T var_1) {}
+
+6. Templates are very useful for containers
+	--> allow containers (like std::array<T>) to work with many data types
+	--> syntax is ugly, error messages are long and cryptic, but useful
 
 
