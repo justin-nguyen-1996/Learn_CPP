@@ -1,0 +1,13 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/18/2016
+ */
+
+1. Expression Parameters
+	--> parameter that is not substituted by a type
+	--> replaced by a value (like a normal parameter)
+	--> example:
+		template <typename T, int size>
+		class Buffer {}
+
+
