@@ -10,4 +10,30 @@
 		template <typename T, int size>
 		class Buffer {}
 
+2. Template Specialization
+	--> used when need special version of 
+		the template for specific parameter types
+	--> define the specialized function outside of the class definition and
+		replace the template type 'T' with the specific type desired
+	--> basic example
+		--> template <>
+			void Storage<double>::Print() {
+				cout << "blah blah" << "\n";
+			}
+	--> template <> means this is a full template specialization
+		(i.e. we're explicitly specifying all of the template types)
+	--> specialized template function for constructor & destructor
+		--> template<>
+			Storage<char*>::Storage(char* val) {}
+		--> template<>
+			Storage<char*>::~Storage() { delete[] m_val; m_val = 0; }
+
+3. Partial Template Specialization
+	--> use the second because the first restricts the buffer size to 10
+	
+	--> void PrintBufferString(Buffer<char, 10> &buf) {}
+
+		template<int size>
+		void PrintBufferString(Buffer<char, size> &buf) {}
+
 
