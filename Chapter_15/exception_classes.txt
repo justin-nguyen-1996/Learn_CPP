@@ -30,4 +30,13 @@
                      << error.getError() << "\n";
             }
         }
+        
+2. Things to note
+    --> exception classes are useful because they are their own unique type
+        --> i.e. try blocks that catch exception classes treat them
+                 differently from other exceptions
+    --> exception handlers should catch 
+        exception objects by reference instead of by value
+    
+    
 
