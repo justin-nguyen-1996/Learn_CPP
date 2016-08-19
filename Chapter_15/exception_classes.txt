@@ -1,0 +1,33 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/19/2016
+ */
+ 
+1. Exception Classes
+    --> a normal class specifically designed to be thrown as an exception
+    --> example:
+        
+        class ArrayException {
+            private:
+                std::string m_str;
+            public:
+                ArrayException(std::string str) : m_str(str) {}
+                std::string getError() { return m_str; }
+        };
+        
+        int& IntArray::operator[] (int index) {
+            if (index < 0 || index >= getLength()) {
+                throw ArrayException("Invalid index.");
+            }
+            return m_data[index];
+        }
+        
+        int main() {
+            try {
+                int val = IntArray[5];
+            } catch (ArrayException& error) {
+                cerr << "An IntArray exception occurred. Error: " 
+                     << error.getError() << "\n";
+            }
+        }
+
