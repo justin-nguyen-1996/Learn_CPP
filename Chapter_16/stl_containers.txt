@@ -26,4 +26,8 @@
         --> also called a dictionary
             --> real dictionaries are multimaps
             --> this is because a word can have multiple meanings
+            
+3. Container Adapters
+    --> special containers predefined for specific use
+    --> stack, queue, priority queue
     
