@@ -19,4 +19,11 @@
 3. Example of more than one template type
 	--> template <typename T1, typename T2>
 
+4. Instantiating Templates
+	--> no machine language is generated at compile time
+	--> compiler replicates the template and then
+		replaces all instances of "T" with the actual variable type
+	--> compiler only creates one instance per set of unique type params
+	--> if template exists but not called, no instance is created
+
 
