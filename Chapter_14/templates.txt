@@ -38,4 +38,21 @@
 	--> allow containers (like std::array<T>) to work with many data types
 	--> syntax is ugly, error messages are long and cryptic, but useful
 
+7. Splitting up template classes
+	--> use three files
+	--> template class header goes in the .h file
+	--> template class member functions go in the .cpp file
+	--> template instances go in a templates.cpp file
+		--> // Ensure the full Array template definition can be seen
+			#include "Array.h"
+			#include "Array.cpp"
+			 
+			// Explicitly instantiate template Array<int>
+			template class Array<int>; 
+			
+			// Explicitly instantiate template Array<double>
+			template class Array<double>; 
+	--> the "template class" command causes the 
+		compiler to explicitly instantiate the templated class
+
 
