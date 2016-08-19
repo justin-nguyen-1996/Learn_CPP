@@ -56,3 +56,4 @@
     --> can flush using ostream::flush
     --> flushing too much can decrease performance (so don't use endl too much)
 
+
