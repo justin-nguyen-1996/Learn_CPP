@@ -1,0 +1,17 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/19/2016
+ */
+ 
+1. Try to avoid uncaught exceptions
+    --> will immediately terminate your program
+
+2. Catch-All Handlers
+    --> catch (...) {} // execution block is often left empty
+    --> the elipsis indicates that this
+        catch block handles exceptions of all types
+    --> put the catch-all handler last in the catch block chain
+        --> allows the more specific handlers to execute first
+        
+
+
