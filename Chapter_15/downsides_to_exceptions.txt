@@ -1,0 +1,35 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/19/2016
+ */
+ 
+1. Cleaning up resources
+    --> thrown exceptions interrupt control flow so that
+        the program terminates but objects' destructors are not called
+    --> common examples: not closing files and not deallocating memory
+    --> solution for closing files:
+        
+        try {
+            OpenFile(strFilename);
+            WriteFile(strFilename, strData);
+            CloseFile(strFilename);
+        } catch (FileException &cException) {
+            CloseFile(strFilename);
+            cerr << "Failed to write to file: " << cException.what() << endl;
+        }
+    
+    --> solution for deallocating memory
+        --> use pointers that automatically 
+            deallocate themselves upon going out of scope
+        --> std::unique_ptr
+        
+    --> #include <memory> // for std::unique_ptr
+        try {
+            Person* pJohn = new Person("John", 18, E_MALE);
+            unique_ptr<Person> pxJohn(pJohn); // pxJohn now owns pJohn
+            ProcessPerson(pJohn);
+            // when pxJohn goes out of scope, it will delete pJohn
+        } catch (PersonException &cException) {
+            cerr << "Failed to process person: " << cException.what() << endl;
+        }
+
