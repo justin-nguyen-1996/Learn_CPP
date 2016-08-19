@@ -1,0 +1,11 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/19/2016
+ */
+ 
+1. Exceptions
+    --> provide a mechanism for decoupling error handling from
+        your code's normal control flow
+    --> allows for more freedom when handling error codes
+    
+
