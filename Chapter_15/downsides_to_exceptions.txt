@@ -38,4 +38,12 @@
     --> program won't know to continue stack unwinding or handle new exception
         --> causes program to terminate immediately
     --> just write a message to a log file instead
+    
+3. Performance Concerns
+    --> they increase the size of the code/executable
+    --> they slow the program down due to additional checking
+        --> especially bad if have to unwind the stack and
+            find the appropriate try/catch block
+    --> therefore, exception handling should only be used for
+        exceptional cases and catastrophic errors
 
