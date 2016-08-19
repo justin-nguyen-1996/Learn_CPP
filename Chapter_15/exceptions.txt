@@ -8,16 +8,26 @@
         your code's normal control flow
     --> allows for more freedom when handling error codes
     
-2. Try keyword
-    --> look for any exceptions that occur in this block
-    
-3. Throw keyword
+2. Throw keyword
     --> a signal indicating that an exception has occurred
     --> can throw primitives, strings, etc.
+    
+3. Try keyword
+    --> look for any exceptions that occur in this block
     
 4. Catch keyword
     --> handles exceptions for a single data type
 
 5. Try and Catch go together
     --> every try block must have at least one catch block attached to it
+    
+6. How exceptions work (behind the scenes)
+    --> 1. an exception is thrown
+        2. the program immediately jumps to the nearest enclosing try block
+        3. if any catch handlers attached to that 
+           try block handle that exception, then that handler executes
+        4. else look for the next try block with an appropriate catch handler
+        5. repeat until no try blocks left --> program fails with exception error
+
+7. 
 
