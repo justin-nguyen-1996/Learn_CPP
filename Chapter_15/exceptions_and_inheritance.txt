@@ -12,4 +12,19 @@
         execute instead of the derived class handler
         --> this happens because the compiler checks
             for exceptions sequentially
+            
+2. std::exception
+    --> the standard library has its own exception class called std::exception
+    --> many other exceptions are derived from std::exception
+    --> allows us to use specific handlers for specific derived exception classes, 
+        or to use base class handlers to catch everything else
+    --> example:
+    
+        try {
+            // code using standard library goes here
+        } catch (std::bad_alloc &cException) {
+            cerr << "You ran out of memory!" << endl;
+        } catch (std::exception &cException) {
+            cerr << "Standard exception: " << cException.what() << endl;
+        }
 
