@@ -1,0 +1,10 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/19/2016
+ */
+ 
+1. Standard Template Library
+    --> commonly abbreviated as the STL
+    --> a collection of classes that provide 
+        templated containers, algorithms, and iterators
+
