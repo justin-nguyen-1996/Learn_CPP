@@ -2,10 +2,22 @@
  * Author:  Justin Nguyen
  * Created: 8/20/2016
  */
- 
+
 1. Iterators
-    --> objects that can traverse a container class without 
+    --> objects that can traverse a container class without
         knowledge of the container's implementation
-    --> best thought of as a pointer to an object in the container 
-        that has a bunch of overloaded operators and functions
+    --> best thought of as a pointer to an object in the
+        container that has a bunch of overloaded operators and functions
+
+2. Basic member functions associated with iterators
+    --> begin() --> returns an iterator pointing to the
+                    beginning of the elements in the container
+    --> end()   --> returns an iterator pointing to just
+                    after the end of the elements in the container
+    --> cbegin() and cend() --> same but returns a constant iterator
+
+3. Two types of iterators
+	--> container::iterator
+	--> container::const_interator
+
 
