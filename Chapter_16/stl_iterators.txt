@@ -1,0 +1,11 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/20/2016
+ */
+ 
+1. Iterators
+    --> objects that can traverse a container class without 
+        knowledge of the container's implementation
+    --> best thought of as a pointer to an object in the container 
+        that has a bunch of overloaded operators and functions
+
