@@ -4,50 +4,64 @@
  */
 
 1. Library
-	--> comes with header files that define functionality of the program
-	--> precompiled binary that contains the program's executable
+    --> comes with header files that define functionality of the program
+    --> precompiled binary that contains the program's executable
 
 2. Why libraries are precompiled
-	--> libraries rarely change so they aren't recompiled every time
-	--> binary/machine language form prevents people from
-		seeing the source code and protects intellectual property 
+    --> libraries rarely change so they aren't recompiled every time
+    --> binary/machine language form prevents people from
+        seeing the source code and protects intellectual property 
 
 3. Static Libraries
-	--> also called an archive
-		--> on Windows, usually have a .lib extension
-		--> on Linux, usually have a .a extension (archive)
-	--> contains routines that are compiled and linked into the program
-	--> when you compile a program that uses a static library,
-		the library's functionality becomes part of the program
-		--> library becomes part of the program 
-			so only have to distribute the executable
-	--> downsides:
-		--> copy of the library becomes part of every .exe that uses it
-			(can potentially lead to a lot of wasted space)
-		--> to update the library, the entire .exe needs to be replaced
+    --> also called an archive
+        --> on Windows, usually have a .lib extension
+        --> on Linux, usually have a .a extension (archive)
+    --> contains routines that are compiled and linked into the program
+    --> when you compile a program that uses a static library,
+        the library's functionality becomes part of the program
+        --> library becomes part of the program 
+            so only have to distribute the executable
+    --> downsides:
+        --> copy of the library becomes part of every .exe that uses it
+            (can potentially lead to a lot of wasted space)
+        --> to update the library, the entire .exe needs to be replaced
 
 4. Dynamic Libraries
-	--> also called shared libraries
-		--> on Windows, usually have a .dll extension (dynamic link lib)
-		--> on Linux, usually have a .so extension (shared object)
-	--> contains routines that are loaded into the program at runtime
-	--> when you compile a program that uses a dynamic library,
-		the library does not become part of the executable
-		--> it remains as a separate unit that is linked in a runtime
-		--> allows programs to share one copy (saves space)
-		--> when changing the library versions, 
-			only the library changes instead of the entire executable
-	--> downsides:
-		--> linking at runtime can be slower
-		--> no direct linkage, so programs have to load and interface with
-			the dynamic library (this can be rather clumsy)
+    --> also called shared libraries
+        --> on Windows, usually have a .dll extension (dynamic link lib)
+        --> on Linux, usually have a .so extension (shared object)
+    --> contains routines that are loaded into the program at runtime
+    --> when you compile a program that uses a dynamic library,
+        the library does not become part of the executable
+        --> it remains as a separate unit that is linked in a runtime
+        --> allows programs to share one copy (saves space)
+        --> when changing the library versions, 
+            only the library changes instead of the entire executable
+    --> downsides:
+        --> linking at runtime can be slower
+        --> no direct linkage, so programs have to load and interface with
+            the dynamic library (this can be rather clumsy)
 
 5. Import Libraries
-	--> libs that automate the process of loading and using dynamic libs
-	--> on Windows
-		--> a small static library of the same name as the dynamic lib is
-			created and linked into the program at compile time
-	--> on Linux
-		--> the .so doubles as a dynamic library and an import library
-			
+    --> libs that automate the process of loading and using dynamic libs
+    --> on Windows
+        --> a small static library of the same name as the dynamic lib is
+            created and linked into the program at compile time
+    --> on Linux
+        --> the .so doubles as a dynamic library and an import library
+
+6. Installing and Using Libraries
+    --> 1. Download the library
+            --> best to download a precompiled version
+	--> 2. Install the library
+			--> on Linux, just use the package manager
+			--> on Windows, unzip the library to C:/Libs
+	--> 3. Let the compiler know where to find the .h files for the lib
+			--> on Linux, usually in /usr/include
+			--> on Windows, usually in the include subdirectory of
+				where you chose to install the library
+	--> 4. Tell the linker where to find the library files
+			--> on Linux, usually in /usr/lib
+			--> on Windows, usually in the lib subdirectory
+            
 
