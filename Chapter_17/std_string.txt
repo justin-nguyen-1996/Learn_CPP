@@ -12,4 +12,8 @@
 	--> good for when you know that the string will have to be
 		reallocated many times (less expensive this way)
 
+3. Converting to C-style strings
+	--> std::string str("abc");
+		std::cout << str.c_str() << "\n";
+
 
