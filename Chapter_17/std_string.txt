@@ -1,0 +1,12 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/21/2016
+ */
+
+1. std::string vs std::wstring
+	--> std::string is a standard ascii string (8 bits)
+	--> std::wstring is a wide-character string (16 bits)
+
+2. 
+
+
