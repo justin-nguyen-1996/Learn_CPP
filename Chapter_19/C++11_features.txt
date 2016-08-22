@@ -4,6 +4,14 @@
  */
 
 1. auto, nullptr, enum classes
-2. 
+
+2. static_assert()
+	--> normal assert() checks for things at runtime
+	--> static_assert() checks for things at compile time
+		--> primarily useful for 
+			-->	checking sizeof() things
+			--> checking values of #defines
+			--> checking if C++11 is supported
+				--> static_assert(__cplusplus > 199711L, "message_here")
 
 
