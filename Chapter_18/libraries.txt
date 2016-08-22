@@ -42,6 +42,12 @@
 		--> no direct linkage, so programs have to load and interface with
 			the dynamic library (this can be rather clumsy)
 
-5. 
+5. Import Libraries
+	--> libs that automate the process of loading and using dynamic libs
+	--> on Windows
+		--> a small static library of the same name as the dynamic lib is
+			created and linked into the program at compile time
+	--> on Linux
+		--> the .so doubles as a dynamic library and an import library
 			
 
