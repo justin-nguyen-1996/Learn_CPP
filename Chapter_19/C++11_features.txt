@@ -1,0 +1,9 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/22/2016
+ */
+
+1. auto, nullptr, enum classes
+2. 
+
+
