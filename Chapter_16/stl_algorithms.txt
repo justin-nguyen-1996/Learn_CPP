@@ -18,8 +18,18 @@
 		list<int> li;
 		list<int>::const_iterator it;
 		it = min_element(li.begin(), li.end());
+		std::cout << "min: " << *it << "\n";
 		it = max_element(li.begin(), li.end());
+		std::cout << "max: " << *it << "\n";
 
-3. Example of 
+
+3. Example of find STL algo
+	--> it = find(li.begin(), li.end(), 3);
+		std::cout << *it << "\n";
+
+4. Sort and Reverse
+	--> sort(vec.begin(), vec.end());
+		reverse(vec.begin(), vec.end());
+		for (it = vec.begin(); it <= vec.end; ++it) {}
 
 
