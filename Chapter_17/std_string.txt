@@ -7,6 +7,9 @@
 	--> std::string is a standard ascii string (8 bits)
 	--> std::wstring is a wide-character string (16 bits)
 
-2. 
+2. reserve(int new_capacity)
+	--> immediately reserve the capacity to be at least this amount
+	--> good for when you know that the string will have to be
+		reallocated many times (less expensive this way)
 
 
