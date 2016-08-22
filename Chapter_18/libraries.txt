@@ -12,11 +12,11 @@
 	--> binary/machine language form prevents people from
 		seeing the source code and protects intellectual property 
 
-3. Static libraries
+3. Static Libraries
 	--> also called an archive
 		--> on Windows, usually have a .lib extension
-		--> on Linux, usually have a .a extension
-	--> routines that are compiled and linked directly into the program
+		--> on Linux, usually have a .a extension (archive)
+	--> contains routines that are compiled and linked into the program
 	--> when you compile a program that uses a static library,
 		the library's functionality becomes part of the program
 		--> library becomes part of the program 
@@ -26,4 +26,22 @@
 			(can potentially lead to a lot of wasted space)
 		--> to update the library, the entire .exe needs to be replaced
 
+4. Dynamic Libraries
+	--> also called shared libraries
+		--> on Windows, usually have a .dll extension (dynamic link lib)
+		--> on Linux, usually have a .so extension (shared object)
+	--> contains routines that are loaded into the program at runtime
+	--> when you compile a program that uses a dynamic library,
+		the library does not become part of the executable
+		--> it remains as a separate unit that is linked in a runtime
+		--> allows programs to share one copy (saves space)
+		--> when changing the library versions, 
+			only the library changes instead of the entire executable
+	--> downsides:
+		--> linking at runtime can be slower
+		--> no direct linkage, so programs have to load and interface with
+			the dynamic library (this can be rather clumsy)
+
+5. 
+			
 
