@@ -31,5 +31,7 @@
 	--> sort(vec.begin(), vec.end());
 		reverse(vec.begin(), vec.end());
 		for (it = vec.begin(); it <= vec.end; ++it) {}
+	--> note that sort doesn't work with the list container
+		(list has its own more efficient implementation)
 
 
