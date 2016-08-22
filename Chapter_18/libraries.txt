@@ -7,6 +7,23 @@
 	--> comes with header files that define functionality of the program
 	--> precompiled binary that contains the program's executable
 
-2. 
+2. Why libraries are precompiled
+	--> libraries rarely change so they aren't recompiled every time
+	--> binary/machine language form prevents people from
+		seeing the source code and protects intellectual property 
+
+3. Static libraries
+	--> also called an archive
+		--> on Windows, usually have a .lib extension
+		--> on Linux, usually have a .a extension
+	--> routines that are compiled and linked directly into the program
+	--> when you compile a program that uses a static library,
+		the library's functionality becomes part of the program
+		--> library becomes part of the program 
+			so only have to distribute the executable
+	--> downsides:
+		--> copy of the library becomes part of every .exe that uses it
+			(can potentially lead to a lot of wasted space)
+		--> to update the library, the entire .exe needs to be replaced
 
 
