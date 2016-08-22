@@ -63,5 +63,9 @@
 	--> 4. Tell the linker where to find the library files
 			--> on Linux, usually in /usr/lib
 			--> on Windows, usually in the lib subdirectory
+	--> 5. Tell the linker which library files to link
+		   (if using static libraries or import libraries)
+	--> 6. #include the library's header files
+	--> 7. If on Windows, put the .dll with the .exe
             
 
