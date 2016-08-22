@@ -1,0 +1,14 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/21/2016
+ */
+
+1. STL Algorithms
+	--> implemented as global functions that operate using iterators
+	--> generally works for any container that provides iterators
+	--> dark side:
+		--> some combos of iterators and algos don't work
+		--> or cause infinite loops
+		--> or perform very poorly
+
+
