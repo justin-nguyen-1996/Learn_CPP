@@ -11,4 +11,15 @@
 		--> or cause infinite loops
 		--> or perform very poorly
 
+2. Example of min/max STL algo
+	--> #include <algorithm>
+		#include <list>
+
+		list<int> li;
+		list<int>::const_iterator it;
+		it = min_element(li.begin(), li.end());
+		it = max_element(li.begin(), li.end());
+
+3. Example of 
+
 
