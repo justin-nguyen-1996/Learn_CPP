@@ -1,0 +1,12 @@
+/*
+ * Author:  Justin Nguyen
+ * Created: 8/22/2016
+ */
+
+1. Library
+	--> comes with header files that define functionality of the program
+	--> precompiled binary that contains the program's executable
+
+2. 
+
+
