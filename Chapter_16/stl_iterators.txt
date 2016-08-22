@@ -20,4 +20,15 @@
 	--> container::iterator
 	--> container::const_interator
 
+4. Example
+	--> #include <vector>
+		std::vector<int> vec;
+		vector<int>::const_iterator it = vec.begin();
+		while (it != vec.end()) {
+			cout << *it << " ";
+			++it;
+		}
+	--> extremely easy to use, basically works the same for every container
+	--> just note that 'it' is a pointer
+
 
