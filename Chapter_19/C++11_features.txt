@@ -26,6 +26,11 @@
 		--> class Derived: public Base
 			virtual void A(int x) override;
 
-4. 
+4. Final keyword
+	--> can make functions non-overridable --> void A() final
+	--> can make classes non-inheritable --> class Base final
+	--> makes things immutable
+
+5. 
 
 
