@@ -14,4 +14,18 @@
 			--> checking if C++11 is supported
 				--> static_assert(__cplusplus > 199711L, "message_here")
 
+3. Overriding virtual functions
+	--> if the derived class's function fails to match the
+		base class's function prototype/signature exactly,
+		then a new function will be created instead of 
+		overriding the original function
+	--> need to use same parameters, return type, and const
+	--> also happens when base fxn changes, but derived version not updated
+	
+	--> override identifier
+		--> class Derived: public Base
+			virtual void A(int x) override;
+
+4. 
+
 
