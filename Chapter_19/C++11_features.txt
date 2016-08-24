@@ -31,6 +31,4 @@
 	--> can make classes non-inheritable --> class Base final
 	--> makes things immutable
 
-5. 
-
 
